@@ -1,0 +1,34 @@
+<style>
+  @font-face {
+    font-family: 'Bravura';
+    src: url(https://cdn.jsdelivr.net/npm/@vexflow-fonts/bravura/bravura.otf) format(opentype);
+  }
+  @font-face {
+    font-family: 'Academico';
+    src: url(https://cdn.jsdelivr.net/npm/@vexflow-fonts/academico/academico.otf) format(opentype);
+  }
+</style>
+
+<div id="output"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/vxflw-early-access@latest/build/cjs/vexflow.js"></script>
+
+<script>
+  const { Factory, EasyScore, System } = Vex.Flow;
+  Vex.Flow.setMusicFont('Bravura', 'Academico');
+
+  const vf = new Factory({
+    renderer: { elementId: 'output', width: 500, height: 200 },
+  });
+
+  const system = vf.System();
+
+  system
+    .addStave({
+      voices: [],
+    })
+    .addClef('treble')
+    .addTimeSignature('4/4');
+
+  vf.draw();
+</script>
