@@ -7,19 +7,21 @@
 
 <body>
 <script>
-    function showHtml(file) {
-        const url = "https://vexflow.github.io/vexflow-examples/static/"+file+".html"; 
-        
-        $("<object width=100% height=200 data='"+url+"'></object>").appendTo("body");
-        $("<pre style='background-color:black;color:white;'><code id="+file+"></code></pre>").appendTo("body");
-        
-        $.get(url, function(content) {
-        $( "#"+file ).html(hljs.highlight(content, {language: 'html'}).value);
-    });};
-    showHtml("step0");
-    showHtml("step1");
-    showHtml("step2a");
-    showHtml("step2b");
+  function showHtml(file) {
+    const url = `https://vexflow.github.io/vexflow-examples/static/${file}.html`;
+  
+    $(`<object width=100% height=200 data='${url}'></object>`).appendTo('body');
+    $(`<pre style='background-color:black;color:white;'><code id=${file}></code></pre>`).appendTo('body');
+  
+    $.get(url, (content) => {
+      $(`#${file}`).html(hljs.highlight(content, { language: 'html' }).value);
+    });
+  }
+  showHtml('step0');
+  showHtml('step1');
+  showHtml('step2a');
+  showHtml('step2b');
+  showHtml('step3');
 </script>
 </body>
 </html>

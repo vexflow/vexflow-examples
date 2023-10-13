@@ -1,0 +1,81 @@
+<style>
+  @font-face {
+    font-family: 'Bravura';
+    src: url(https://cdn.jsdelivr.net/npm/@vexflow-fonts/bravura/bravura.otf) format(opentype);
+  }
+  @font-face {
+    font-family: 'Academico';
+    src: url(https://cdn.jsdelivr.net/npm/@vexflow-fonts/academico/academico.otf) format(opentype);
+  }
+</style>
+
+<div id="output"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/vxflw-early-access@alpha/build/cjs/vexflow.js"></script>
+
+<script>
+const {
+  Renderer,
+  Stave,
+  StaveNote,
+  Accidental,
+  Formatter,
+  Dot,
+} = Vex.Flow;
+
+function dotted(staveNote, noteIndex = -1) {
+  if (noteIndex < 0) {
+    Dot.buildAndAttach([staveNote], {
+      all: true,
+    });
+  } else {
+    Dot.buildAndAttach([staveNote], {
+      index: noteIndex,
+    });
+  }
+  return staveNote;
+}
+
+// Create an SVG renderer and attach it to the DIV element named "boo".
+const div = document.getElementById('output');
+const renderer = new Renderer(div, Renderer.Backends.SVG);
+
+// Configure the rendering context.
+renderer.resize(500, 500);
+const context = renderer.getContext();
+
+// Create a stave of width 400 at position 10, 40 on the canvas.
+const stave = new Stave(10, 40, 400);
+
+// Add a clef and time signature.
+stave.addClef('treble').addTimeSignature('4/4');
+
+// Connect it to the rendering context and draw!
+stave.setContext(context).draw();
+
+const notes = [
+  dotted(new StaveNote({
+    keys: ['e##/5'],
+    duration: '8d',
+  }).addModifier(new Accidental('##'))),
+
+  new StaveNote({
+    keys: ['eb/5'],
+    duration: '16',
+  }).addModifier(new Accidental('b')),
+
+  dotted(new StaveNote({
+    keys: ['eb/4', 'd/5'],
+    duration: 'h',
+  }), 0 /* add dot to note at index==0 */),
+
+  dotted(new StaveNote({
+    keys: ['c/5', 'eb/5', 'g#/5'],
+    duration: 'q',
+  })
+    .addModifier(new Accidental('b'), 1)
+    .addModifier(new Accidental('#'), 2)),
+];
+
+Formatter.FormatAndDraw(context, stave, notes);
+</script>
