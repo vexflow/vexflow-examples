@@ -1,11 +1,25 @@
-<object width=100% height=200 data="https://vexflow.github.io/vexflow-examples/static/step0.html"></object>
-<a href="https://raw.githubusercontent.com/vexflow/vexflow-examples/main/static/step0.html">Code</a>
+<htnl>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/devibeans.min.css">
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+</head>
 
-<object width=100% height=200 data="https://vexflow.github.io/vexflow-examples/static/step1.html"></object>
-<a href="https://raw.githubusercontent.com/vexflow/vexflow-examples/main/static/step1.html">Code</a>
-
-<object width=100% height=200 data="https://vexflow.github.io/vexflow-examples/static/step2a.html"></object>
-<a href="https://raw.githubusercontent.com/vexflow/vexflow-examples/main/static/step1.htm2a">Code</a>
-
-<object width=100% height=200 data="https://vexflow.github.io/vexflow-examples/static/step2b.html"></object>
-<a href="https://raw.githubusercontent.com/vexflow/vexflow-examples/main/static/step1.htm2b">Code</a>
+<body>
+<script>
+    function showHtml(file) {
+        const url = "https://vexflow.github.io/vexflow-examples/static/"+file+".html"; 
+        
+        $("<object width=100% height=200 data='"+url+"'></object>").appendTo("body");
+        $("<pre style='background-color:black;color:white;'><code id="+file+"></code></pre>").appendTo("body");
+        
+        $.get(url, function(content) {
+        $( "#"+file ).html(hljs.highlight(content, {language: 'html'}).value);
+    });};
+    showHtml("step0");
+    showHtml("step1");
+    showHtml("step2a");
+    showHtml("step2b");
+</script>
+</body>
+</html>
