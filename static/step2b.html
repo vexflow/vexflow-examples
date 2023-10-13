@@ -8,12 +8,15 @@
     src: url(https://cdn.jsdelivr.net/npm/@vexflow-fonts/academico/academico.otf) format(opentype);
   }
 </style>
+<span style="font-family: Academico"></span>
+<span style="font-family: Bravura"></span>
 
 <div id="output"></div>
 
 <script src="https://cdn.jsdelivr.net/npm/vxflw-early-access@alpha/build/cjs/vexflow.js"></script>
 
 <script>
+document.fonts.ready.then(() => {
   const { Factory } = Vex.Flow;
   Vex.Flow.setMusicFont('Bravura', 'Academico');
 
@@ -37,7 +40,7 @@
     // A C-Major chord.
     vf.StaveNote({ keys: ['c/4', 'e/4', 'g/4'], duration: 'q' }),
   ];
-  
+
   const notes2 = [
     vf.StaveNote({ keys: ['c/4'], duration: 'w' }),
   ];
@@ -53,4 +56,5 @@
     .addTimeSignature('4/4');
 
   vf.draw();
+});
 </script>
