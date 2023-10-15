@@ -22,38 +22,55 @@
 document.fonts.ready.then(() => {
   /* global Vex */
   Vex.Flow.setMusicFont('Bravura', 'Academico');
-  const { Factory } = Vex.Flow;
+  const { Factory, Dot } = Vex.Flow;
   const vf = new Factory({
     renderer: { elementId: 'output', width: 500, height: 200 },
   });
 
   const system = vf.System({ width: 400 });
 
+  function dotted(staveNote, noteIndex = -1) {
+    if (noteIndex < 0) {
+      Dot.buildAndAttach([staveNote], {
+        all: true,
+      });
+    } else {
+      Dot.buildAndAttach([staveNote], {
+        index: noteIndex,
+      });
+    }
+    return staveNote;
+  }
+
   const notes = [
-    // A quarter-note C.
-    vf.StaveNote({ keys: ['c/5'], duration: 'q' }),
+    dotted(vf.StaveNote({
+      keys: ['e##/5'],
+      duration: '8d',
+    }).addModifier(vf.Accidental({ type: '##' }))),
 
-    // A quarter-note D.
-    vf.StaveNote({ keys: ['d/4'], duration: 'q' }),
+    vf.StaveNote({
+      keys: ['eb/5'],
+      duration: '16',
+    }).addModifier(vf.Accidental({ type: 'b' })),
 
-    // A quarter-note rest. Note that the key (b/4) specifies the vertical
-    // position of the rest.
-    vf.StaveNote({ keys: ['b/4'], duration: 'qr' }),
+    dotted(vf.StaveNote({
+      keys: ['eb/4', 'd/5'],
+      duration: 'h',
+    }), 0 /* add dot to note at index==0 */),
 
-    // A C-Major chord.
-    vf.StaveNote({ keys: ['c/4', 'e/4', 'g/4'], duration: 'q' }),
-  ];
-
-  const notes2 = [
-    vf.StaveNote({ keys: ['c/4'], duration: 'w' }),
+    dotted(vf.StaveNote({
+      keys: ['c/5', 'eb/5', 'g#/5'],
+      duration: 'q',
+    })
+      .addModifier(vf.Accidental({ type: 'b' }), 1)
+      .addModifier(vf.Accidental({ type: '#' }), 2)),
   ];
 
   const voice = vf.Voice().addTickables(notes);
-  const voice2 = vf.Voice().addTickables(notes2);
 
   system
     .addStave({
-      voices: [voice, voice2],
+      voices: [voice],
     })
     .addClef('treble')
     .addTimeSignature('4/4');
