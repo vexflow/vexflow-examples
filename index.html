@@ -1,7 +1,7 @@
 <htnl>
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/devibeans.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/vs2015.min.css">
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
 </head>
 
@@ -15,7 +15,7 @@
     $(`<form action='https://jsfiddle.net/api/post/library/pure/' method='post'>
       <textarea hidden type='text' id='${file}_' name='html'></textarea><br>
       <input type='submit' value='Edit in JSFiddle'>`).appendTo('body');
-    $(`<pre style='background-color:black;color:white;'><code id=${file}></code></pre>`).appendTo('body');
+    $(`<pre style='background-color:#1e1e1e;color:#dcdcdc;'><code id=${file}></code></pre>`).appendTo('body');
   
     $.get(url, (content) => {
       $(`#${file}_`).val(content);
