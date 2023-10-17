@@ -12,7 +12,7 @@
   
     $(`<h2>${file}</h2>`).appendTo('body');
     $(`<iframe width=100% height=250  src='${url}' title='${file}'></iframe>`).appendTo('body');
-    $(`<form action='https://jsfiddle.net/api/post/library/pure/' method='post'>
+    $(`<form action='https://jsfiddle.net/api/post/library/pure/' method='post' target='_blank'>
       <textarea hidden type='text' id='${file}_' name='html'></textarea><br>
       <input type='submit' value='Edit in JSFiddle'>`).appendTo('body');
     $(`<pre style='background-color:#1e1e1e;color:#dcdcdc;'><code id=${file}></code></pre>`).appendTo('body');
