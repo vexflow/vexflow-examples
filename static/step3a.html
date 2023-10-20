@@ -1,80 +1,89 @@
-<!-- Load Bravura and Academico (see vexflow-fonts for available fonts) -->
-<style>
-  @font-face {
-    font-family: 'Bravura';
-    src: url(https://cdn.jsdelivr.net/npm/@vexflow-fonts/bravura/bravura.woff2) format(woff2);
-  }
-  @font-face {
-    font-family: 'Academico';
-    src: url(https://cdn.jsdelivr.net/npm/@vexflow-fonts/academico/academico.woff2) format(woff2);
-  }
-</style>
-<span style="font-family: Academico"></span>
-<span style="font-family: Bravura"></span>     
+<!doctype html>
+<html>
+  <head>
+    <!-- IMPORTANT: Set the character set to UTF-8. Otherwise you may get weird symbols on the score. -->
+    <meta charset="utf-8" />
+    <!-- Load Bravura and Academico (see vexflow-fonts for available fonts) -->
+    <style>
+      @font-face {
+        font-family: 'Bravura';
+        src: url(https://cdn.jsdelivr.net/npm/@vexflow-fonts/bravura/bravura.woff2) format(woff2);
+      }
+      @font-face {
+        font-family: 'Academico';
+        src: url(https://cdn.jsdelivr.net/npm/@vexflow-fonts/academico/academico.woff2) format(woff2);
+      }
+    </style>
+  </head>
+  <body>
+    <span style="font-family: Academico"></span>
+    <span style="font-family: Bravura"></span>     
 
-<!-- Div where the scores will be output -->
-<div id="output"></div>
+    <!-- Div where the scores will be output -->
+    <div id="output"></div>
 
-<!-- Load library -->
-<script src="https://cdn.jsdelivr.net/npm/vxflw-early-access@alpha/build/cjs/vexflow.js"></script>
+    <!-- Load library -->
+    <script src="https://cdn.jsdelivr.net/npm/vxflw-early-access@5.0.0-alpha.6/build/cjs/vexflow.js"></script>
 
-<script>
-document.fonts.ready.then(() => {
-  /* global Vex */
-  Vex.Flow.setMusicFont('Bravura', 'Academico');
-  const { Factory, Dot } = Vex.Flow;
-  const vf = new Factory({
-    renderer: { elementId: 'output', width: 500, height: 200 },
-  });
-
-  const system = vf.System({ width: 400 });
-
-  function dotted(staveNote, noteIndex = -1) {
-    if (noteIndex < 0) {
-      Dot.buildAndAttach([staveNote], {
-        all: true,
+    <script>
+    document.fonts.ready.then(() => {
+      /* global Vex */
+      Vex.Flow.setMusicFont('Bravura', 'Academico');
+      const { Factory, Dot } = Vex.Flow;
+      const vf = new Factory({
+        renderer: { elementId: 'output', width: 500, height: 200 },
       });
-    } else {
-      Dot.buildAndAttach([staveNote], {
-        index: noteIndex,
-      });
-    }
-    return staveNote;
-  }
 
-  const notes = [
-    dotted(vf.StaveNote({
-      keys: ['e##/5'],
-      duration: '8d',
-    }).addModifier(vf.Accidental({ type: '##' }))),
+      const system = vf.System({ width: 400 });
 
-    vf.StaveNote({
-      keys: ['eb/5'],
-      duration: '16',
-    }).addModifier(vf.Accidental({ type: 'b' })),
+      function dotted(staveNote, noteIndex = -1) {
+        if (noteIndex < 0) {
+          Dot.buildAndAttach([staveNote], {
+            all: true,
+          });
+        } else {
+          Dot.buildAndAttach([staveNote], {
+            index: noteIndex,
+          });
+        }
+        return staveNote;
+      }
 
-    dotted(vf.StaveNote({
-      keys: ['eb/4', 'd/5'],
-      duration: 'h',
-    }), 0 /* add dot to note at index==0 */),
+      const notes = [
+        dotted(vf.StaveNote({
+          keys: ['e##/5'],
+          duration: '8d',
+        }).addModifier(vf.Accidental({ type: '##' }))),
 
-    dotted(vf.StaveNote({
-      keys: ['c/5', 'eb/5', 'g#/5'],
-      duration: 'q',
-    })
-      .addModifier(vf.Accidental({ type: 'b' }), 1)
-      .addModifier(vf.Accidental({ type: '#' }), 2)),
-  ];
+        vf.StaveNote({
+          keys: ['eb/5'],
+          duration: '16',
+        }).addModifier(vf.Accidental({ type: 'b' })),
 
-  const voice = vf.Voice().addTickables(notes);
+        dotted(vf.StaveNote({
+          keys: ['eb/4', 'd/5'],
+          duration: 'h',
+        }), 0 /* add dot to note at index==0 */),
 
-  system
-    .addStave({
-      voices: [voice],
-    })
-    .addClef('treble')
-    .addTimeSignature('4/4');
+        dotted(vf.StaveNote({
+          keys: ['c/5', 'eb/5', 'g#/5'],
+          duration: 'q',
+        })
+          .addModifier(vf.Accidental({ type: 'b' }), 1)
+          .addModifier(vf.Accidental({ type: '#' }), 2)),
+      ];
 
-  vf.draw();
-});
-</script>
+      const voice = vf.Voice().addTickables(notes);
+
+      system
+        .addStave({
+          voices: [voice],
+        })
+        .addClef('treble')
+        .addTimeSignature('4/4');
+
+      vf.draw();
+    });
+    </script>
+  </body>
+</html>
