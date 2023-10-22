@@ -3,32 +3,19 @@
   <head>
     <!-- IMPORTANT: Set the character set to UTF-8. Otherwise you may get weird symbols on the score. -->
     <meta charset="utf-8" />
-    <!-- Load Bravura and Academico (see vexflow-fonts for available fonts) -->
-    <style>
-      @font-face {
-        font-family: 'Bravura';
-        src: url(https://cdn.jsdelivr.net/npm/@vexflow-fonts/bravura/bravura.woff2) format(woff2);
-      }
-      @font-face {
-        font-family: 'Academico';
-        src: url(https://cdn.jsdelivr.net/npm/@vexflow-fonts/academico/academico.woff2) format(woff2);
-      }
     </style>
   </head>
   <body>
-    <span style="font-family: Academico"></span>
-    <span style="font-family: Bravura"></span>     
-
     <!-- Div where the scores will be output -->
     <div id="output"></div>
 
     <!-- Load library -->
-    <script src="https://cdn.jsdelivr.net/npm/vxflw-early-access@5.0.0-alpha.6/build/cjs/vexflow.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vxflw-early-access@alpha/build/cjs/vexflow.js"></script>
 
     <script>
-    document.fonts.ready.then(() => {
-      /* global Vex */
-      Vex.Flow.setMusicFont('Bravura', 'Academico');
+    /* global Vex */
+    Vex.Flow.loadFonts('Bravura', 'Academico').then(() => {
+      Vex.Flow.setFonts('Bravura', 'Academico');
       const { Factory } = Vex.Flow;
       const vf = new Factory({
         renderer: { elementId: 'output', width: 500, height: 200 },
