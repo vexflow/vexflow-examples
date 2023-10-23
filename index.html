@@ -1,4 +1,4 @@
-<htnl>
+<html>
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/vs2015.min.css">
@@ -8,18 +8,18 @@
 <body style='background-color:#ccc;color:black;'>
 <script>
   function showHtml(file, start, end) {
-    const url = `https://vexflow.github.io/vexflow-examples/static/${file}.html`;
+    const fileHtml = `https://vexflow.github.io/vexflow-examples/static/${file}.html`;
   
     $(`<h2>${file}</h2>`).appendTo('body');
-    $(`<iframe width=100% height=250  src='${url}' title='${file}'></iframe>`).appendTo('body');
+    $(`<iframe width=100% height=250  src='${fileHtml}' title='${file}'></iframe>`).appendTo('body');
     $(`<form action='https://jsfiddle.net/api/post/library/pure/' method='post' target='_blank'>
-      <textarea hidden type='text' id='${file}_' name='html'></textarea><br>
+      <textarea hidden type='text' id='${file}_jsfiddle_html' name='html'></textarea><br>
       <input type='submit' value='Edit in JSFiddle'>`).appendTo('body');
-    $(`<pre style='background-color:#1e1e1e;color:#dcdcdc;'><code id=${file}></code></pre>`).appendTo('body');
+    $(`<pre style='background-color:#1e1e1e;color:#dcdcdc;'><code id='${file}_html'></code></pre>`).appendTo('body');
   
-    $.get(url, (content) => {
-      $(`#${file}_`).val(content);
-      $(`#${file}`).html(hljs.highlight(content.split('\n').slice(start, end).join('\n'), { language: 'html' }).value);
+    $.get(fileHtml, (content) => {
+      $(`#${file}_jsfiddle_html`).val(content);
+      $(`#${file}_html`).html(hljs.highlight(content.split('\n').slice(start, end).join('\n'), { language: 'html' }).value);
     });
   }
   showHtml('step0');
