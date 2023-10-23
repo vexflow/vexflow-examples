@@ -1,25 +1,39 @@
 <html>
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/vs2015.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github.min.css">
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/markdown-it@13.0.2/dist/markdown-it.min.js"></script>
 </head>
 
-<body style='background-color:#ccc;color:black;'>
+<body>
 <script>
   function showHtml(file, start, end) {
-    const fileHtml = `https://vexflow.github.io/vexflow-examples/static/${file}.html`;
+    const fileHtml = `static/${file}.html`;
+    const fileMd = `static/${file}.md`;
   
-    $(`<h2>${file}</h2>`).appendTo('body');
+    $(`<div id='${file}_md'></div>`).appendTo('body');
     $(`<iframe width=100% height=250  src='${fileHtml}' title='${file}'></iframe>`).appendTo('body');
     $(`<form action='https://jsfiddle.net/api/post/library/pure/' method='post' target='_blank'>
       <textarea hidden type='text' id='${file}_jsfiddle_html' name='html'></textarea><br>
       <input type='submit' value='Edit in JSFiddle'>`).appendTo('body');
-    $(`<pre style='background-color:#1e1e1e;color:#dcdcdc;'><code id='${file}_html'></code></pre>`).appendTo('body');
+    $(`<div id='${file}_html'></div>`).appendTo('body');
   
     $.get(fileHtml, (content) => {
       $(`#${file}_jsfiddle_html`).val(content);
-      $(`#${file}_html`).html(hljs.highlight(content.split('\n').slice(start, end).join('\n'), { language: 'html' }).value);
+      $(`#${file}_html`).html(window.markdownit().render(`\`\`\`html\n${content.split('\n').slice(start, end).join('\n')}\n\`\`\``));
+      $(`#${file}_html pre code`).each((index, element) => {
+        hljs.highlightElement(element);
+      });
+    });
+
+    $.get(fileMd).done((content) => {
+      $(`#${file}_md`).html(window.markdownit().render(content));
+      $(`#${file}_md pre code`).each((index, element) => {
+        hljs.highlightElement(element);
+      });
+    }).fail(() => {
+      $(`#${file}_md`).html(`<h2>${file}</h2>`);
     });
   }
   showHtml('step0');
