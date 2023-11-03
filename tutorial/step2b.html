@@ -9,13 +9,13 @@
     <div id="output"></div>
 
     <!-- Load library -->
-    <script src="https://cdn.jsdelivr.net/npm/vxflw-early-access@alpha/build/cjs/vexflow-core.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vxflw-early-access@5.0.0-alpha.11/build/cjs/vexflow-core.js"></script>
 
     <script>
-    /* global Vex */
-    Vex.Flow.loadFonts('Finale Ash', 'Finale Ash Text').then(() => {
-      Vex.Flow.setFonts('Finale Ash', 'Finale Ash Text');
-      const { Factory } = Vex.Flow;
+    /* global VexFlow */
+    VexFlow.loadFonts('Finale Ash', 'Finale Ash Text').then(() => {
+      VexFlow.setFonts('Finale Ash', 'Finale Ash Text');
+      const { Factory } = VexFlow;
       const vf = new Factory({
         renderer: { elementId: 'output', width: 500, height: 200 },
       });

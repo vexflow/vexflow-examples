@@ -61,7 +61,7 @@
       <div id="qunit"></div>
       <div id="qunit-fixture"></div>
       <div>
-        <h2>[ <a href="https://vexflow.com">Home</a> ] [ <a href="https://github.com/vexflow/vexflow">GitHub</a> ]</h2>
+        <h2>[ <a href="https://github.com/vexflow/vexflow">GitHub</a> ]</h2>
         <h3>
           See the: <a id="vex-src" target="_blank"></a>. Don't forget to run the
           <a href="https://github.com/0xfe/vexflow/wiki/Visual-Regression-Tests">Visual Regression Tests</a>!
@@ -69,8 +69,7 @@
       </div>
       <p>&nbsp;</p>
       <p>&nbsp;</p>
-      <p class="vf-footer">
-        [ <a href="https://vexflow.com">Home</a> ] [ <a href="https://github.com/vexflow/vexflow">GitHub</a> ]
+      <p class="vf-footer">[ <a href="https://github.com/vexflow/vexflow">GitHub</a> ]
       </p>
     </div>
     <div id="font-preload">
@@ -123,7 +122,7 @@
       let QUnitFilter = queryParams.get('filter') ?? hashParams.get('filter');
 
       // The `ver` query param chooses which VexFlow version to load. If omitted, `ver` defaults to 'build'.
-      const ver = queryParams.get('ver') ?? hashParams.get('ver') ?? 'builjsdelivr@alpha';
+      const ver = queryParams.get('ver') ?? hashParams.get('ver') ?? 'builjsdelivr@5.0.0-alpha.11';
       let useESM = queryParams.get('esm') === 'true' || hashParams.get('esm') === 'true';
       const isFileProtocol = location.protocol === 'file:';
 
@@ -143,11 +142,11 @@
       let vexPlusTestsURL;
       if (useCDN) {
         // `ver` can specify a version hosted on the unpkg.com / jsdelivr.com CDN. We only support VexFlow 4 or newer:
-        //   ver=unpkg@4.2.3     =>  https://unpkg.com/vexflow@4.2.3/build/cjs/vexflow-debug-with-tests.js
-        //   ver=unpkg@alpha     =>  https://unpkg.com/vexflow@alpha/build/cjs/vexflow-debug-with-tests.js
-        //   ver=jsdelivr@4.2.3  =>  https://cdn.jsdelivr.net/npm/vexflow@4.2.3/build/cjs/vexflow-debug-with-tests.js
+        //   ver=unpkg@4.2.3     =>  https://unpkg.com/vxflw-early-access@@4.2.3/build/cjs/vexflow-debug-with-tests.js
+        //   ver=unpkg@5.0.0-alpha.11     =>  https://unpkg.com/vxflw-early-access@@5.0.0-alpha.11/build/cjs/vexflow-debug-with-tests.js
+        //   ver=jsdelivr@4.2.3  =>  https://cdn.jsdelivr.net/npm/vxflw-early-access@@4.2.3/build/cjs/vexflow-debug-with-tests.js
         const versionNumber = ver.split('@')[1];
-        vexPlusTestsURL = `${cdnURLPath}vexflow@${versionNumber}/build/${pathCJSorESM}`;
+        vexPlusTestsURL = `${cdnURLPath}vxflw-early-access@${versionNumber}/build/${pathCJSorESM}`;
       } else {
         // We are NOT loading from a CDN. Instead, we are loading from the local filesystem.
         //   ver=build           =>  vexflow/build/
@@ -164,14 +163,14 @@
         console.log('LOADING ESM: ' + vexPlusTestsURL);
         loadVexFlow = async () => {
           const module = await import(vexPlusTestsURL);
-          window.Vex = module.Vex;
-          return Vex.Flow;
+          window.VexFlow = module.VexFlow;
+          return VexFlow;
         };
       } else {
         console.log('LOADING CJS: ' + vexPlusTestsURL);
         loadVexFlow = async () => {
           await loadScript(vexPlusTestsURL);
-          return Vex.Flow;
+          return VexFlow;
         };
       }
 
