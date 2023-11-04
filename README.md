@@ -1,2 +1,3 @@
 # vexflow-examples
-VexFlow examples.
+
+Take a look at [the VexFlow Examples](https://vexflow.github.io/vexflow-examples)
