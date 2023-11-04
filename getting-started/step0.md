@@ -20,12 +20,12 @@ The quickest way to add VexFlow to a web page is via a `<script>` tag.
     <div id="output"></div>
 
     <!-- Load library -->
-    <script src="https://cdn.jsdelivr.net/npm/vxflw-early-access@alpha/build/cjs/vexflow-core.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vxflw-early-access@5.0.0-alpha.11/build/cjs/vexflow-core.js"></script>
 
     <script>
-    /* global Vex */
-    Vex.Flow.loadFonts('Bravura', 'Academico').then(() => {
-      Vex.Flow.setFonts('Bravura', 'Academico');
+    /* global VexFlow */
+    VexFlow.loadFonts('Bravura', 'Academico').then(() => {
+      VexFlow.setFonts('Bravura', 'Academico');
       // YOUR CODE GOES HERE
     });
     </script>

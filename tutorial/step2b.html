@@ -9,13 +9,13 @@
     <div id="output"></div>
 
     <!-- Load library -->
-    <script src="https://cdn.jsdelivr.net/npm/vxflw-early-access@alpha/build/cjs/vexflow-core.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vxflw-early-access@5.0.0-alpha.11/build/cjs/vexflow-core.js"></script>
 
     <script>
-    /* global Vex */
-    Vex.Flow.loadFonts('Bravura', 'Academico').then(() => {
-      Vex.Flow.setFonts('Bravura', 'Academico');
-      const { Factory } = Vex.Flow;
+    /* global VexFlow */
+    VexFlow.loadFonts('Finale Ash', 'Finale Ash Text').then(() => {
+      VexFlow.setFonts('Finale Ash', 'Finale Ash Text');
+      const { Factory } = VexFlow;
       const vf = new Factory({
         renderer: { elementId: 'output', width: 500, height: 200 },
       });
@@ -24,7 +24,7 @@
 
       const notes = [
         // A quarter-note C.
-        vf.StaveNote({ keys: ['c/4'], duration: 'q' }),
+        vf.StaveNote({ keys: ['c/5'], duration: 'q' }),
 
         // A quarter-note D.
         vf.StaveNote({ keys: ['d/4'], duration: 'q' }),
@@ -37,11 +37,16 @@
         vf.StaveNote({ keys: ['c/4', 'e/4', 'g/4'], duration: 'q' }),
       ];
 
+      const notes2 = [
+        vf.StaveNote({ keys: ['c/4'], duration: 'w' }),
+      ];
+
       const voice = vf.Voice().addTickables(notes);
+      const voice2 = vf.Voice().addTickables(notes2);
 
       system
         .addStave({
-          voices: [voice],
+          voices: [voice, voice2],
         })
         .addClef('treble')
         .addTimeSignature('4/4');
