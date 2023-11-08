@@ -1,4 +1,2 @@
-# Examples
-
 ## Text Brackets
 

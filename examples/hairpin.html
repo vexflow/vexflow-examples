@@ -1,0 +1,83 @@
+<html>
+  <head>
+    <!-- IMPORTANT: Set the character set to UTF-8. Otherwise you may get weird symbols on the score. -->
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <!-- Div where the scores will be output -->
+    <div id="output"></div>
+
+    <!-- Load library -->
+    <script src="https://cdn.jsdelivr.net/npm/vxflw-early-access@5.0.0-alpha.11/build/cjs/vexflow-core.js"></script>
+
+    <script>
+    /* global VexFlow */
+    VexFlow.loadFonts('Bravura', 'Academico').then(() => {
+      VexFlow.setFonts('Bravura', 'Academico');
+      const { Factory, Dot, StaveHairpin } = VexFlow;
+      const vf = new Factory({
+        renderer: { elementId: 'output', width: 1000, height: 200 },
+      });
+
+      const system = vf.System({ width: 400 });
+      const system2 = vf.System({ x: 400, width: 350 });
+
+      const notes = [
+        vf.StaveNote({
+          keys: ['e/5'],
+          duration: 'q',
+        }),
+
+        vf.StaveNote({
+          keys: ['e/4', 'd/5'],
+          duration: 'h',
+        }),
+
+        vf.StaveNote({
+          keys: ['c/5', 'e/5', 'g/5'],
+          duration: 'q',
+        }),
+      ];
+
+      const notes2 = [
+        vf.StaveNote({
+          keys: ['e/5'],
+          duration: 'q',
+        }),
+
+        vf.StaveNote({
+          keys: ['e/4', 'd/5'],
+          duration: 'h',
+        }),
+
+        vf.StaveNote({
+          keys: ['c/5', 'e/5', 'g/5'],
+          duration: 'q',
+        }),
+      ];
+
+      const voice = vf.Voice().addTickables(notes);
+      const voice2 = vf.Voice().addTickables(notes2);
+
+      system
+        .addStave({
+          voices: [voice],
+        })
+        .addClef('treble')
+        .addTimeSignature('4/4');
+
+      system2
+        .addStave({
+          voices: [voice2],
+        });
+
+      vf.draw();
+
+      const hairpin = new StaveHairpin({ firstNote: notes[1], lastNote: notes2[1] }, 2);
+      hairpin.setContext(vf.getContext());
+      hairpin.setPosition(4);
+      hairpin.draw();
+    });
+    </script>
+  </body>
+</html>
