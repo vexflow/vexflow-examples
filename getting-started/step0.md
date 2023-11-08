@@ -22,12 +22,53 @@ The quickest way to add VexFlow to a web page is via a `<script>` tag.
     <!-- Load library -->
     <script src="https://cdn.jsdelivr.net/npm/vxflw-early-access@5.0.0-alpha.11/build/cjs/vexflow-core.js"></script>
 
+    <!-- Load Bravura and Academico (see vexflow-fonts for available fonts) -->
     <script>
     /* global VexFlow */
     VexFlow.loadFonts('Bravura', 'Academico').then(() => {
       VexFlow.setFonts('Bravura', 'Academico');
       // YOUR CODE GOES HERE
     });
+    </script>
+  </body>
+</html>
+```
+
+It is also possible to use face fonts 
+
+```html
+<!doctype html>
+<html>
+  <head>
+    <!-- IMPORTANT: Set the character set to UTF-8. Otherwise you may get weird symbols on the score. -->
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <!-- Load Bravura and Academico (see vexflow-fonts for available fonts) -->
+    <style>
+      @font-face {
+        font-family: 'Bravura';
+        src: url(https://cdn.jsdelivr.net/npm/@vexflow-fonts/bravura/bravura.woff2) format(woff2);
+      }
+      @font-face {
+        font-family: 'Academico';
+        src: url(https://cdn.jsdelivr.net/npm/@vexflow-fonts/academico/academico.woff2) format(woff2);
+      }
+    </style>
+    <span style="font-family: Academico"></span>
+    <span style="font-family: Bravura"></span>
+
+    <!-- Div where the scores will be output -->
+    <div id="output"></div>
+
+    <!-- Load library -->
+    <script src="https://cdn.jsdelivr.net/npm/vxflw-early-access@alpha/build/cjs/vexflow.js"></script>
+
+    <script>
+      document.fonts.ready.then(() => {
+        VexFlow.setFonts('Bravura', 'Academico');
+        // YOUR CODE GOES HERE
+      });
     </script>
   </body>
 </html>
