@@ -20,7 +20,7 @@ The quickest way to add VexFlow to a web page is via a `<script>` tag.
     <div id="output"></div>
 
     <!-- Load library -->
-    <script src="https://cdn.jsdelivr.net/npm/vxflw-early-access@5.0.0-alpha.11/build/cjs/vexflow-core.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vexflow@5.0.0-alpha.4/build/cjs/vexflow-core.js"></script>
 
     <!-- Load Bravura and Academico (see vexflow-fonts for available fonts) -->
     <script>
