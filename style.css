@@ -50,8 +50,8 @@ b { color: green }
 
 h1 {
   font-family: 'Tangerine', 'OFL Sorts Mill Goudy TT', Arial, sans-serif;
-  font-size: 84px;
-  text-shadow: 4px 4px 4px #aaa;
+  /* font-size: 84px; */
+  /* text-shadow: 4px 4px 4px #aaa; */
   margin: 0;
   text-align: center;
 }

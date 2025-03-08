@@ -3,15 +3,19 @@ function sanitizeId(id) {
   return id.replace(/\//g, '-');
 }
 
-function showHtml(file, start, end) {
+function showHtml(file, containerClass, start, end) {
   // Create a safe version of the file name for use in element IDs
   const safeId = sanitizeId(file);
 
   const fileHtml = `${file}.html`;
   const fileMd = `${file}.md`;
 
-    // Use .content as the target container
-    const $target = $('.content');
+  let $target;
+  if (containerClass == undefined){
+    $target = 'body'
+  } else {
+   $target = `.${containerClass}`
+  }
 
   // Use safeId for element IDs
   $(`<div id='${safeId}_md'></div>`).appendTo($target);
