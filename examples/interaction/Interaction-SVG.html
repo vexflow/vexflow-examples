@@ -1,0 +1,63 @@
+<html>
+  <head>
+    <!-- IMPORTANT: Set the character set to UTF-8. Otherwise you may get weird symbols on the score. -->
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <!-- Div where the scores will be output -->
+    <div id="output"></div>
+
+    <!-- Load library -->
+    <script src="https://cdn.jsdelivr.net/npm/vexflow@5.0.0-alpha.4/build/cjs/vexflow-core.js"></script>
+
+    <script>
+    /* global VexFlow */
+    VexFlow.loadFonts('Bravura', 'Academico').then(() => {
+      VexFlow.setFonts('Bravura', 'Academico');
+      const { Factory, StaveHairpin } = VexFlow;
+      const vf = new Factory({
+        renderer: { elementId: 'output', width: 250, height: 150 },
+      });
+      const score = vf.EasyScore();
+
+      let notes = score.notes('C4/q, F#4, B5, Bb4')
+      let voice = score.voice(notes)
+      const system = vf.System();
+      let stave = system.addStave({voices: [voice]}).addClef('treble').addTimeSignature('4/4')
+
+      vf.draw()
+
+        for (let note of notes){
+          const svg = note.getSVGElement();
+          if (svg){
+            // listen to whatever event you want here
+            svg.addEventListener('click', (ev) => {
+              toggleDescendantColors(svg)
+            }, false)
+
+          }
+        }
+
+      // parentItem: SVGElement
+      const toggleDescendantColors = (parentItem) => {
+        const isSelected = parentItem.classList.contains('selected');
+        // Choose the color based on whether it’s selected or not.
+        const newColor = isSelected ? 'black' : 'red';
+        
+        // Toggle the colors on all child elements.
+        parentItem.querySelectorAll('*').forEach((child) => {
+          child.setAttribute('fill', newColor);
+          child.setAttribute('stroke', newColor);
+        });
+        
+        // Update the selection state on the parent element.
+        if (isSelected) {
+          parentItem.classList.remove('selected');
+        } else {
+          parentItem.classList.add('selected');
+        }
+      };
+    });
+    </script>
+  </body>
+</html>
