@@ -49,5 +49,5 @@ function showHtml(file, containerClass, start, end) {
 }
 
 function showNavigation(containerClass){
-    $(`.${containerClass}`).load('/nav.html');
+    $(`.${containerClass}`).load('/partials/nav.html');
 }
