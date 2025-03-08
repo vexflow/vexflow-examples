@@ -7,17 +7,19 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github.min.css">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/markdown-it@13.0.2/dist/markdown-it.min.js"></script>
-    <script src="/showHtml.js"></script>
+    <script src="/main.js"></script>
     <title>Vexflow Interaction Examples</title>
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
+  <div class="nav-container"></div>
     <div class="container">
-        <div class="content">
-        <script>
-        showHtml('interaction-SVG', 'content')
-        showHtml('interaction-canvas', 'content')
-        </script>    
-        </div>
+        <div class="content"></div>
+    </div> 
+  <script>
+    showHtml('interaction-SVG', 'content')
+    showHtml('interaction-canvas', 'content')
+    showNavigation('nav-container')
+  </script>    
 </body>
 </html>

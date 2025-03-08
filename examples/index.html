@@ -1,11 +1,16 @@
 <html>
 <head>
   <link rel="stylesheet" href="/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="/main.js"></script>
 </head>
 <body>
+  <div class="nav-container"></div>
   <div class="container">
-    <div class="content">
+    <div class="header">
       <h1>Examples</h1>
+    </div>
+    <div class="content">
       <ul>
         <li><a href="hairpin/index.html">Hairpin</a></li>
         <li><a href="textbracket/index.html">Text Bracket</a></li>
@@ -13,5 +18,8 @@
       </ul>
     </div>
 </div>
+<script>
+  showNavigation('nav-container')
+</script>
 </body>
 </html>

@@ -8,16 +8,19 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github.min.css">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/markdown-it@13.0.2/dist/markdown-it.min.js"></script>
-    <script src="/showHtml.js"></script>
+    <script src="/main.js"></script>
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
+    <div class="nav-container"></div>
     <div class="container">
         <div class="content">
-        <script>
-            showHtml('hairpin', 'content')
-        </script>    
         </div>
     </div>
+    <script>
+        showHtml('hairpin', 'content')
+        showNavigation('nav-container')
+    </script>    
+
 </body>
 </html>

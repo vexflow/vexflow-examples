@@ -47,3 +47,7 @@ function showHtml(file, containerClass, start, end) {
       $(`#${safeId}_md`).html(`<h2>${file}</h2>`);
     });
 }
+
+function showNavigation(containerClass){
+    $(`.${containerClass}`).load('/nav.html');
+}

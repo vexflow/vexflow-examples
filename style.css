@@ -35,28 +35,23 @@ iframe{
   border-radius: 16px;
 }
 
-#vf {
-  display: inline-block;
-  width: 100%;
-}
-
 a {
   color: green;
   text-decoration: none;
   border-bottom: solid 2px green;
 }
 
-b { color: green }
+a:hover {
+  border-bottom: solid 3px green;
+}
 
 h1 {
   font-family: 'Tangerine', 'OFL Sorts Mill Goudy TT', Arial, sans-serif;
-  /* font-size: 84px; */
-  /* text-shadow: 4px 4px 4px #aaa; */
   margin: 0;
   text-align: center;
 }
 
-div.vex {
+div.nav {
   color: #ccc;
   position: fixed;
   font-family: 'Barlow', courier;
@@ -64,26 +59,18 @@ div.vex {
   right: 0px;
   background: #eee;
   padding: 5px 5px 8px 10px;
-  border-bottom: solid 3px #ccc;
-  border-left: solid 3px #ccc;
+  border-bottom: solid 2px #ccc;
+  border-left: solid 2px #ccc;
   border-bottom-left-radius: 0.4rem;
 }
 
-div.vex a { color: green; text-decoration: none; border: none; }
-div.vex a:hover { border-bottom: 5px solid #ccc; }
+div.nav a { color: green; text-decoration: none; border: none; }
+div.nav a:hover { border-bottom: 5px solid #ccc; }
 
 code {
   font-size: 0.85em;
 }
 
-
 .reveal pre code, .hljs {
-  background-color: rgb(250,250,250) !important; 
-  padding: 5px;
-  overflow: auto;
-  word-wrap: normal;
-  
-}
-.reveal pre, .hljs {
-  box-shadow: none !important;
+  background-color: rgb(250,250,250);   
 }
