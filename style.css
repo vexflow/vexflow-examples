@@ -8,31 +8,16 @@ body {
   margin: 0;
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  margin: 0px;
-  padding: 0px;
-  padding-bottom: 1rem;
-}
-
-.header {
-  padding: 10px;
-  text-align: center;
-}
-
-.content {
-  width: 90%;
-  max-width: 900px;
-  margin: auto;
-}
-
-
 iframe{
   border-radius: 16px;
+}
+
+code {
+  font-size: 0.85em;
+}
+
+.reveal pre code, .hljs {
+  background-color: rgb(250,250,250);   
 }
 
 a {
@@ -67,10 +52,24 @@ div.nav {
 div.nav a { color: green; text-decoration: none; border: none; }
 div.nav a:hover { border-bottom: 5px solid #ccc; }
 
-code {
-  font-size: 0.85em;
+div.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  padding-bottom: 1rem;
 }
 
-.reveal pre code, .hljs {
-  background-color: rgb(250,250,250);   
+div.header {
+  padding: 10px;
+  text-align: center;
+}
+
+div.content {
+  width: 90%;
+  max-width: 900px;
+  margin: auto;
 }
