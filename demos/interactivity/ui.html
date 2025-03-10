@@ -2,7 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>UI</title>
+    <title>Hover Events</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
     <style>
       /* Bravura */
       @font-face {
@@ -12,7 +15,7 @@
         font-weight: 400;
         src:
           local('Bravura'),
-          url(../node_modules/@vexflow-fonts/bravura/bravura.woff2) format('woff2');
+          url(https://cdn.jsdelivr.net/npm/node_modules/@vexflow-fonts/bravura/bravura.woff2) format('woff2');
       }
 
       /* Bravura Text */
@@ -23,7 +26,7 @@
         font-weight: 400;
         src:
           local('Bravura Text'),
-          url(../node_modules/@vexflow-fonts/bravuratext/bravuratext.woff2) format('woff2');
+          url(https://cdn.jsdelivr.net/npm/node_modules/@vexflow-fonts/bravuratext/bravuratext.woff2) format('woff2');
       }
 
       svg {
@@ -39,14 +42,18 @@
     </style>
   </head>
   <body>
+    <nav class="nav-container"></nav>
     <span style="font-family: Bravura"></span>
     <span style="font-family: Bravura Text"></span>
+    <h1>Hover Events</h1>
     <svg>
       <circle id="c" cx="100" cy="100" r="40" stroke="green" stroke-width="4" fill="yellow" />
       <text id="t" x="30" y="200" fill="black" stroke="cyan">
         &#xE560; &#xE1D7; &#xE050; &#xE062; &#xE080; &#xE081; &#xE082; &#xE083;
       </text>
     </svg>
+    <p style="text-align: center;">Look at page source for code.</p>
+
     <script type="module">
       const fontFaceSet = await document.fonts.ready;
       console.log(fontFaceSet);
@@ -56,6 +63,9 @@
         const gray = Math.random() * 255;
         text.setAttribute('fill', `rgb(${gray}, ${gray}, ${gray})`);
       });
+    </script>
+    <script>
+      showNavigation('nav-container')
     </script>
   </body>
 </html>
