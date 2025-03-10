@@ -11,6 +11,8 @@
       Call `VexFlow.setFonts(...)` before rendering your score.
     -->
   <link rel="stylesheet" href="/css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="/js/main.js"></script>
   <style>
     .centered{
       text-align: center;
@@ -18,6 +20,7 @@
   </style>
   </head>
   <body>
+    <nav class="nav-container"></nav>
     <div class="container">
       <div class="content centered">
         <h1>Five Staves</h1>
@@ -90,5 +93,9 @@
       VF.setFonts('Sebastian, Nepomuk');
       drawScoreInDiv('outputSebastian');
     </script>
+    <script>
+      showNavigation('nav-container')
+    </script>
+    
   </body>
 </html>

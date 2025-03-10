@@ -11,6 +11,8 @@
       Open the developer console to verify that ONLY vexflow-core.js is loaded when this page is first displayed.
     -->
       <link rel="stylesheet" href="/css/style.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      <script src="/js/main.js"></script>  
       <style>
         #output {
           min-height: 220px;
@@ -22,6 +24,7 @@
   
   </head>
   <body>
+    <nav class="nav-container"></nav>
     <div class="container">
       <div class="content">
         <h1>Async Await</h1>
@@ -78,6 +81,9 @@
         factory.draw();
       }
       window.chooseFont = chooseFont;
+    </script>
+    <script>
+      showNavigation('nav-container')
     </script>
   </body>
 </html>

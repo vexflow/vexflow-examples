@@ -4,7 +4,7 @@
 // Web Workers have an importScripts() method that allows you to load scripts. importScripts(...) is similar to require(...) in Node.js.
 
 const libName = 'vexflow-core.js'; // vexflow-core.js is the slim build with zero bundled fonts.
-importScripts('../../build/cjs/' + libName);
+importScripts('https://cdn.jsdelivr.net/npm/vexflow@5.0.0/build/cjs/' + libName);
 const color = '#74AB00';
 
 onmessage = function (e) {
@@ -41,5 +41,5 @@ onmessage = function (e) {
   }
 
   // We need to make sure the SMuFL fonts are loaded before VexFlow does any drawing.
-  Vex.Flow.loadFonts('Bravura', 'Petaluma', 'Gonville', 'Leland').then(draw);
+  VexFlow.loadFonts('Bravura', 'Petaluma', 'Gonville', 'Leland').then(draw);
 };

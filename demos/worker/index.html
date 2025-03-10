@@ -8,15 +8,10 @@
         Start a web server with `npx http-server -p 8080` from the `vexflow/` folder
         Navigate to http://127.0.0.1:8080/demos/worker/
     -->
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="/js/main.js"></script>  
     <style>
-      html {
-        font: 16px sans-serif;
-      }
-
-      body {
-        margin: 20px;
-      }
-
       canvas {
         width: 500px;
         height: 200px;
@@ -27,14 +22,21 @@
     </style>
   </head>
   <body>
-    <p>
-      The five scores below are rendered by web workers via
-      <a href="https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas" target="_blank">OffscreenCanvas</a
-      >.<br />
-      To see this page, you need to run a webserver from the <b>vexflow/</b> directory.<br />For example,
-      <b><code>npx http-server</code></b
-      >, then open <a href="http://127.0.0.1:8080/demos/worker/">http://127.0.0.1:8080/demos/worker/</a>
-    </p>
+    <nav class="nav-container"></nav>
+    <div class="container">
+      <div class="content">
+        <h1>Worker</h1>
+        <p>
+          The five scores below are rendered by web workers via
+          <a href="https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas" target="_blank">OffscreenCanvas</a
+          >.
+          To see this page, you need to run a webserver. For example,
+          <b><code>npx http-server</code></b
+          >, then open <a href="http://127.0.0.1:8080/demos/worker/">http://127.0.0.1:8080/demos/worker/</a> (or just run in browser).
+        </p>
+        <p>see the source .js <a href="worker-vexflow-core.js">here</a> and examine this page's source to see how it is used.</p>
+      </div>
+    </div>
     <script type="module">
       if (window.Worker) {
         const numScores = 5;
@@ -42,9 +44,10 @@
         const workers = [];
         const offscreenCanvases = [];
         for (let i = 0; i < numScores; i++) {
-          document.body.insertAdjacentHTML(
+          let container = document.getElementsByClassName('content')[0];
+          container.insertAdjacentHTML(
             'beforeend',
-            `<canvas id="outputCanvas${i}" width="1000" height="400"></canvas>`
+            `<canvas id="outputCanvas${i}" width="1000" height="400" style="display: block; margin: 0 auto; margin-top: 10px;""></canvas>`
           );
 
           const workerJS = 'worker-vexflow-core.js';
@@ -64,6 +67,9 @@
       } else {
         alert("This browser doesn't support web workers.");
       }
+    </script>
+    <script>
+      showNavigation('nav-container')
     </script>
   </body>
 </html>

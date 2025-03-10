@@ -6,6 +6,8 @@
       Summary: Sample of the text fonts available in VexFlow. This page doesn't use any VexFlow features.
       Run: Open this html file in your web browser.
     -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
     <style>
       html {
         font-family: sans-serif;
@@ -33,6 +35,24 @@
         height: 30px;
       }
     </style>
+    <style>
+      div.nav {
+        color: #ccc;
+        position: fixed;
+        font-family: 'Barlow', courier;
+        top: 0px;
+        right: 0px;
+        background: #eee;
+        padding: 5px 5px 8px 10px;
+        border-bottom: solid 2px #ccc;
+        border-left: solid 2px #ccc;
+        border-bottom-left-radius: 0.4rem;
+        font-size: 16px;
+        }
+
+      div.nav a { color: green; text-decoration: none; border: none; }
+      div.nav a:hover { border-bottom: 5px solid #ccc; }
+    </style>
     <!-- 
       In your browser's dev tools / network tab, you'll see that these index.css files are loaded immediately. 
       However, the actual font files (*.woff2) are not loaded until the button is clicked.
@@ -49,6 +69,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@vexflow-fonts/robotoslab/index.css" />
   </head>
   <body>
+    <nav class="nav-container"></nav>
     <button id="show-next-font" onclick="showNextFont()">SHOW NEXT FONT</button>
     <div class="space"></div>
     <div class="text">
@@ -94,6 +115,9 @@
       document.addEventListener('DOMContentLoaded', () => {
         updateButtonLabel();
       });
+    </script>
+    <script>
+      showNavigation('nav-container')
     </script>
   </body>
 </html>
