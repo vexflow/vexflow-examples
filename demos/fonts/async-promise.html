@@ -6,29 +6,27 @@
     Summary: Instead of async/await, you can use Promise .then() to make sure fonts are loaded before proceeding.
     Run: start a web server and load this page.
     -->
-    <style>
-      html {
-        font: 16px sans-serif;
-      }
-      body {
-        margin: 20px;
-      }
-    </style>
+    <link rel="stylesheet" href="/css/style.css">
   </head>
   <body>
-    <p>
-      To see the demo, start a web server and load this page (e.g., `npx http-server` and navigate to
-      <a href="http://127.0.0.1:8080/demos/async-promise.html">http://127.0.0.1:8080/demos/async-promise.html</a>).
-    </p>
-    <p>
-      Using <b>vexflow-core.js</b> allows your webpage to load a smaller initial bundle. It will load fonts on demand
-      when you call <code>VexFlow.loadFonts(...fontNames)</code>. This method is asynchronous and returns a Promise.
-    </p>
-    <p>Open your browser's developer tools to see that font files are downloaded upon request:</p>
-    <p>View the page's source.</p>
-    <div id="output"></div>
+    <div class="container">
+      <div class="content">
+        <h1>Async Promise</h1>
+        <p>
+          To see the demo, start a web server and load this page (e.g., `npx http-server` and navigate to
+          <a href="http://127.0.0.1:8080/demos/async-promise.html">http://127.0.0.1:8080/demos/async-promise.html</a>).
+        </p>
+        <p>
+          Using <b>vexflow-core.js</b> allows your webpage to load a smaller initial bundle. It will load fonts on demand
+          when you call <code>VexFlow.loadFonts(...fontNames)</code>. This method is asynchronous and returns a Promise.
+        </p>
+        <p>Open your browser's developer tools to see that font files are downloaded upon request:</p>
+        <div id="output"></div>  
+        <p>View this page's source code for more information.</p>      
+      </div>
+    </div>
     <!-- vexflow-core.js includes no music fonts. -->
-    <script src="../../build/cjs/vexflow-core.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vexflow@5.0.0/build/cjs/vexflow-core.js"></script>
     <script>
       // You can skip some fonts if you will not be using them.
       // See your browser's developer tools > network tab to see which fonts are loaded.
