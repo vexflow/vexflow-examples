@@ -34,27 +34,27 @@ function showHtml(file, containerClass, start, end) {
     ));
     $(`#${safeId}_html pre code`).each((index, element) => {
       hljs.highlightElement(element);
-      
+
       // Create the copy button and style it to be at the top right.
-      const $copyBtn = $('<button>Copy</button>');
+    const $copyBtn = $('<button>Copy</button>');
       $copyBtn.css({
         position: 'absolute',
         top: '5px',
         right: '5px',
         zIndex: 10
       });
-      
-      $copyBtn.on('click', () => {
-        const codeText = $(element).text();
-        navigator.clipboard.writeText(codeText)
-          .then(() => {
-            $copyBtn.text('Copied!');
-            setTimeout(() => {
-              $copyBtn.text('Copy');
-            }, 2000);
-          });
-      });
-      
+  
+    $copyBtn.on('click', () => {
+      const codeText = $(element).text();
+      navigator.clipboard.writeText(codeText)
+        .then(() => {
+          $copyBtn.text('Copied!');
+          setTimeout(() => {
+            $copyBtn.text('Copy');
+          }, 2000);
+        });
+    });
+  
       // Append the button to the container div
       const $pre = $(element).parent();
       $pre.parent().append($copyBtn);

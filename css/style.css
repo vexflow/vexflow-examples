@@ -14,10 +14,12 @@ iframe{
 
 code {
   font-size: 0.85em;
+  color: rgb(14, 98, 182);
 }
 
-.reveal pre code, .hljs {
-  background-color: rgb(250,250,250);   
+pre code,
+pre code.hljs {
+  background-color: rgb(250,250,250);
 }
 
 a {
