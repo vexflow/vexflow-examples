@@ -3,21 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <!-- 
-      This page uses `vexflow-bravura.js`, which statically bundles the Bravura and Academico fonts.
-      You do not need to call `VexFlow.setFonts(...)`.
+    This page uses `vexflow-bravura.js`, which statically bundles the Bravura and Academico fonts.
+    You do not need to call `VexFlow.setFonts(...)`.
     -->
-    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="/js/main.js"></script>
-
+    <title>Bravura Score</title>
+    <link rel="stylesheet" href="/css/style.css">
     <style>
       body {
         font-family: 'Academico', monospace, 'Georgia', serif !important; 
       }
     </style>
-    <link rel="stylesheet" href="/css/style.css">
+    <!-- Load Library -->
     <script src="https://cdn.jsdelivr.net/npm/vexflow@5.0.0/build/cjs/vexflow-bravura.js"></script>
+    <!-- Navigation -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
   </head>
   <body>
     <nav class="nav-container"></nav>
@@ -29,7 +29,6 @@
           <b>Academico</b> fonts. You do not need to call <b>VexFlow.setFonts(...)</b> because VexFlow will use 'Bravura,
           Academico' by default.
         </p>
-        <pre><code class="language-javascript" id="code"></code></pre>
         <div id="output"></div>    
         <p>View this page's source code for more information.</p>    
       </div>

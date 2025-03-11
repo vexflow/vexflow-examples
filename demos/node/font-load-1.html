@@ -12,12 +12,13 @@ Summary:
 <html>
   <head>
     <meta charset="UTF-8" />
-    <link rel="preload" href="../../node_modules/@vexflow-fonts/academico/academico.woff2" as="font" crossorigin />
-    <link rel="preload" href="../../node_modules/@vexflow-fonts/bravura/bravura.otf" as="font" crossorigin />
-    <link rel="preload" href="../../node_modules/@vexflow-fonts/petaluma/petaluma.woff2" as="font" crossorigin />
+    <title>Font Load 1</title>
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/@vexflow-fonts/academico/academico.woff2" as="font" crossorigin />
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/@vexflow-fonts/bravura/bravura.otf" as="font" crossorigin />
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/@vexflow-fonts/petaluma/petaluma.woff2" as="font" crossorigin />
     <link
       rel="preload"
-      href="../../node_modules/@vexflow-fonts/petalumascript/petalumascript.otf"
+      href="https://cdn.jsdelivr.net/npm/node_modules/@vexflow-fonts/petalumascript/petalumascript.otf"
       as="font"
       crossorigin
     />
@@ -34,7 +35,7 @@ Summary:
         font-family: 'Academico';
         font-style: normal;
         font-display: swap;
-        src: url(../../node_modules/@vexflow-fonts/academico/academico.woff2) format('woff2');
+        src: url(https://cdn.jsdelivr.net/npm/@vexflow-fonts/academico/academico.woff2) format('woff2');
       }
 
       @font-face {
@@ -42,7 +43,7 @@ Summary:
         font-style: normal;
         font-display: block;
         font-weight: 400;
-        src: url(../../node_modules/@vexflow-fonts/bravura/bravura.otf) format('woff2');
+        src: url(https://cdn.jsdelivr.net/npm/@vexflow-fonts/bravura/bravura.otf) format('woff2');
       }
 
       @font-face {
@@ -50,7 +51,7 @@ Summary:
         font-style: normal;
         font-display: block;
         font-weight: 400;
-        src: url(../../node_modules/@vexflow-fonts/petaluma/petaluma.woff2) format('woff2');
+        src: url(https://cdn.jsdelivr.net/npm/@vexflow-fonts/petaluma/petaluma.woff2) format('woff2');
       }
 
       @font-face {
@@ -58,7 +59,7 @@ Summary:
         font-style: normal;
         font-display: swap;
         font-weight: 400;
-        src: url(../../node_modules/@vexflow-fonts/petalumascript/petalumascript.otf) format('woff2');
+        src: url(https://cdn.jsdelivr.net/npm/@vexflow-fonts/petalumascript/petalumascript.otf) format('woff2');
       }
 
       img,
@@ -80,8 +81,12 @@ Summary:
         box-sizing: border-box;
       }
     </style>
+    <!-- Navigation -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="/js/main.js"></script>    
   </head>
   <body>
+    <nav class="nav-container"></nav>
     <p>CANVAS</p>
     <canvas width="1200" height="800"></canvas>
     <p>CANVAS → IMG</p>
@@ -117,6 +122,9 @@ Summary:
       // render the canvas's contents to an IMG tag.
       const img = document.querySelector('img');
       img.src = canvas.toDataURL();
+    </script>
+    <script>
+      showNavigation('nav-container')
     </script>
   </body>
 </html>
