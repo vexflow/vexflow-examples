@@ -125,9 +125,3 @@ function copyCode(index) {
 function runCode(index) {
   eval('"use strict";' + codeArray[index]);
 }
-
-if (window.location.hostname.endsWith("github.io")) {
-  const base = document.createElement("base");
-  base.href = "/vexflow-examples/";
-  document.head.appendChild(base);
-}
