@@ -104,10 +104,6 @@ function showHtml(file, containerClass, start, end) {
     });
 }
 
-function showNavigation(containerClass){
-    $(`.${containerClass}`).load('/partials/nav.html');
-}
-
 // used in entry demos:
 let codeArray;
 function showCode(...c) {
