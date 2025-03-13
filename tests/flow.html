@@ -122,7 +122,7 @@
       let QUnitFilter = queryParams.get('filter') ?? hashParams.get('filter');
 
       // The `ver` query param chooses which VexFlow version to load. If omitted, `ver` defaults to 'build'.
-      const ver = queryParams.get('ver') ?? hashParams.get('ver') ?? 'build';
+      const ver = queryParams.get('ver') ?? hashParams.get('ver') ?? 'jsdelivr@latest';
       let useESM = queryParams.get('esm') === 'true' || hashParams.get('esm') === 'true';
       const isFileProtocol = location.protocol === 'file:';
 
