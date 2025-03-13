@@ -38,7 +38,7 @@ h1 {
   text-align: center;
 }
 
-div.nav {
+nav {
   color: #ccc;
   position: fixed;
   font-family: 'Barlow', courier;
@@ -51,8 +51,8 @@ div.nav {
   border-bottom-left-radius: 0.4rem;
 }
 
-div.nav a { color: green; text-decoration: none; border: none; }
-div.nav a:hover { border-bottom: 5px solid #ccc; }
+nav a { color: green; text-decoration: none; border: none; }
+nav a:hover { border-bottom: 5px solid #ccc; }
 
 div.container {
   display: flex;
