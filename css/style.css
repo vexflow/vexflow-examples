@@ -49,6 +49,7 @@ nav {
   border-bottom: solid 2px #ccc;
   border-left: solid 2px #ccc;
   border-bottom-left-radius: 0.4rem;
+  z-index: 20;
 }
 
 nav a { color: green; text-decoration: none; border: none; }
