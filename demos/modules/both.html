@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Module and Script</title>
+    <link rel="stylesheet" href="../../css/style.css"/>
+  </head>
+  <body>
+    <nav>
+      <a href="../../index.html">HOME</a>
+      <span class="separator">|</span>
+      <a href="../index.html">DEMOS</a>
+      <span class="separator">|</span>
+      <a target="_blank" href="https://github.com/vexflow/vexflow">GITHUB</a>
+      <span class="separator">|</span>
+    </nav>
+    <div class="container">
+      <div class="content">
+        <h1>Both Module and Script</h1>
+        <p>Take a look at the source code. Output is logged to the developer console.</p>
+      </div>
+    </div>
+    <!-- ES Module -->
+    <script type="module">
+      // import { VexFlow, StaveNote } from 'https://cdn.jsdelivr.net/npm/vexflow@5.0.0/build/esm/entry/vexflow.js';
+      import { VexFlow, StaveNote } from 'https://cdn.jsdelivr.net/npm/vexflow@5.0.0/build/esm/entry/vexflow-debug.js';
+      // import { VexFlow, StaveNote, ArticulationTests } from 'https://cdn.jsdelivr.net/npm/vexflow@5.0.0/build/esm/entry/vexflow-debug-with-tests.js';
+      // import { VexFlow, StaveNote } from 'https://cdn.jsdelivr.net/npm/vexflow@5.0.0/build/esm/entry/vexflow-bravura.js';
+      // import { VexFlow, StaveNote } from 'https://cdn.jsdelivr.net/npm/vexflow@5.0.0/build/esm/entry/vexflow-gonville.js';
+      // import { VexFlow, StaveNote } from 'https://cdn.jsdelivr.net/npm/vexflow@5.0.0/build/esm/entry/vexflow-petaluma.js';
+      // import { VexFlow, StaveNote } from 'https://cdn.jsdelivr.net/npm/vexflow@5.0.0/build/esm/entry/vexflow-core.js';
+      console.log('ESM');
+      console.log(VexFlow);
+      console.log(StaveNote);
+    </script>
+
+    <!-- CJS: The script tags below assign their default export to window.VexFlow. -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vexflow@5.0.0/build/cjs/vexflow.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/vexflow@5.0.0/build/cjs/vexflow-debug.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vexflow@5.0.0/build/cjs/vexflow-debug-with-tests.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vexflow@5.0.0/build/cjs/vexflow-bravura.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vexflow@5.0.0/build/cjs/vexflow-core.js"></script> -->
+    <script>
+      console.log('CJS');
+      const { StaveNote } = VexFlow;
+      console.log(VexFlow);
+      console.log(StaveNote);
+    </script>
+  </body>
+</html>

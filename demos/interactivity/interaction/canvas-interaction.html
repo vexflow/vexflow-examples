@@ -1,0 +1,78 @@
+<html>
+  <head>
+    <!-- IMPORTANT: Set the character set to UTF-8. Otherwise you may get weird symbols on the score. -->
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <!-- Canvas where the scores will be output -->
+    <canvas id="output"></div>
+
+    <!-- Load library -->
+    <script src="https://cdn.jsdelivr.net/npm/vexflow@5.0.0/build/cjs/vexflow-core.js"></script>
+
+    <script>
+        /* global VexFlow */
+        VexFlow.loadFonts('Bravura', 'Academico').then(() => {
+          VexFlow.setFonts('Bravura', 'Academico');
+          const { Factory, StaveHairpin } = VexFlow;
+          const vf = new Factory({
+            renderer: { elementId: 'output', width: 250, height: 150 },
+          });
+          const score = vf.EasyScore();
+    
+          let notes = score.notes('C4/q, F#4, B5, Bb4')
+          let voice = score.voice(notes)
+          const system = vf.System();
+          let stave = system.addStave({voices: [voice]}).addClef('treble').addTimeSignature('4/4')
+    
+          vf.draw()
+
+          let canvas = document.getElementById('output')
+    
+          canvas?.addEventListener('click', (ev) => {
+            let adjustedPosition = adjustCoordinates(ev, canvas)
+
+            for (const note of notes) {
+            if (isInBounding(adjustedPosition, note.getBoundingBox())) {
+                toggleNoteColor(note);
+                break; // stop after the first matching note
+                }
+            }
+            });
+    
+          // note: StemmableNote
+          function toggleNoteColor(note){
+            if (note.hasClass('selected')) {
+                note.setStyle({ fillStyle: 'black', strokeStyle: 'black' });
+                note.drawWithStyle();
+                note.removeClass('selected')
+                return
+            } 
+            note.setStyle({ fillStyle: 'red', strokeStyle: 'red' });
+            note.drawWithStyle();
+            note.addClass('selected')
+            }
+            // helper to see if click event is in a given bounding box
+            // pos: MousePosition, box: BoundingBox
+            function isInBounding(pos, box) {
+                const startingX = box.getX();
+                const startingY = box.getY();
+                const endX = startingX + box.getW();
+                const endY = startingY + box.getH();
+
+                const isWithinX = pos.x >= startingX && pos.x <= endX;
+                const isWithinY = pos.y >= startingY && pos.y <= endY;
+
+                return isWithinX && isWithinY;
+            }
+
+            // helper to adjust coordinates from client space to canvas space
+            // ev: mouse event, element: HTMLElement
+            function adjustCoordinates(ev, element) {
+                const rect = element.getBoundingClientRect();
+                return { x: ev.clientX - rect.left, y: ev.clientY - rect.top };
+            }
+        });
+        </script>
+  </body>
+</html>
