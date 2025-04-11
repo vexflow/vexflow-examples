@@ -15,13 +15,12 @@
     /* global VexFlow */
     VexFlow.loadFonts('Bravura', 'Academico').then(() => {
       VexFlow.setFonts('Bravura', 'Academico');
-      const { Factory } = VexFlow;
-      const vf = new Factory({
+      const factory = new VexFlow.Factory({
         renderer: { elementId: 'output', width: 500, height: 200 },
       });
 
-      const score = vf.EasyScore();
-      const system = vf.System();
+      const score = factory.EasyScore();
+      const system = factory.System();
 
       system
         .addStave({
@@ -33,7 +32,7 @@
         .addClef('treble')
         .addTimeSignature('4/4');
 
-      vf.draw();
+      factory.draw();
     });
     </script>
   </body>

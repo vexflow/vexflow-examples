@@ -15,49 +15,49 @@
     VexFlow.loadFonts('Bravura', 'Academico').then(() => {
       VexFlow.setFonts('Bravura', 'Academico');
       const { Factory, StaveHairpin } = VexFlow;
-      const vf = new Factory({
+      const factory = new Factory({
         renderer: { elementId: 'output', width: 1000, height: 200 },
       });
 
-      const system = vf.System({ width: 400 });
-      const system2 = vf.System({ x: 400, width: 350 });
+      const system = factory.System({ width: 400 });
+      const system2 = factory.System({ x: 400, width: 350 });
 
       const notes = [
-        vf.StaveNote({
+        factory.StaveNote({
           keys: ['e/5'],
           duration: 'q',
         }),
 
-        vf.StaveNote({
+        factory.StaveNote({
           keys: ['e/4', 'd/5'],
           duration: 'h',
         }),
 
-        vf.StaveNote({
+        factory.StaveNote({
           keys: ['c/5', 'e/5', 'g/5'],
           duration: 'q',
         }),
       ];
 
       const notes2 = [
-        vf.StaveNote({
+        factory.StaveNote({
           keys: ['e/5'],
           duration: 'q',
         }),
 
-        vf.StaveNote({
+        factory.StaveNote({
           keys: ['e/4', 'd/5'],
           duration: 'h',
         }),
 
-        vf.StaveNote({
+        factory.StaveNote({
           keys: ['c/5', 'e/5', 'g/5'],
           duration: 'q',
         }),
       ];
 
-      const voice = vf.Voice().addTickables(notes);
-      const voice2 = vf.Voice().addTickables(notes2);
+      const voice = factory.Voice().addTickables(notes);
+      const voice2 = factory.Voice().addTickables(notes2);
 
       system
         .addStave({
@@ -71,10 +71,10 @@
           voices: [voice2],
         });
 
-      vf.draw();
+      factory.draw();
 
       const hairpin = new StaveHairpin({ firstNote: notes[1], lastNote: notes2[1] }, 2);
-      hairpin.setContext(vf.getContext());
+      hairpin.setContext(factory.getContext());
       hairpin.setPosition(4);
       hairpin.draw();
     });
