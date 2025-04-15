@@ -1,0 +1,258 @@
+/* RESETS */
+
+/* Box sizing rules and padding/margin reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/* start of styles. Default set for mobile. Check media queries for larger screen sizes. */
+body{
+    font-family: 'Barlow', Arial, sans-serif;
+    font-size: 16px;
+    background: var(--color-background);
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: var(--color-link);
+}
+
+a:hover{
+    /* color: var(--color-accent); */
+    font-weight: bold;
+}
+
+button{
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+}
+button svg{
+    fill: var(--color-text);
+}
+button:hover svg{
+    fill: var(--color-link);
+}
+
+button:active svg{
+    fill: var(--color-accent)
+}
+
+/* holder of all content */
+.container{
+    width: 100vw;
+    height: 100vh;
+}
+
+/* holds examples. Covers full screen on mobile. */
+.main-content{
+    width: 100vw;
+    height: 100vh;
+    padding: 4rem;
+}
+
+/* hide container by default */
+.nav-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 80%;
+    max-width: 300px; /* maybe change this... */ 
+    z-index: 100;
+
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: var(--color-background);
+    color: var(--color-text);
+
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+/* When nav-open class is on body, show nav-container */
+body.nav-open .nav-container {
+    transform: translateX(0%);
+}
+
+.nav-title{
+    font-size: 36px;
+    font-weight: 300;
+    height: 130px;
+    line-height: 130px;
+    margin-bottom: 0px;
+    text-align: center;
+    border-bottom: 1px solid var(--color-background-secondary);
+}
+
+/* Allows scrolling only on site-nav. */
+.site-nav{
+    overflow: auto;
+    scrollbar-width: thin;
+}
+
+.site-nav .section, .page-nav .section{
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+} 
+
+.site-nav .section-links, .page-nav .toc-links{
+    padding-left: 2rem;
+}
+
+.page-nav{
+     padding-bottom: 1rem;
+}
+
+.nav-container, .page-nav{
+    background: var(--color-background-secondary);
+}
+
+.page-nav, .site-nav{
+    padding-top: 20px;
+}
+
+/* Styles for site-nav and page-nav headers */
+.site-nav .section .section-header, .toc-header{
+    font-size: 1.1rem;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+/* Styles just for page-nav in the nav div */
+.in-nav{
+    border-bottom: 1px solid var(--color-background);
+}
+
+.desktop-only{
+    display: none;
+}
+
+/* On mobile, place button to open nav on the top right */
+#open-sidebar-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 10; /* ensure it stays on top */
+  }
+
+#overlay {
+    display: none;
+}
+  
+/* Show only when nav is open */
+body.nav-open #overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(24, 24, 28, 0.75);
+    z-index: 50;
+}
+
+/* one sidebar for medium windows */
+@media (min-width: 900px){
+    .container{
+        display: grid;        
+        grid-template-areas: "left right";
+        grid-template-columns: minmax(0px, 1fr) minmax(0px, 2.5fr);
+    }
+
+    .nav-container{
+        grid-area: left;
+
+        position: static;
+        transform: none;
+        max-width: none;
+        width: auto;
+    }
+    
+    .main-content{
+        grid-area: right;
+        width: auto;
+        height: auto;    
+    }
+
+    #open-sidebar-button{
+        display: none;
+    }
+}
+
+/* two sidebars  */
+@media (min-width: 1300px) {
+    .container{
+        display: grid;
+        grid-template-areas: "left center right";
+        grid-template-columns: minmax(0px, 1fr) minmax(0px, 3.5fr) minmax(0px, 1fr);
+    }
+
+    .nav-container{
+        grid-area: left;
+    }
+
+    .main-content{
+        grid-area: center;
+    }
+
+    /* don't display the page nav inside of the navbar */
+    .in-nav{
+        display: none;
+    }
+
+    /* instead, show the desktop-only one */
+    .desktop-only{
+        display: block;
+    }
+
+    .page-nav{
+        grid-area: right;
+        overflow-y: auto;
+    }
+}

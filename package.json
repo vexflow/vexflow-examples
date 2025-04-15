@@ -13,6 +13,7 @@
   "author": "vexflow contributers",
   "license": "MIT",
   "dependencies": {
-    "@11ty/eleventy": "^3.0.0"
+    "@11ty/eleventy": "^3.0.0",
+    "@11ty/eleventy-navigation": "^1.0.4"
   }
 }

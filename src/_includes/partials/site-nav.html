@@ -1,0 +1,20 @@
+<div class="site-nav">
+    {% assign navTree = collections.all | eleventyNavigation %}
+    {% assign topLevel = navTree | where: "parent", nil | sort: "title" %}
+  
+    {% for entry in topLevel %}
+    <div class="section">
+        <h3 class="section-header">
+            {{entry.title}}
+        </h3>
+            {% if entry.children %}
+              <ul class="section-links">
+                {% assign children = entry.children | sort: "title" %}
+                {% for child in children %}
+                  <li><a href="{{ child.url }}">{{ child.title }}</a></li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+    </div>
+  {% endfor %}
+</div>
