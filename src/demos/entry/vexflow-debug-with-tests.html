@@ -1,6 +1,7 @@
 ---
 layout: layouts/layout.html
 title: vexflow-debug-with-tests.js
+needsHighlight: true
 
 eleventyNavigation:
     key: vexflow-debug-with-tests.js
@@ -9,9 +10,6 @@ eleventyNavigation:
 ---
 <!-- Load Library -->
 <script src="https://cdn.jsdelivr.net/npm/vexflow@5.0.0/build/cjs/vexflow-debug-with-tests.js"></script>
-<!-- Syntax Highlighting -->
-<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github.min.css">
     
 <h1>vexflow-debug-with-tests.js</h1>
 <p>
@@ -62,6 +60,4 @@ factory.draw();`;
     eval('"use strict";' + sampleCode);
   }
 </script>
-<script>
-  hljs.highlightAll();
-</script>
+

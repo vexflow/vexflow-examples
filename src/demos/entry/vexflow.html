@@ -1,6 +1,7 @@
 ---
 layout: layouts/layout.html
 title: vexflow.js
+needsHighlight: true
 
 eleventyNavigation:
     key: vexflow.js
@@ -10,10 +11,6 @@ eleventyNavigation:
 
 <!-- Load Library -->
 <script src="https://cdn.jsdelivr.net/npm/vexflow@5.0.0/build/cjs/vexflow.js"></script>
-
-<!-- Syntax Highlighting -->
-<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github.min.css">
 
 <h1>vexflow.js</h1>
 <p>
@@ -62,9 +59,6 @@ factory.draw();`;
   function runCode() {
     eval('"use strict";' + sampleCode);
   }
-</script>
-<script>
-  hljs.highlightAll();
 </script>
   </body>
 </html>

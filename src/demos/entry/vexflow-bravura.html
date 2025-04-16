@@ -1,6 +1,7 @@
 ---
 layout: layouts/layout.html
 title: vexflow-bravura
+needsHighlight: true
 
 eleventyNavigation:
     key: vexflow-bravura
@@ -37,26 +38,23 @@ const score = factory.EasyScore();
 const system = factory.System();
 
 system
-  .addStave({
-    voices: [
-      score.voice(score.notes('C#5/q, B4, A4, G#4', { stem: 'up' })),
-      score.voice(score.notes('C#4/h, C#4', { stem: 'down' })),
-    ],
-  })
-  .addClef('treble')
-  .addTimeSignature('4/4');
+.addStave({
+voices: [
+  score.voice(score.notes('C#5/q, B4, A4, G#4', { stem: 'up' })),
+  score.voice(score.notes('C#4/h, C#4', { stem: 'down' })),
+],
+})
+.addClef('treble')
+.addTimeSignature('4/4');
 
 factory.draw();`;
       document.getElementById('code').textContent = sampleCode;
 
-      function copyCode() {
-        navigator.clipboard.writeText(sampleCode);
-      }
+  function copyCode() {
+    navigator.clipboard.writeText(sampleCode);
+  }
 
-      function runCode() {
-        eval('"use strict";' + sampleCode);
-      }
-    </script>
-    <script>
-      hljs.highlightAll();
-    </script>
+  function runCode() {
+    eval('"use strict";' + sampleCode);
+  }
+</script>

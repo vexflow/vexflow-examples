@@ -1,6 +1,7 @@
 ---
 layout: layouts/layout.html
 title: vexflow.esm.js
+needsHighlight: true
 
 eleventyNavigation:
     key: vexflow.esm.js
@@ -8,8 +9,6 @@ eleventyNavigation:
     title: vexflow.esm.js
 ---
 
-<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github.min.css">
 <h1>vexflow.esm.js</h1>
 <p>
   This page loads the <code>vexflow.js</code> ESM build, which bundles the Bravura, Petaluma, and Gonville music
@@ -58,7 +57,4 @@ factory.draw();`;
   window.runCode = () => {
     eval('"use strict";' + sampleCode);
   };
-</script>
-<script>
-  hljs.highlightAll();
 </script>
