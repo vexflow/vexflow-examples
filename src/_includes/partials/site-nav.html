@@ -1,20 +1,26 @@
 <div class="site-nav">
-    {% assign navTree = collections.all | eleventyNavigation %}
-    {% assign topLevel = navTree | where: "parent", nil | sort: "title" %}
-  
-    {% for entry in topLevel %}
+  {% assign navTree = collections.all | eleventyNavigation %}
+  {% assign topLevel = navTree | where: "parent", nil | sort: "title" %}
+
+  {% for entry in topLevel %}
+    {% assign children = entry.children | sort: "title" %}
+    {% assign activeChild = children | where: "url", page.url | first %}
     <div class="section">
-        <h3 class="section-header">
-            {{entry.title}}
-        </h3>
-            {% if entry.children %}
-              <ul class="section-links">
-                {% assign children = entry.children | sort: "title" %}
-                {% for child in children %}
-                  <li><a href="{{ child.url }}">{{ child.title }}</a></li>
-                {% endfor %}
-              </ul>
-            {% endif %}
+      <h3 class="section-header">
+        {{ entry.title }}
+      </h3>
+      {% if children %}
+        <ul class="section-links">
+          {% for child in children %}
+            <li>
+              <a
+                href="{{ child.url }}"
+                class="{% if child.url == page.url %}active{% endif %}"
+              >{{ child.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
     </div>
   {% endfor %}
 </div>
