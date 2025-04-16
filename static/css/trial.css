@@ -84,15 +84,15 @@ button:active svg{
 }
 
 /* holder of all content */
-.container{
-    width: 100vw;
-    height: 100vh;
-}
+.container {
+    width: 100%;
+    min-height: 100vh;
+  }
 
 /* holds examples. Covers full screen on mobile. */
 .main-content{
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     padding: 4rem;
 }
 
@@ -199,6 +199,7 @@ body.nav-open #overlay {
 
 /* one sidebar for medium windows */
 @media (min-width: 900px){
+
     .container{
         display: grid;        
         grid-template-areas: "left right";
@@ -207,9 +208,11 @@ body.nav-open #overlay {
 
     .nav-container{
         grid-area: left;
-
-        position: static;
+        position: sticky;
+        top: 0;
+        align-self: start;
         transform: none;
+        height: 100vh;
         max-width: none;
         width: auto;
     }
@@ -232,13 +235,22 @@ body.nav-open #overlay {
         grid-template-areas: "left center right";
         grid-template-columns: minmax(0px, 1fr) minmax(0px, 3.5fr) minmax(0px, 1fr);
     }
-
+    /* styles here still work from one col layout so no need to rewrite here  */
     .nav-container{
         grid-area: left;
     }
 
     .main-content{
         grid-area: center;
+    }
+
+    .page-nav{
+        grid-area: right;
+        overflow-y: auto;
+        position: sticky;
+        top: 0;
+        height: 100vh;
+        align-self: start;
     }
 
     /* don't display the page nav inside of the navbar */
@@ -251,8 +263,4 @@ body.nav-open #overlay {
         display: block;
     }
 
-    .page-nav{
-        grid-area: right;
-        overflow-y: auto;
-    }
 }
