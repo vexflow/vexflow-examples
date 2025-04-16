@@ -2,5 +2,6 @@
 layout: layouts/layout.html
 
 ---
+# Welcome to the Vexflow Examples!
 
-Welcome!
+Click on an example to start learning!
