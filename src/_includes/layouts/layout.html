@@ -6,12 +6,6 @@
     <link rel="stylesheet" href="/css/trial.css">
     <link rel="stylesheet" href="/css/theme.css">
     <title>Document</title>
-    <style>
-        .active{
-            font-weight: bold;
-            text-decoration: underline;
-        }
-    </style>
 </head>
 <body>
     <div class="container">
@@ -49,6 +43,7 @@
 
     </script>
     <script>
+        // works pretty well, on page resize could be reran when different toc is shown
 document.addEventListener("DOMContentLoaded", () => {
   const allTOCLinks = document.querySelectorAll(".toc a");
   const headings = Array.from(allTOCLinks)

@@ -14,6 +14,7 @@ html {
   -moz-text-size-adjust: none;
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
+  scroll-behavior: smooth;
 }
 
 /* Set core body defaults */
@@ -55,6 +56,11 @@ body{
 
 ul{
     list-style: none;
+}
+
+ol{
+    list-style: none;
+    padding-left: 1rem;
 }
 
 a{
@@ -174,6 +180,11 @@ body.nav-open .nav-container {
 
 .desktop-only{
     display: none;
+}
+
+.active{
+    font-weight: bold;
+    text-decoration: underline;
 }
 
 /* On mobile, place button to open nav on the top right */
