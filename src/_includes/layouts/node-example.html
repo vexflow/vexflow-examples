@@ -1,0 +1,14 @@
+---
+layout: layouts/layout.html
+toc: false
+needsHighlight: true
+---
+
+{% capture snippet %}
+  {% include "code/node-examples/{{ filename }}" %}
+{% endcapture %}
+{{content}}
+
+<pre><code class="language-{{ language | default: "javascript" }}">
+  {{ snippet | escape }}
+</code></pre>
