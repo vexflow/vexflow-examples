@@ -1,7 +1,7 @@
 ---
 eleventyNavigation:
-  key: Basics
-  title: Basics
-  order: 2
+  key: Entry
+  title: Entry
+  order: 1
 permalink: false
 ---

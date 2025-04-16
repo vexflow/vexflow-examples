@@ -1,26 +1,17 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>vexflow-bravura.js</title>
-    <link rel="stylesheet" href="../../css/style.css"/>
+---
+layout: layouts/layout.html
+title: vexflow-bravura
+
+eleventyNavigation:
+    key: vexflow-bravura
+    parent: Entry
+    title: vexflow-bravura.js
+---
     <!-- Load Library -->
-    <script src="https://cdn.jsdelivr.net/npm/vexflow@5.0.0/build/cjs/vexflow-bravura.js"></script>
     <!-- Syntax Highlighting -->
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github.min.css">
-  </head>
-  <body>
-    <nav>
-      <a href="../../index.html">HOME</a>
-      <span class="separator">|</span>
-      <a href="../index.html">DEMOS</a>
-      <span class="separator">|</span>
-      <a target="_blank" href="https://github.com/vexflow/vexflow">GITHUB</a>
-      <span class="separator">|</span>
-    </nav>
-    <div class="container">
-      <div class="content">
+    <script src="https://cdn.jsdelivr.net/npm/vexflow@5.0.0/build/cjs/vexflow-bravura.js"></script>
         <h1>vexflow-bravura.js</h1>
         <p>
           This page loads the <code>vexflow-bravura.js</code> build, which bundles the Bravura music font and the Academico
@@ -37,8 +28,6 @@
         <button onclick="runCode()">Run Code</button>
         <pre><code class="language-javascript" id="code"></code></pre>
         <div id="output"></div>    
-      </div>
-    </div>
     <script>
       const sampleCode = `const factory = new VexFlow.Factory({
   renderer: { elementId: 'output', width: 300, height: 180 },
@@ -71,5 +60,3 @@ factory.draw();`;
     <script>
       hljs.highlightAll();
     </script>
-  </body>
-</html>

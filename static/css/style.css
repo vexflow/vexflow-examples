@@ -1,4 +1,4 @@
-body {
+/* body {
   font-family: 'Barlow', Arial, sans-serif;
   font-size: 16px;
   color: #554;
@@ -6,7 +6,7 @@ body {
   line-height: 1.5;
   padding: 0;
   margin: 0;
-}
+} */
 
 iframe{
   border-radius: 16px;
@@ -22,7 +22,7 @@ pre code.hljs {
   background-color: rgb(250,250,250);
 }
 
-a {
+/* a {
   color: green;
   text-decoration: none;
   border-bottom: solid 2px green;
@@ -30,7 +30,7 @@ a {
 
 a:hover {
   border-bottom: solid 3px green;
-}
+} */
 
 button {
   display: inline-block;
@@ -86,23 +86,6 @@ h1 {
   margin: 0;
   text-align: center;
 }
-
-nav {
-  color: #ccc;
-  position: fixed;
-  font-family: 'Barlow', courier;
-  top: 0px;
-  right: 0px;
-  background: #eee;
-  padding: 5px 5px 8px 10px;
-  border-bottom: solid 2px #ccc;
-  border-left: solid 2px #ccc;
-  border-bottom-left-radius: 0.4rem;
-  z-index: 20;
-}
-
-nav a { color: green; text-decoration: none; border: none; }
-nav a:hover { border-bottom: 5px solid #ccc; }
 
 div.container {
   display: flex;
