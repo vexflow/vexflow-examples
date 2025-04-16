@@ -1,0 +1,62 @@
+---
+layout: layouts/layout.html
+title: ES Module
+
+eleventyNavigation:
+    key: ES Module
+    parent: Modules
+    title: ES Modules
+---
+<h1>ES Module</h1>
+<div id="output"></div>
+<p>
+  This page shows how to include VexFlow via direct <b>import</b> of an ES module entry file. View the source code.
+</p>
+<p>
+  Open the vexflow/build/esm/entry/ folder to see the various entry points. This particular demo uses
+  vexflow-core.js.
+</p>
+<p>
+  This page only works if you run a web server (e.g., <b>npx http-server</b> and
+  navigate to
+  <a href="http://127.0.0.1:8080/demos/modules/module.html">http://127.0.0.1:8080/demos/modules/module.html</a>) or just open on the web.
+</p>
+<p>This is because ES modules do not work from file:// URLs.</p>
+<p>VexFlow Build: <span id="info"></span></p>
+<p>See also: <a href="script-tag.html">Script Tag</a></p>
+<script type="module">
+  import VexFlow from 'https://cdn.jsdelivr.net/npm/vexflow@5.0.0/build/esm/entry/vexflow.js';
+  VexFlow.setFonts('Petaluma');
+
+  document.fonts.ready.then(() => {
+    showScore();
+  });
+
+  const { VERSION, ID, DATE } = VexFlow.BUILD;
+  document.querySelector('#info').innerText = `${VERSION} / ${ID} / ${DATE}`;
+
+  function showScore() {
+    const factory = new VexFlow.Factory({
+      renderer: { elementId: 'output', width: 500, height: 200 },
+    });
+
+    const score = factory.EasyScore();
+    const system = factory.System();
+
+    system
+      .addStave({
+        voices: [
+          score.voice(score.notes('C#5/q, B4, A4, G#4', { stem: 'up' })),
+          score.voice(score.notes('C#4/h, C#4', { stem: 'down' })),
+        ],
+      })
+      .addClef('treble')
+      .addTimeSignature('4/4');
+
+    factory.draw();
+  }
+
+  // Just for debugging, assign VexFlow to the global window.VF variable.
+  // Now you can do VF.setFonts('Bravura'); from the developer tools command line.
+  window.VF = VexFlow;
+</script>
