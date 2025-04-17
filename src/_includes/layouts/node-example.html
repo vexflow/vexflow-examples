@@ -9,6 +9,12 @@ needsHighlight: true
 {% endcapture %}
 {{content}}
 
+<style>
+  code{
+    background-color: green;
+  }
+</style>
+
 <pre><code class="language-{{ language | default: "javascript" }}">
   {{ snippet | escape }}
 </code></pre>

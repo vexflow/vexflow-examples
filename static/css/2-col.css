@@ -247,8 +247,8 @@ body.nav-open #overlay {
         grid-area: right;
         width: auto;
         height: auto;
-        padding-left: 2rem;
-        padding-right: 4rem;    
+        /* padding-left: 2rem; */
+        /* padding-right: 4rem;     */
     }
 
     #open-sidebar-button{
