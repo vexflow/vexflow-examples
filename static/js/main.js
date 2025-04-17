@@ -108,67 +108,6 @@ function showHtml(fileName, containerClass, start, end) {
     });
 }
 
-// NOTE: must contain extension
-function showJS(fileName, containerClass) {
-  // Create a safe version of the file name for use in element IDs
-  const safeId = sanitizeId(fileName);
-
-  // Determine target container as a jQuery object
-  let $target;
-  if (containerClass === undefined) {
-    $target = $('body');
-  } else {
-    $target = $(`.${containerClass}`);
-  }
-
-  // Create the container for code
-  $(`<div id="${safeId}_container" style="position: relative;"></div>`).appendTo($target);
-
-  // Retrieve the newly created container as a jQuery object
-  let $container = $(`#${safeId}_container`);
-
-  // Append the <pre><code> block inside the container
-  $(`<pre><code class="language-javascript" id="${safeId}_code"></code></pre>`).appendTo($container);
-
-    // Fetch file content
-  $.get(fileName, (content) => {
-    // Insert the file content as text (this safely escapes HTML)
-    $(`#${safeId}_code`).text(content);
-
-    // Apply syntax highlighting to the specific code element
-    hljs.highlightElement(document.getElementById(`${safeId}_code`));
-
-    // // Create the copy button and style it (positioned at the top-right of the container)
-    const $copyBtn = $('<button>Copy</button>');
-    $copyBtn.css({
-      position: 'absolute',
-      top: '5px',
-      right: '5px',
-      zIndex: 10
-    });
-
-    // Append the copy button to the container
-    $(`#${safeId}_container`).append($copyBtn);
-
-  //  Set up the copy button click event to copy the code text to the clipboard
-    $copyBtn.on('click', () => {
-      const codeText = $(`#${safeId}_code`).text();
-      navigator.clipboard.writeText(codeText)
-        .then(() => {
-          $copyBtn.text('Copied!');
-          setTimeout(() => {
-            $copyBtn.text('Copy');
-          }, 2000);
-        })
-        .catch((error) => {
-          console.error('Copy failed:', error);
-        });
-    });
-  }, 'text').fail((error) => {
-    console.error('Error loading file:', error);
-});  
-}
-
 // used in entry demos:
 let codeArray;
 function showCode(...c) {

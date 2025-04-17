@@ -1,7 +1,0 @@
----
-eleventyNavigation:
-  key: Basics
-  title: Basics
-  order: 2
-permalink: false
----
