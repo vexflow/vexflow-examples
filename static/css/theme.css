@@ -108,3 +108,7 @@ html {
     --color-scheme: var(--dark-color-scheme);
 }
 
+
+code {
+    font-size: 0.85em;
+  }

@@ -32,6 +32,8 @@ eleventyNavigation:
   <b><code>npx http-server</code></b
   >, then open <a href="http://127.0.0.1:8080/demos/worker/">http://127.0.0.1:8080/demos/worker/</a> (or just run in browser).
 </p>
+
+
 <p>see the source .js <a href="/js/worker-vexflow-core.js">here</a> and examine this page's source to see how it is used.</p>
 <div class="content"></div>
     <script type="module">
@@ -47,7 +49,7 @@ eleventyNavigation:
             `<canvas id="outputCanvas${i}" width="1000" height="400" style="display: block; margin: 0 auto; margin-top: 10px;""></canvas>`
           );
 
-          const workerJS = '/js/worker-vexflow-core.js';
+          const workerJS = '/vexflow-examples/js/worker-vexflow-core.js';
           const w = new Worker(workerJS);
           w.onmessage = function (e) {
             console.log(`Message from #${i} / ${workerJS}:  [${e.data}]`);

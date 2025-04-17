@@ -10,5 +10,3 @@ eleventyNavigation:
 ---
 
 # Canvas
-
-this is a test to see what the fuckt the deal is
