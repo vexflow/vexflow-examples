@@ -1,5 +1,4 @@
 ---
-layout: layouts/layout.html
 
 ---
 # Welcome to the Vexflow Examples!

@@ -1,5 +1,4 @@
 ---
-layout: layouts/layout.html
 toc: true
 eleventyNavigation:
     key: Test
