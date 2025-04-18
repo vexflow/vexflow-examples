@@ -3,15 +3,17 @@ layout: layouts/layout.html
 title: vexflow-core.js
 needsHighlight: true
 
+extraHead:
+- <!-- Load Library -->
+- <script src="https://cdn.jsdelivr.net/npm/vexflow@5.0.0/build/cjs/vexflow-core.js"></script>
+- <!-- Code Controls -->
+- <script src="/js/main.js"></script>
+
 eleventyNavigation:
     key: vexflow-core.js
     parent: Entry
     title: vexflow-core.js
 ---
-<!-- Load Library -->
-<script src="https://cdn.jsdelivr.net/npm/vexflow@5.0.0/build/cjs/vexflow-core.js"></script>
-<!-- Code Controls -->
-<script src="/js/main.js"></script>
 <h1>vexflow-core.js</h1>
 <p>
   This page loads the <code>vexflow-core.js</code> build. It does not bundle any fonts, and is minified for

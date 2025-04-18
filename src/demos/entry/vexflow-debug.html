@@ -3,18 +3,17 @@ layout: layouts/layout.html
 title: vexflow-debug.js
 needsHighlight: true
 
+extraHead:
+  - <!-- Load Library -->
+  - <script src="https://cdn.jsdelivr.net/npm/vexflow@5.0.0/build/cjs/vexflow-debug.js"></script>
+  - <!-- Code Actions -->
+  - <script src="/js/main.js"></script>
+
 eleventyNavigation:
     key: vexflow-debug.js
     parent: Entry
     title: vexflow-debug.js
 ---
-
-<!-- Load Library -->
-<script src="https://cdn.jsdelivr.net/npm/vexflow@5.0.0/build/cjs/vexflow-debug.js"></script>
-
-<!-- Code Actions -->
-<script src="/js/main.js"></script>
-
 <h1>vexflow-debug.js</h1>
 <p>
   This page loads the <code>vexflow-debug.js</code> build, which is the non-minified version of

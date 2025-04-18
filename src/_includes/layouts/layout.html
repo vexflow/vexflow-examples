@@ -23,7 +23,13 @@
   />
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
   {% endif %}
-    <title>{{ title }}</title>
+  <!-- allow extra tags in the head -->
+  {% if extraHead %}
+    {% for tag in extraHead %}
+      {{ tag }}
+    {% endfor %}
+  {% endif %}
+  <title>{{ title }}</title>
 </head>
 <body>
     <div class="container">
