@@ -1,93 +1,4 @@
-/* RESETS */
-
-/* Box sizing rules and padding/margin reset */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0px;
-  padding: 0px;
-}
-
-/* Prevent font size inflation */
-html {
-  -moz-text-size-adjust: none;
-  -webkit-text-size-adjust: none;
-  text-size-adjust: none;
-  scroll-behavior: smooth;
-}
-
-/* Set core body defaults */
-body {
-  min-height: 100vh;
-  line-height: 1.5;
-}
-
-/* Set shorter line heights on headings and interactive elements */
-h1, h2, h3, h4,
-button, input, label {
-  line-height: 1.1;
-}
-
-/* Balance text wrapping on headings */
-h1, h2,
-h3, h4 {
-  text-wrap: balance;
-}
-
-/* Make images easier to work with */
-img,
-picture {
-  max-width: 100%;
-  display: block;
-}
-
-/* Anything that has been anchored to should have extra scroll margin */
-:target {
-  scroll-margin-block: 5ex;
-}
-
-/* start of styles. Default set for mobile. Check media queries for larger screen sizes. */
-body{
-    font-family: 'Barlow', Arial, sans-serif;
-    font-size: 16px;
-    background: var(--color-background);
-}
-
-ul{
-    list-style: none;
-}
-
-ol{
-    list-style: none;
-    padding-left: 1rem;
-}
-
-a{
-    text-decoration: none;
-    color: var(--color-link);
-}
-
-a:hover{
-    /* color: var(--color-accent); */
-    font-weight: bold;
-}
-
-button{
-    background: transparent;
-    border: 0;
-    cursor: pointer;
-}
-button svg{
-    fill: var(--color-text);
-}
-button:hover svg{
-    fill: var(--color-link);
-}
-
-button:active svg{
-    fill: var(--color-accent)
-}
+/* Layout specific styles. Mobile styles are default and grow into larger formats */
 
 /* holder of all content */
 .container {
@@ -102,14 +13,14 @@ button:active svg{
     padding: 4rem;
 }
 
-/* hide container by default */
+/* hide container by default on mobile */
 .nav-container {
     position: fixed;
     top: 0;
     left: 0;
     height: 100vh;
     width: 80%;
-    max-width: 300px; /* maybe change this... */ 
+    max-width: 300px; /* not committed to this number... */ 
     z-index: 100;
 
     display: flex;
@@ -136,12 +47,12 @@ body.nav-open .nav-container {
     text-align: center;
 }
 
-/* Allows scrolling only on site-nav. */
+/* Allows scrolling only on site-nav. (full nav container not scrollable) */
 .site-nav{
     overflow: auto;
     scrollbar-width: thin;
 }
-
+ 
 .site-nav .section, .page-nav .section{
     padding-bottom: 1rem;
     padding-left: 1rem;
@@ -159,14 +70,22 @@ body.nav-open .nav-container {
     padding: 0.5rem 1rem; /* whatever spacing you need */
   }
   
-  .site-nav li a:hover {
+.site-nav li a:hover {
     background-color: var(--color-background-secondary);
   }
 
+/* page-nav not shown if container doesn't have toc */
 .page-nav{
-     padding-bottom: 1rem;
+    display: none;
 }
 
+/* if container has toc, show page-nav */
+.container.has-toc .page-nav{
+    display: block;
+    padding-bottom: 1rem;
+}
+
+/* everything should be the same bg color (covers left + right col) */
 .nav-container, .page-nav{
     background: var(--color-background);
 }
@@ -183,27 +102,13 @@ body.nav-open .nav-container {
     text-decoration: none;
 }
 
-/* Styles just for page-nav in the nav div */
-/* .in-nav{
-    border-bottom: 1px solid var(--color-background);
-} */
-
-.desktop-only{
-    display: none;
-}
-
-.active{
-    font-weight: bold;
-    text-decoration: underline;
-}
-
 /* On mobile, place button to open nav on the top right */
 #open-sidebar-button {
     position: absolute;
     top: 1rem;
     right: 1rem;
     z-index: 10; /* ensure it stays on top */
-  }
+}
 
 #overlay {
     display: none;
@@ -220,7 +125,6 @@ body.nav-open #overlay {
 
 /* one sidebar for medium windows */
 @media (min-width: 900px){
-
     .container{
         display: grid;        
         grid-template-areas: "left right";
@@ -251,39 +155,36 @@ body.nav-open #overlay {
     }
 }
 
-/* two sidebars  */
+/* two sidebars — only when .has-toc is present on .container */
 @media (min-width: 1300px) {
-    .container{
-        display: grid;
-        grid-template-areas: "left center right";
-        grid-template-columns: minmax(0px, 1fr) minmax(0px, 3.5fr) minmax(0px, 1fr);
+  
+    /* if we’ve flagged has-toc, expand to two sidebars */
+    .container.has-toc {
+      grid-template-areas: "left center right";
+      grid-template-columns: minmax(0px, 1fr) minmax(0px, 3.5fr) minmax(0px, 1fr);
     }
-    /* styles here still work from one col layout so no need to rewrite here  */
-    .nav-container{
-        grid-area: left;
-    }
-
-    .main-content{
-        grid-area: center;
+  
+    /* page‑nav only shows in the third slot when .has-toc */
+    .container .page-nav {
+      display: none;
     }
 
-    .page-nav{
-        grid-area: right;
-        overflow-y: auto;
-        position: sticky;
-        top: 0;
-        height: 100vh;
-        align-self: start;
+    .container.has-toc .page-nav {
+      display: block;
+      grid-area: right;
+      overflow-y: auto;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      align-self: start;
     }
-
-    /* don't display the page nav inside of the navbar */
-    .in-nav{
-        display: none;
+  
+    /* hide embedded TOC and show desktop-only links as before */
+    .in-nav {
+      display: none;
     }
-
-    /* instead, show the desktop-only one */
-    .desktop-only{
-        display: block;
+    .container.has-toc .desktop-only {
+      display: block;
     }
-
-}
+  }
+  

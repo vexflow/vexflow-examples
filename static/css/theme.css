@@ -36,7 +36,7 @@
     :root {
         --color-background: var(--light-color-background);
         --color-background-secondary: var(--light-color-background-secondary);
-        --color-background-highlight: var(var(--light-color-background-highlight));
+        --color-background-highlight: var(--light-color-background-highlight);
         --color-background-warning: var(--light-color-background-warning);
         --color-warning-text: var(--light-color-warning-text);
         --color-icon-background: var(--light-color-icon-background);
@@ -55,7 +55,7 @@
     :root {
         --color-background: var(--dark-color-background);
         --color-background-secondary: var(--dark-color-background-secondary);
-        --color-background-highlight: var(var(--dark-color-background-highlight));
+        --color-background-highlight: var(--dark-color-background-highlight);
         --color-background-warning: var(--dark-color-background-warning);
         --color-warning-text: var(--dark-color-warning-text);
         --color-icon-background: var(--dark-color-icon-background);
@@ -77,7 +77,7 @@ html {
 :root[data-theme="light"] {
     --color-background: var(--light-color-background);
     --color-background-secondary: var(--light-color-background-secondary);
-    --color-background-highlight: var(var(--light-color-background-highlight));
+    --color-background-highlight: var(--light-color-background-highlight);
     --color-background-warning: var(--light-color-background-warning);
     --color-warning-text: var(--light-color-warning-text);
     --color-icon-background: var(--light-color-icon-background);
@@ -94,7 +94,7 @@ html {
 :root[data-theme="dark"] {
     --color-background: var(--dark-color-background);
     --color-background-secondary: var(--dark-color-background-secondary);
-    --color-background-highlight: var(var(--dark-color-background-highlight));
+    --color-background-highlight: var(--dark-color-background-highlight);
     --color-background-warning: var(--dark-color-background-warning);
     --color-warning-text: var(--dark-color-warning-text);
     --color-icon-background: var(--dark-color-icon-background);

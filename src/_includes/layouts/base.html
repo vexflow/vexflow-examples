@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {% if toc %}
-    <link rel="stylesheet" href="/css/3-col.css">
-    {% else %}
-    <link rel="stylesheet" href="/css/2-col.css">
-    {% endif %}
-
+    <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/theme.css">
+    <link rel="stylesheet" href="/css/helpers.css">   
+    <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="/css/base.css">
+
     {% if needsHighlight %}
     <link
       rel="stylesheet"
@@ -32,8 +31,8 @@
   <title>{{ title }}</title>
 </head>
 <body>
-    <div class="container">
-      {% if toc %}
+   <div class="container{% if toc %} has-toc{% endif %}">
+    {% if toc %}
         {% include "partials/nav.html" %}
       {% else %}
       {% include "partials/basic-nav.html" %}
@@ -41,7 +40,7 @@
 
         <main class="main-content">
           <div class="content">
-            <button id="open-sidebar-button">
+            <button id="open-sidebar-button" class="svg-button">
               <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px"><path d="M165.13-254.62q-10.68 0-17.9-7.26-7.23-7.26-7.23-18t7.23-17.86q7.22-7.13 17.9-7.13h629.74q10.68 0 17.9 7.26 7.23 7.26 7.23 18t-7.23 17.87q-7.22 7.12-17.9 7.12H165.13Zm0-200.25q-10.68 0-17.9-7.27-7.23-7.26-7.23-17.99 0-10.74 7.23-17.87 7.22-7.13 17.9-7.13h629.74q10.68 0 17.9 7.27 7.23 7.26 7.23 17.99 0 10.74-7.23 17.87-7.22 7.13-17.9 7.13H165.13Zm0-200.26q-10.68 0-17.9-7.26-7.23-7.26-7.23-18t7.23-17.87q7.22-7.12 17.9-7.12h629.74q10.68 0 17.9 7.26 7.23 7.26 7.23 18t-7.23 17.86q-7.22 7.13-17.9 7.13H165.13Z"/></svg>
           </button>
           {{ content }}

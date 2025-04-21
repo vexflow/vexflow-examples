@@ -1,0 +1,50 @@
+/* All the base styles used on site */
+body{
+    font-family: 'Barlow', Arial, sans-serif;
+    font-size: 16px;
+    background: var(--color-background);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+ul{
+    list-style: none;
+}
+
+ol{
+    list-style: none;
+    padding-left: 1rem;
+}
+
+a{
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+a:hover{
+    font-weight: bold;
+    color: var(--color-accent);
+}
+
+/* self descriptive. Class for buttons that contain an svg */
+/* example: menu button */
+button.svg-button{
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
+button.svg-button svg{
+    fill: var(--color-text);
+}
+
+button.svg-button:hover svg{
+    fill: var(--color-link);
+}
+
+button.svg-button:active svg{
+    fill: var(--color-accent)
+}
