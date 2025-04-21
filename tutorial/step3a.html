@@ -16,11 +16,11 @@
     VexFlow.loadFonts('Bravura', 'Academico').then(() => {
       VexFlow.setFonts('Bravura', 'Academico');
       const { Factory, Dot } = VexFlow;
-      const vf = new Factory({
+      const factory = new Factory({
         renderer: { elementId: 'output', width: 500, height: 200 },
       });
 
-      const system = vf.System({ width: 400 });
+      const system = factory.System({ width: 400 });
 
       function dotted(staveNote, noteIndex = -1) {
         if (noteIndex < 0) {
@@ -36,30 +36,30 @@
       }
 
       const notes = [
-        dotted(vf.StaveNote({
+        dotted(factory.StaveNote({
           keys: ['e##/5'],
           duration: '8d',
-        }).addModifier(vf.Accidental({ type: '##' }))),
+        }).addModifier(factory.Accidental({ type: '##' }))),
 
-        vf.StaveNote({
+        factory.StaveNote({
           keys: ['eb/5'],
           duration: '16',
-        }).addModifier(vf.Accidental({ type: 'b' })),
+        }).addModifier(factory.Accidental({ type: 'b' })),
 
-        dotted(vf.StaveNote({
+        dotted(factory.StaveNote({
           keys: ['eb/4', 'd/5'],
           duration: 'h',
         }), 0 /* add dot to note at index==0 */),
 
-        dotted(vf.StaveNote({
+        dotted(factory.StaveNote({
           keys: ['c/5', 'eb/5', 'g#/5'],
           duration: 'q',
         })
-          .addModifier(vf.Accidental({ type: 'b' }), 1)
-          .addModifier(vf.Accidental({ type: '#' }), 2)),
+          .addModifier(factory.Accidental({ type: 'b' }), 1)
+          .addModifier(factory.Accidental({ type: '#' }), 2)),
       ];
 
-      const voice = vf.Voice().addTickables(notes);
+      const voice = factory.Voice().addTickables(notes);
 
       system
         .addStave({
@@ -68,7 +68,7 @@
         .addClef('treble')
         .addTimeSignature('4/4');
 
-      vf.draw();
+      factory.draw();
     });
     </script>
   </body>

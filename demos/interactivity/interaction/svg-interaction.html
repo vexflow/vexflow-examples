@@ -14,29 +14,27 @@
     /* global VexFlow */
     VexFlow.loadFonts('Bravura', 'Academico').then(() => {
       VexFlow.setFonts('Bravura', 'Academico');
-      const { Factory, StaveHairpin } = VexFlow;
-      const vf = new Factory({
+      const factory = new VexFlow.Factory({
         renderer: { elementId: 'output', width: 250, height: 150 },
       });
-      const score = vf.EasyScore();
+      const score = factory.EasyScore();
 
       let notes = score.notes('C4/q, F#4, B5, Bb4')
       let voice = score.voice(notes)
-      const system = vf.System();
-      let stave = system.addStave({voices: [voice]}).addClef('treble').addTimeSignature('4/4')
+      const system = factory.System();
+      system.addStave({voices: [voice]}).addClef('treble').addTimeSignature('4/4')
 
-      vf.draw()
+      factory.draw()
 
-        for (let note of notes){
-          const svg = note.getSVGElement();
-          if (svg){
-            // listen to whatever event you want here
-            svg.addEventListener('click', (ev) => {
-              toggleDescendantColors(svg)
-            }, false)
-
-          }
+      for (let note of notes){
+        const svg = note.getSVGElement();
+        if (svg) {
+          // listen to whatever event you want here
+          svg.addEventListener('click', (ev) => {
+            toggleDescendantColors(svg)
+          }, false)
         }
+      }
 
       // parentItem: SVGElement
       const toggleDescendantColors = (parentItem) => {
