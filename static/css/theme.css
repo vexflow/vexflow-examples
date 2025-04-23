@@ -1,3 +1,5 @@
+/* shoudl contain all colors used in the site */
+
 :root {
     /* Light */
     --light-color-background: #f2f4f8;
@@ -107,8 +109,3 @@ html {
     --external-icon: var(--dark-external-icon);
     --color-scheme: var(--dark-color-scheme);
 }
-
-
-code {
-    font-size: 0.85em;
-  }

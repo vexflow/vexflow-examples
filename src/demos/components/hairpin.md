@@ -8,5 +8,4 @@ eleventyNavigation:
     parent: Components
     title: hairpin
 ---
-
 # Hairpin
