@@ -10,3 +10,4 @@ eleventyNavigation:
 ---
 
 # canvas interactions
+click notes to see interactions!

@@ -10,3 +10,4 @@ eleventyNavigation:
 ---
 
 # svg interactions
+click notes to see interactions!

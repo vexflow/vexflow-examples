@@ -55,24 +55,27 @@ body.nav-open .nav-container {
  
 .site-nav .section, .page-nav .section{
     padding-bottom: 1rem;
-    padding-left: 1rem;
-    /* padding-right: 2rem; */
 } 
 
-.site-nav .section-links, .page-nav .toc-links{
-    padding-left: 1rem;
+/* give a little padding to headers */
+.site-nav .section .section-header,
+.page-nav .toc-header {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 1rem;  
 }
-
-.site-nav li a {
-    display: block;       /* make link a block so it fills its parent */
-    width: 100%;
-    height: 100%;
-    padding: 0.5rem 1rem; /* whatever spacing you need */
-  }
+/* make anchor tags take full width of nav contianers and shift links to right */
+.site-nav li a,
+.page-nav li a {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0rem 0.5rem 2rem;  
+}
   
-.site-nav li a:hover {
-    background-color: var(--color-background-secondary);
-  }
+.site-nav li a:hover,
+.page-nav li a:hover {
+  background-color: var(--color-background-secondary);
+}
 
 /* page-nav not shown if container doesn't have toc */
 .page-nav{
@@ -121,6 +124,36 @@ body.nav-open #overlay {
     inset: 0;
     background-color: rgba(24, 24, 28, 0.75);
     z-index: 50;
+}
+
+/* for button that copies code in html/node-example layouts */
+#copy-btn {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+  
+    /* hide visually and remove from hit‑testing */
+    opacity: 0;
+    pointer-events: none;
+  
+    transition:
+      opacity 0.2s ease,
+      pointer-events 0s linear 0.2s; /* delay re‑enabling pointer‑events until after fade-out */
+  }
+
+/* found in layouts */
+.code-block{
+    position: relative;
+}
+  
+.code-block:hover #copy-btn {
+    opacity: 1;
+    pointer-events: auto;
+  
+    /* remove the delay on hover so pointer-events is active immediately */
+    transition:
+      opacity 0.2s ease,
+      pointer-events 0s;
 }
 
 /* one sidebar for medium windows */

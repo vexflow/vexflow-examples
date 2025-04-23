@@ -9,35 +9,6 @@ needsHighlight: true
 {% endcapture %}
 {{content}}
 
-<style>
-#copy-btn {
-  position: absolute;
-  top: 2rem;
-  right: 2rem;
-
-  /* hide visually and remove from hit‑testing */
-  opacity: 0;
-  pointer-events: none;
-
-  transition:
-    opacity 0.2s ease,
-    pointer-events 0s linear 0.2s; /* delay re‑enabling pointer‑events until after fade-out */
-}
-
-.code-block{
-  position: relative;
-}
-
-.code-block:hover #copy-btn {
-  opacity: 1;
-  pointer-events: auto;
-
-  /* remove the delay on hover so pointer-events is active immediately */
-  transition:
-    opacity 0.2s ease,
-    pointer-events 0s;
-}
-</style>
 <div class="code-block">
   <button id="copy-btn">copy</button>
   <pre><code id="example-code" class="language-{{ language | default: "javascript" }}">
