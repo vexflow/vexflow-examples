@@ -1,6 +1,7 @@
 .active{
     font-weight: bold;
-    text-decoration: underline;
+    color: var(--color-accent);
+    background-color: var(--color-background-secondary);
 }
 
 .desktop-only{
