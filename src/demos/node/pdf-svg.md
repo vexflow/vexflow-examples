@@ -1,7 +1,8 @@
 ---
-layout: layouts/node-example.html
+layout: layouts/simple-example.html
 title: PDF SVG
-filename: pdf-svg.js
+filename: node-examples/pdf-svg.js
+language: js
 
 eleventyNavigation:
     key: pdf-svg

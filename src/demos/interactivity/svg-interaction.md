@@ -1,7 +1,8 @@
 ---
-layout: layouts/html-example.html
+layout: layouts/simple-example.html
 title: svg interactions
-filename: svg-interaction.html
+filename: html-examples/svg-interaction.html
+showIframe: true
 
 eleventyNavigation:
     key: svg interactions

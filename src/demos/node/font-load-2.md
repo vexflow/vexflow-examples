@@ -1,7 +1,8 @@
 ---
-layout: layouts/node-example.html
+layout: layouts/simple-example.html
 title: font-load-2
-filename: font-load-2.js
+filename: node-examples/font-load-2.js
+language: js
 
 eleventyNavigation:
     key: font-load-2

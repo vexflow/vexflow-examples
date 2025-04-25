@@ -7,9 +7,10 @@ needsHighlight: true
 {{ content }}
 
 {% capture snippet %}
-{% include "code/html-examples/{{ filename }}" %}
+{% include "code/{{ filename }}" %}
 {% endcapture %}
 
+{% if showIframe %}
 <iframe
   width="100%"
   height="250"
@@ -25,7 +26,8 @@ needsHighlight: true
   <textarea hidden name="html">{{ snippet }}</textarea><br>
   <input type="submit" value="Edit in JSFiddle">
 </form>
+{% endif %}
 
-  <pre><code id="example-code" class="language-{{ language | default: "javascript" }}">
-    {{ snippet | escape }}
-  </code></pre>
+<pre><code id="example-code" class="language-{{ language | default: "html" }}">
+  {{ snippet | escape }}
+</code></pre>

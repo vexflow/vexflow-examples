@@ -1,7 +1,8 @@
 ---
-layout: layouts/html-example.html
+layout: layouts/simple-example.html
 title: textbracket 
-filename: textbracket.html
+filename: html-examples/textbracket.html
+showIframe: true
 
 eleventyNavigation:
     key: textbracket

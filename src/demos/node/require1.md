@@ -1,7 +1,8 @@
 ---
-layout: layouts/node-example.html
+layout: layouts/simple-example.html
 title: Require Example 1
-filename: require1.js
+filename: node-examples/require1.js
+language: js
 
 eleventyNavigation:
     key: require1

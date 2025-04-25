@@ -1,7 +1,8 @@
 ---
-layout: layouts/node-example.html
+layout: layouts/simple-example.html
 title: SVG
-filename: svg.js
+filename: node-examples/svg.js
+language: js
 
 eleventyNavigation:
     key: SVG 

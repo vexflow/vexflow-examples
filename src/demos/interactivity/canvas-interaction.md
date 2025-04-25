@@ -1,7 +1,8 @@
 ---
-layout: layouts/html-example.html
+layout: layouts/simple-example.html
 title: canvas interactions
-filename: canvas-interaction.html
+filename: html-examples/canvas-interaction.html
+showIframe: true
 
 eleventyNavigation:
     key: canvas interactions

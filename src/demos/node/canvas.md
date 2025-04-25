@@ -1,7 +1,8 @@
 ---
-layout: layouts/node-example.html
+layout: layouts/simple-example.html
 title: Canvas
-filename: canvas.js
+filename: node-examples/canvas.js
+language: js
 
 eleventyNavigation:
     key: Canvas

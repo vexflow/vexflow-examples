@@ -1,7 +1,8 @@
 ---
-layout: layouts/node-example.html
+layout: layouts/simple-example.html
 title: font-draw
-filename: font-draw.js
+filename: node-examples/font-draw.js
+language: js
 
 eleventyNavigation:
     key: font draw

@@ -1,7 +1,8 @@
 ---
-layout: layouts/html-example.html
+layout: layouts/simple-example.html
 title: hairpin
-filename: hairpin.html
+filename: html-examples/hairpin.html
+showIframe: true
 
 eleventyNavigation:
     key: hairpin

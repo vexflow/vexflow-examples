@@ -1,7 +1,8 @@
 ---
-layout: layouts/node-example.html
+layout: layouts/simple-example.html
 title: Import Example 2
-filename: import2.mjs
+filename: node-examples/import2.mjs
+language: js
 
 eleventyNavigation:
     key: Import2
