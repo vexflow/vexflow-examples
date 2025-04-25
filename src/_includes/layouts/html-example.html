@@ -26,21 +26,6 @@ needsHighlight: true
   <input type="submit" value="Edit in JSFiddle">
 </form>
 
-<div class="code-block">
-  <button id="copy-btn">copy</button>
   <pre><code id="example-code" class="language-{{ language | default: "javascript" }}">
     {{ snippet | escape }}
   </code></pre>
-</div>
-
-<script>
-  let button = document.getElementById("copy-btn")
-  let code = document.getElementById("example-code")
-
-  function onClick(){
-    navigator.clipboard.writeText(code.innerText)
-    button.innerText = "copied!"
-    setTimeout(()=> button.innerText = "copy", 1000)
-}
-  button.addEventListener("click", ()=> onClick())
-</script>

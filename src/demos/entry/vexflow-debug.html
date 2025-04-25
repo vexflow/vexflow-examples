@@ -29,19 +29,17 @@ eleventyNavigation:
 <p>This is the string representing a treble clef:</p>
 <pre><code class="language-javascript">VexFlow.Glyphs.gClef</code></pre>
 <p>This is the string representing a treble clef:</p>
-<button onclick="copyCode(0)">Copy Code</button>
 <button onclick="runCode(0)">Run Code</button>
 <pre><code class="language-javascript" id="code0"></code></pre>
 <div id="trebleClef" style="font-family: Bravura; font-size: 92px"></div>
 <p>Draw a stave with a treble clef, time signature, and a few notes.</p>
-<button onclick="copyCode(1)">Copy Code</button>
 <button onclick="runCode(1)">Run Code</button>
 <pre><code class="language-javascript" id="code1"></code></pre>
 <div id="output"></div>    
 
 <script>
   const code0 = `document.getElementById("trebleClef").innerText = VexFlow.Glyphs.gClef`;
-
+  
   const code1 = `const factory = new VexFlow.Factory({
     renderer: { elementId: 'output', width: 300, height: 180 },
   });

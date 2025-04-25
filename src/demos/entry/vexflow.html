@@ -24,7 +24,6 @@ eleventyNavigation:
 <p>Get the default font stack, as an array of strings.</p>
 <pre><code class="language-javascript">VexFlow.getFonts()</code></pre>
 <p>Draw a stave with a treble clef, time signature, and a few notes.</p>
-<button onclick="copyCode()">Copy Code</button>
 <button onclick="runCode()">Run Code</button>
 <pre><code class="language-javascript" id="code"></code></pre>
 <div id="output"></div>    
@@ -51,10 +50,6 @@ factory.draw();`;
 
   // Set the inner text of the code block and re-highlight the code
   document.getElementById('code').textContent = sampleCode;
-
-  function copyCode() {
-    navigator.clipboard.writeText(sampleCode);
-  }
 
   function runCode() {
     eval('"use strict";' + sampleCode);

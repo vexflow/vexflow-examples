@@ -21,7 +21,6 @@ eleventyNavigation:
 <p>Get the default font stack, as an array of strings.</p>
 <pre><code class="language-javascript">VexFlow.getFonts()</code></pre>
 <p>Draw a stave with a treble clef, time signature, and a few notes.</p>
-<button onclick="copyCode()">Copy Code</button>
 <button onclick="runCode()">Run Code</button>
 <pre><code class="language-javascript" id="code"></code></pre>
 <div id="output"></div>    
@@ -48,10 +47,6 @@ voices: [
 
 factory.draw();`;
   document.getElementById('code').textContent = sampleCode;
-
-  window.copyCode = () => {
-    navigator.clipboard.writeText(sampleCode);
-  };
 
   window.runCode = () => {
     eval('"use strict";' + sampleCode);

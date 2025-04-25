@@ -1,4 +1,9 @@
 /* All the base styles used on site */
+
+:root {
+    --content-max-width: 100ch;    /* roughly 100 characters per line */
+  }
+
 body{
     font-family: 'Barlow', Arial, sans-serif;
     font-size: 16px;
