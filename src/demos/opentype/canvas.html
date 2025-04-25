@@ -17,56 +17,66 @@ eleventyNavigation:
   Use the keyboard's arrow keys to cycle through the glyphs.
 -->
 <style>
-  .canvas-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
-    text-align: left;
-  }
+  :root {
+  --gap: 1.25rem;
+  --canvas-border: 1px solid #000;
+  --canvas-bg: #ddd;
+  --glyph-border: 1px solid #ccc;
+  --glyph-bg: #ccc;
+  --glyph-color: #888;
+  --glyph-selected-color: #f00;
+}
 
-  canvas {
-    border: 1px solid black;
-    background-color: #ddd;
-    display: block;
-    margin-top: 5px;
-    margin-bottom: 20px;
-  }
+.canvas-container {
+  display: grid;
+  /* auto-fit two columns but allow collapsing on narrower viewports if you like */
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--gap);
+}
 
-  div#glyphs {
-    align-items: center;
-    font-family: monospace;
-    width: 1000px;
-    font-size: 1.3em;
-    padding: 10px 20px;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    min-height: 50px;
-    max-height: 200px;
-    background-color: #ccc;
-    color: #888;
-    overflow: auto;
-  }
+.canvas-container canvas {
+  display: block;               /* ensure it’s not inline */
+  width: 100%;                  /* fill its cell */
+  border: var(--canvas-border);
+  background: var(--canvas-bg);
+}
 
-  div#glyphs div {
-    margin: 6px 0;
-  }
+/* Glyph list */
+#glyphs {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;                  
+  max-width: 60ch;              
+  padding: 0.625rem 1.25rem;     
+  font-family: monospace;
+  font-size: 1.3rem;
+  border: var(--glyph-border);
+  background: var(--glyph-bg);
+  color: var(--glyph-color);
+  min-height: 3rem;         
+  max-height: 12rem;         
+  overflow-y: auto;
+}
 
-  div#glyphs .selected {
-    color: #f00;
-    text-decoration: underline;
-  }
+#glyphs > div {
+  margin: 0.375rem 0;           
+}
 
-  div#gonvilledev-container {
-    display: none;
-  }
+#glyphs .selected {
+  color: var(--glyph-selected-color);
+  text-decoration: underline;
+}
 
-  h1 {
-    margin-bottom: 0;
-  }
+/* utility for hiding the dev container */
+#gonvilledev-container {
+  display: none !important;
+}
 
-  code {
-    all: unset;
-  }
+/* keep your demo headings tight under the page title */
+h1 {
+  margin-bottom: 0;
+}
 </style>
 <script src="https://cdn.jsdelivr.net/npm/wawoff2@2.0.1/build/decompress_binding.js"></script>
 <script>
