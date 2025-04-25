@@ -40,37 +40,42 @@ button{
 
 /* self descriptive. Class for buttons that contain an svg */
 /* example: menu button */
-button.svg-button{
-    background: transparent;
-    border: 0;
+.svg-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--color-text);       /* base color for the icon */
+
+    --icon-size: 1.5rem;    
+    font-size: var(--icon-size);  
 }
-
-button.svg-button svg{
-    fill: var(--color-text);
-}
-
-button.svg-button:hover svg{
-    fill: var(--color-link);
-}
-
-button.svg-button:active svg{
-    fill: var(--color-accent)
-}
-
-
-code {
-    font-size: 0.85em;
+  
+.svg-btn svg {
+    fill: currentColor;
+    width: 1em;   /* scale icon to font-size if you like */
+    height: 1em;
+    display: block;  /* remove tiny whitespace issues */
   }
-
-/* base styles for all rendered staves etc */
-#output {
-    min-height: 220px;
-    background-color: #fbfbf0;
-    margin-top: 20px;
-    border: 1px solid #ccc;
+  
+.svg-btn:hover {
+    color: var(--color-link);
+    background: none;
 }
 
-button {
+.svg-btn:active {
+    color: var(--color-accent);
+}
+  
+.svg-btn:focus-visible {
+    outline: 2px solid var(--color-link);
+    outline-offset: 2px;
+}
+/* different size helpers */
+.svg-btn--sm { --icon-size: 1rem;  }
+.svg-btn--md { --icon-size: 1.5rem; }
+.svg-btn--lg { --icon-size: 2.5rem; }
+
+button.btn {
   background-color: #fff;
   border: 1px solid #d5d9d9;
   border-radius: 8px;
@@ -89,15 +94,27 @@ button {
   -webkit-user-select: none;
   touch-action: manipulation;
   vertical-align: middle;
-  width: 100px;
-}
+ }
 
-button:hover {
+button.btn:hover {
   background-color: #f7fafa;
 }
 
-button:focus {
+button.btn:focus {
   border-color: #008296;
   box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
   outline: 0;
+}
+
+
+code {
+    font-size: 0.85em;
+  }
+
+/* base styles for all rendered staves etc */
+#output {
+    min-height: 220px;
+    background-color: #fbfbf0;
+    margin-top: 20px;
+    border: 1px solid #ccc;
 }

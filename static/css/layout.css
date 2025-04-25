@@ -113,7 +113,7 @@ body.nav-open .nav-container {
 }
 
 /* On mobile, place button to open nav on the top right */
-#open-sidebar-button {
+#open-sidebar-btn {
     position: absolute;
     top: 1rem;
     right: 1rem;
@@ -136,8 +136,8 @@ body.nav-open #overlay {
 /* for button that copies code in html/node-example layouts */
 .copy-btn {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 0.5em;
+    right: 0.5em;
   
     /* hide visually and remove from hit‑testing */
     opacity: 0;
@@ -191,7 +191,7 @@ body.nav-open #overlay {
         min-width: 0; /* allows long <pre> to scroll correctly */
     }
 
-    #open-sidebar-button{
+    #open-sidebar-btn{
         display: none;
     }
 }
