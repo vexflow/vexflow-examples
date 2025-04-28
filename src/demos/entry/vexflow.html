@@ -1,6 +1,5 @@
 ---
 title: vexflow.js
-needsHighlight: true
 
 extraHead:
   - <!-- Load Library -->
@@ -20,40 +19,37 @@ eleventyNavigation:
 <p><a href="https://cdn.jsdelivr.net/npm/vexflow@5.0.0/build/cjs/vexflow.js">Click here to view the vexflow.js file</a>.</p>
 <p>Open the developer console and explore the <code>VexFlow</code> object. Below are some things you can try:</p>
 <p>Get an object with the build information of the VexFlow library.</p>
-<pre><code class="language-javascript">VexFlow.BUILD</code></pre>
+{% highlight js %}
+VexFlow.BUILD 
+{% endhighlight %}
+
 <p>Get the default font stack, as an array of strings.</p>
-<pre><code class="language-javascript">VexFlow.getFonts()</code></pre>
+{% highlight js %}
+VexFlow.getFonts()
+{% endhighlight %}
+
 <p>Draw a stave with a treble clef, time signature, and a few notes.</p>
-<button onclick="runCode()">Run Code</button>
-<pre><code class="language-javascript" id="code"></code></pre>
-<div id="output"></div>    
-
-<script>
-  const sampleCode = `const factory = new VexFlow.Factory({
-renderer: { elementId: 'output', width: 300, height: 180 },
-});
-
+{% demo "js" %}
+const factory = new VexFlow.Factory({
+  renderer: { elementId: 'output', width: 300, height: 180 },
+  });
+  
 const score = factory.EasyScore();
 const system = factory.System();
-
+  
 system
-.addStave({
-voices: [
-  score.voice(score.notes('C#5/q, B4, A4, G#4', { stem: 'up' })),
-  score.voice(score.notes('C#4/h, C#4', { stem: 'down' })),
-],
-})
-.addClef('treble')
-.addTimeSignature('4/4');
+  .addStave({
+  voices: [
+    score.voice(score.notes('C#5/q, B4, A4, G#4', { stem: 'up' })),
+    score.voice(score.notes('C#4/h, C#4', { stem: 'down' })),
+  ],
+  })
+  .addClef('treble')
+  .addTimeSignature('4/4');
+  
+factory.draw();
+{% enddemo %}
+<div id="output"></div>    
 
-factory.draw();`;
-
-  // Set the inner text of the code block and re-highlight the code
-  document.getElementById('code').textContent = sampleCode;
-
-  function runCode() {
-    eval('"use strict";' + sampleCode);
-  }
-</script>
   </body>
 </html>

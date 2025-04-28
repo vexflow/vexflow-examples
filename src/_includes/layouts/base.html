@@ -9,19 +9,11 @@
     <link rel="stylesheet" href="/css/layout.css">
     <link rel="stylesheet" href="/css/base.css">
 
-    {% if needsHighlight %}
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/highlight.js@11/styles/github.min.css"
-      media="(prefers-color-scheme: light)"
-      />
-    <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/highlight.js@11/styles/github-dark-dimmed.min.css"
-    media="(prefers-color-scheme: dark)" 
-  />
-    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
-  {% endif %}
+  <link
+  href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css"
+  rel="stylesheet"
+  media=""
+/>
   <!-- allow extra tags in the head -->
   {% if extraHead %}
     {% for tag in extraHead %}
@@ -107,11 +99,6 @@ document.addEventListener("DOMContentLoaded", () => {
   headings.forEach(h => observer.observe(h));
 });
       </script>   
-      {% if needsHighlight %}
-      <script>
-          hljs.highlightAll();
-      </script>
-    {% endif %}
     <script>
       document.addEventListener("click", (e) => {
         // Only run on clicks of copy buttons
@@ -130,5 +117,25 @@ document.addEventListener("DOMContentLoaded", () => {
         navigator.clipboard.writeText(text);
       });
     </script>
+        <script>
+          document.addEventListener("click", (e) => {
+            // Only run on clicks of copy buttons
+            const btn = e.target.closest(".run-btn");
+            if (!btn) return;
+    
+            // Find the nearest code block wrapper
+            const block = e.target.closest(".code-demo");
+            if (!block) return;
+    
+            // Grab the code text (innerText so spans from highlighting are ignored)
+            const codeEl = block.querySelector("code");
+            const text   = codeEl.innerText;
+            eval(`"use strict";\n${text}`);
+    
+            // Copy it
+            navigator.clipboard.writeText(text);
+          });
+        </script>
+    
 </body>
 </html>

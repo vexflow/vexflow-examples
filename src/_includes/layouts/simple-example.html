@@ -6,28 +6,16 @@ needsHighlight: true
 
 {{ content }}
 
-{% capture snippet %}
-{% include "code/{{ filename }}" %}
-{% endcapture %}
+{% assign snippetPath = "code/" | append: filename %}
+{% assign ext         = filename | split:'.' | last | downcase %}
+{% assign showIframe         = ext == "html" %}
 
-{% if showIframe %}
-<iframe
-  width="100%"
-  height="250"
-  srcdoc="{{ snippet | escape }}"
-  title="{{ filename }}"
-></iframe>
-
-<form
-  action="https://jsfiddle.net/api/post/library/pure/"
-  method="post"
-  target="_blank"
->
-  <textarea hidden name="html">{{ snippet }}</textarea><br>
-  <input type="submit" value="Edit in JSFiddle">
-</form>
-{% endif %}
-
-<pre><code id="example-code" class="language-{{ language | default: "html" }}">
-  {{ snippet | escape }}
-</code></pre>
+{%- comment -%}
+  Now just wrap the file's contents in your demo shortcode.
+  — ext            = language (e.g. “html”, “js”)
+  — ext == "html"
+  — (height omitted, so defaults to 250px)
+{%- endcomment -%}
+{% demo ext false showIframe %}
+  {% render snippetPath %}
+{% enddemo %}
