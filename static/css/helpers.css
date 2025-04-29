@@ -1,6 +1,5 @@
 .active{
     font-weight: bold;
-    color: var(--color-accent);
     background-color: var(--color-background-secondary);
 }
 

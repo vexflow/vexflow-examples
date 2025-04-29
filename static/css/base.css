@@ -31,7 +31,7 @@ a{
 
 a:hover{
     font-weight: bold;
-    color: var(--color-accent);
+    text-decoration: underline;
 }
 
 button{
@@ -127,4 +127,9 @@ code {
 
 canvas{
     background-color: white;
+}
+
+/* hotfix for weird backgrounds that are in some of the tokens in prism css */
+pre *{
+    background: none !important;
 }
