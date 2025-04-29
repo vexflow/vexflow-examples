@@ -4,7 +4,7 @@
     /* Light */
     --light-color-background: #f2f4f8;
     --light-color-background-secondary: #eff0f1;
-    --light-color-background-highlight: #d2d2d2; 
+    --light-color-background-highlight: #aaf; 
     --light-color-warning-text: #222;
     --light-color-background-warning: #e6e600;
     --light-color-icon-background: var(--light-color-background);
@@ -20,7 +20,7 @@
     /* Dark */
     --dark-color-background: #2b2e33;
     --dark-color-background-secondary: #1e2024;
-    --dark-color-background-highlight: #00e4e4;
+    --dark-color-background-highlight: #aaf;
     --dark-color-background-warning: #bebe00;
     --dark-color-warning-text: #222;
     --dark-color-icon-background: var(--dark-color-background-secondary);
