@@ -2,11 +2,17 @@
 layout: layouts/base.html
 toc: false
 ---
+<h1> {{ title }} </h1>
 
 {{ content }}
 
 {% assign snippetPath = "code/" | append: filename %}
+
 {% assign ext         = filename | split:'.' | last | downcase %}
+{% if ext == "mjs" %}
+  {% assign ext = "js" %}
+{% endif %}
+
 {% assign showIframe         = ext == "html" %}
 
 {%- comment -%}
