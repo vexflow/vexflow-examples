@@ -133,3 +133,7 @@ canvas{
 pre *{
     background: none !important;
 }
+
+input[type = "submit"]{
+    cursor: pointer;
+}
