@@ -3,8 +3,11 @@
     <div class="site-nav">
   {% assign navTree = collections.all | eleventyNavigation %}
   {% assign topLevel = navTree | where: "parent", nil | sort: "title" %}
+  {% assign guides = topLevel | where: "title", "Guides" %}
+  {% assign others = topLevel | reject: "title", "Guides" | sort: "title" %}
+  {% assign sortedNav = guides | concat: others %}
 
-  {% for entry in topLevel %}
+  {% for entry in sortedNav %}
     {% assign children = entry.children | sort: "title" %}
     {% assign activeChild = children | where: "url", page.url | first %}
     <div class="section">

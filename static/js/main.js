@@ -20,41 +20,6 @@ function setupNav(){
   });  
 }
 
-function setupTOC(){
-  document.addEventListener("DOMContentLoaded", () => {
-    const allTOCLinks = document.querySelectorAll(".toc a");
-    const headings = Array.from(allTOCLinks)
-      .map(link => document.querySelector(decodeURIComponent(link.getAttribute("href"))))
-      .filter(Boolean);
-  
-    const isVisible = el => !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
-  
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const id = entry.target.getAttribute("id");
-  
-          // Remove active from all visible TOCs
-          allTOCLinks.forEach(link => {
-            if (isVisible(link)) link.classList.remove("active");
-          });
-  
-          // Add active to visible link matching this heading
-          const matchingLinks = Array.from(document.querySelectorAll(`.toc a[href="#${id}"]`));
-          matchingLinks.forEach(link => {
-            if (isVisible(link)) link.classList.add("active");
-          });
-        }
-      });
-    }, {
-      // rootMargin: "-50% 0% -40% 0%",
-      threshold: 0.1
-    });
-  
-    headings.forEach(h => observer.observe(h));
-  })
-}
-
 function setupCopy(){
   document.addEventListener("click", (e) => {
     // Only run on clicks of copy buttons
@@ -96,6 +61,5 @@ function setupButtons(){
 }
 
 setupNav()
-setupTOC()
 setupCopy()
 setupRun()

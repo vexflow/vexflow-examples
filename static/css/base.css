@@ -15,6 +15,11 @@ h1 {
     margin-bottom: 1rem;
 }
 
+p{
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
 ul{
     list-style: none;
 }
