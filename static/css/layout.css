@@ -57,59 +57,41 @@ body.nav-open .nav-container {
 /* Allows scrolling only on site-nav. (full nav container not scrollable) */
 .site-nav{
     overflow: auto;
-    scrollbar-width: thin;
+    scrollbar-width: thin;  
+
+    padding-top: 20px;
 }
  
-.site-nav .section, .page-nav .section{
+.site-nav .section{
     padding-bottom: 1rem;
 } 
 
 /* give a little padding to headers */
-.site-nav .section .section-header,
-.page-nav .toc-header {
+.site-nav .section .section-header{
   display: block;
   width: 100%;
   padding: 0.5rem 1rem;  
+
+  font-size: 1.1rem;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  text-decoration: none;
 }
+
 /* make anchor tags take full width of nav contianers and shift links to right */
-.site-nav li a,
-.page-nav li a {
+.site-nav li a {
   display: block;
   width: 100%;
   padding: 0.5rem 0rem 0.5rem 2rem;  
 }
   
-.site-nav li a:hover,
-.page-nav li a:hover {
+.site-nav li a:hover {
   background-color: var(--color-background-secondary);
 }
 
-/* page-nav not shown if container doesn't have toc */
-.page-nav{
-    display: none;
-}
-
-/* if container has toc, show page-nav */
-.container.has-toc .page-nav{
-    display: block;
-    padding-bottom: 1rem;
-}
-
 /* everything should be the same bg color (covers left + right col) */
-.nav-container, .page-nav{
+.nav-container{
     background: var(--color-background);
-}
-
-.page-nav, .site-nav{
-    padding-top: 20px;
-}
-
-/* Styles for site-nav and page-nav headers */
-.site-nav .section .section-header, .toc-header{
-    font-size: 1.1rem;
-    margin-top: 0px;
-    margin-bottom: 10px;
-    text-decoration: none;
 }
 
 /* On mobile, place button to open nav on the top right */
@@ -163,7 +145,7 @@ body.nav-open #overlay {
       pointer-events 0s;
 }
 
-/* one sidebar for medium windows */
+/* sidebar goes to side starting at medium windows */
 @media (min-width: 900px){
     .container{
         display: grid;        
@@ -195,37 +177,4 @@ body.nav-open #overlay {
         display: none;
     }
 }
-
-/* two sidebars — only when .has-toc is present on .container */
-@media (min-width: 1300px) {
-  
-    /* if we’ve flagged has-toc, expand to two sidebars */
-    .container.has-toc {
-      grid-template-areas: "left center right";
-      grid-template-columns: minmax(0px, 1fr) minmax(0px, 3.5fr) minmax(0px, 1fr);
-    }
-  
-    /* page‑nav only shows in the third slot when .has-toc */
-    .container .page-nav {
-      display: none;
-    }
-
-    .container.has-toc .page-nav {
-      display: block;
-      grid-area: right;
-      overflow-y: auto;
-      position: sticky;
-      top: 0;
-      height: 100vh;
-      align-self: start;
-    }
-  
-    /* hide embedded TOC and show desktop-only links as before */
-    .in-nav {
-      display: none;
-    }
-    .container.has-toc .desktop-only {
-      display: block;
-    }
-  }
   

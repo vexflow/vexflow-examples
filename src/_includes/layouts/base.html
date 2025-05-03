@@ -31,12 +31,8 @@
   <title>{{ title }}</title>
 </head>
 <body>
-   <div class="container{% if toc %} has-toc{% endif %}">
-    {% if toc %}
-        {% include "partials/nav.html" %}
-      {% else %}
-      {% include "partials/basic-nav.html" %}
-      {% endif %}
+   <div class="container">
+      {% include "partials/nav.html" %}
 
         <main class="main-content">
           <section class="content-wrapper">

@@ -1,7 +1,5 @@
 import htmlBase from "./lib/plugins/htmlBase.js";
 import navigation from "./lib/plugins/navigation.js";
-import toc from "./lib/plugins/toc.js";
-import configureMarkdown from "./lib/plugins/markdown.js";
 import syntaxHighlight from "./lib/plugins/syntaxHighlight.js";
 import addCopyButtons from "./lib/transforms/addCopyButtons.js";
 import demoShortcode from "./lib/shortcodes/demo.js";
@@ -13,19 +11,18 @@ export default async function (eleventyConfig) {
   eleventyConfig.addGlobalData("currDate", () => new Date());
   eleventyConfig.addPassthroughCopy({ static: "/" });
 
-  // allows for named arguments in liquid shortcodes
-  eleventyConfig.setLiquidParameterParsing("builtin");
+  // will potentially allow for named arguments in liquid shortcodes (https://github.com/11ty/eleventy/issues/2679)
+  // eleventyConfig.setLiquidParameterParsing("builtin");
 
   // plugins
   htmlBase(eleventyConfig);
   navigation(eleventyConfig);
-  toc(eleventyConfig);
-  configureMarkdown(eleventyConfig);
   syntaxHighlight(eleventyConfig)
 
   // transforms
   addCopyButtons(eleventyConfig)
 
+  // shortcodes
   eleventyConfig.addPairedShortcode("demo", demoShortcode)
 }
 
