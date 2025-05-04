@@ -26,7 +26,7 @@ Let's draw an empty stave on this SVG, and set the clef and time signature.
     <!-- Div where the scores will be output -->
     <div id="output"></div>
     <!-- Load library -->
-    <script src="https://cdn.jsdelivr.net/npm/vexflow@5.0.0/build/cjs/vexflow-core.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vexflow@{% ver %}/build/cjs/vexflow-core.js"></script>
     <script>
     /* global VexFlow */
     VexFlow.loadFonts('Bravura', 'Academico').then(() => {
@@ -69,7 +69,7 @@ In the code below we create a voice with two notes, a rest and a chord and assoc
     <!-- Div where the scores will be output -->
     <div id="output"></div>
     <!-- Load library -->
-    <script src="https://cdn.jsdelivr.net/npm/vexflow@5.0.0/build/cjs/vexflow-core.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vexflow@{% ver %}/build/cjs/vexflow-core.js"></script>
     <script>
     /* global VexFlow */
     VexFlow.loadFonts('Bravura', 'Academico').then(() => {
@@ -115,7 +115,7 @@ Let's change the font to **Finale Ash** and add a second voice with a single who
     <!-- Div where the scores will be output -->
     <div id="output"></div>
     <!-- Load library -->
-    <script src="https://cdn.jsdelivr.net/npm/vexflow@5.0.0/build/cjs/vexflow-core.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vexflow@{% ver %}/build/cjs/vexflow-core.js"></script>
     <script>
     /* global VexFlow */
     VexFlow.loadFonts('Finale Ash', 'Finale Ash Text').then(() => {
@@ -172,7 +172,7 @@ Let's add some accidentals and dots.
     <!-- Div where the scores will be output -->
     <div id="output"></div>
     <!-- Load library -->
-    <script src="https://cdn.jsdelivr.net/npm/vexflow@5.0.0/build/cjs/vexflow-core.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vexflow@{% ver %}/build/cjs/vexflow-core.js"></script>
     <script>
     /* global VexFlow */
     VexFlow.loadFonts('Bravura', 'Academico').then(() => {

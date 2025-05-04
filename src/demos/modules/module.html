@@ -24,7 +24,7 @@ eleventyNavigation:
 <p>VexFlow Build: <span id="info"></span></p>
 <p>See also: <a href="../script-tag/">Script Tag</a></p>
 <script type="module">
-  import VexFlow from 'https://cdn.jsdelivr.net/npm/vexflow@5.0.0/build/esm/entry/vexflow.js';
+  import VexFlow from 'https://cdn.jsdelivr.net/npm/vexflow@{% ver %}/build/esm/entry/vexflow.js';
   VexFlow.setFonts('Petaluma');
 
   document.fonts.ready.then(() => {
