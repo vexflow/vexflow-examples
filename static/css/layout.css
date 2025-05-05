@@ -33,7 +33,7 @@
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    background: var(--color-background);
+    background: var(--color-background-secondary);
     color: var(--color-text);
 
     transform: translateX(-100%);
@@ -86,12 +86,8 @@ body.nav-open .nav-container {
 }
   
 .site-nav li a:hover {
-  background-color: var(--color-background-secondary);
-}
-
-/* everything should be the same bg color (covers left + right col) */
-.nav-container{
-    background: var(--color-background);
+  background-color: var(--color-nav-hover-bg);
+  text-decoration: none;
 }
 
 /* On mobile, place button to open nav on the top right */

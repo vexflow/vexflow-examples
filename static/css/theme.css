@@ -13,6 +13,9 @@
     --light-color-text: #222;
     --light-color-text-aside: #6e6e6e;
     --light-color-link: #1f70c2;
+    --light-color-nav-hover-bg:    rgba(0, 0, 0, 0.05);
+    --light-color-nav-active-bg:   rgba(0, 0, 0, 0.10);
+  
 
     --light-external-icon: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='10' height='10'><path fill-opacity='0' stroke='%23000' stroke-width='10' d='m43,35H5v60h60V57M45,5v10l10,10-30,30 20,20 30-30 10,10h10V5z'/></svg>");
     --light-color-scheme: light;
@@ -29,6 +32,9 @@
     --dark-color-text: #f5f5f5;
     --dark-color-text-aside: #dddddd;
     --dark-color-link: #00aff4;
+    --dark-color-nav-hover-bg:    rgba(255, 255, 255, 0.10);
+    --dark-color-nav-active-bg:   rgba(255, 255, 255, 0.20);
+  
 
     --dark-external-icon: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='10' height='10'><path fill-opacity='0' stroke='%23fff' stroke-width='10' d='m43,35H5v60h60V57M45,5v10l10,10-30,30 20,20 30-30 10,10h10V5z'/></svg>");
     --dark-color-scheme: dark;
@@ -47,6 +53,8 @@
         --color-text: var(--light-color-text);
         --color-text-aside: var(--light-color-text-aside);
         --color-link: var(--light-color-link);
+        --color-nav-hover-bg: var(--light-color-nav-hover-bg);
+        --color-nav-active-bg: var(--light-color-nav-active-bg);
 
         --external-icon: var(--light-external-icon);
         --color-scheme: var(--light-color-scheme);
@@ -66,6 +74,9 @@
         --color-text: var(--dark-color-text);
         --color-text-aside: var(--dark-color-text-aside);
         --color-link: var(--dark-color-link);
+        --color-nav-hover-bg: var(--dark-color-nav-hover-bg);
+        --color-nav-active-bg: var(--dark-color-nav-active-bg);
+
 
         --external-icon: var(--dark-external-icon);
         --color-scheme: var(--dark-color-scheme);
@@ -88,6 +99,8 @@ html {
     --color-text: var(--light-color-text);
     --color-text-aside: var(--light-color-text-aside);
     --color-link: var(--light-color-link);
+    --color-nav-hover-bg: var(--light-color-nav-hover-bg);
+    --color-nav-active-bg: var(--light-color-av-active-bg);
 
     --external-icon: var(--light-external-icon);
     --color-scheme: var(--light-color-scheme);
@@ -105,6 +118,9 @@ html {
     --color-text: var(--dark-color-text);
     --color-text-aside: var(--dark-color-text-aside);
     --color-link: var(--dark-color-link);
+    --color-nav-hover-bg: var(--dark-color-nav-hover-bg);
+    --color-nav-active-bg: var(--dark-color-nav-active-bg);
+
 
     --external-icon: var(--dark-external-icon);
     --color-scheme: var(--dark-color-scheme);

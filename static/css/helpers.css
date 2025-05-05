@@ -2,7 +2,8 @@
 
 .active{
     font-weight: bold;
-    background-color: var(--color-background-secondary);
+    /* background-color: var(--color-background-secondary); */
+    background-color: var(--color-nav-active-bg);
 }
 
 .desktop-only{
