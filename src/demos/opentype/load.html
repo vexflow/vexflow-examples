@@ -1,26 +1,11 @@
 ---
 title: Load
-
-extraHead:
-  - <script src="https://cdn.jsdelivr.net/npm/opentype.js@1.3.4/dist/opentype.min.js"></script>
-  - <script src="https://cdn.jsdelivr.net/npm/wawoff2@2.0.1/build/decompress_binding.js"></script>
   
 eleventyNavigation:
     key: Load
     parent: Opentype
     title: Load
 ---
-<style>
-  .music {
-    font-size: 72px;
-  }
-
-  .text {
-    font-family: monospace;
-    font-size: 32px;
-    line-height: 150%;
-  }
-</style>
 <h1>Load Fonts</h1>
 <p>
 This page demonstrates <a href="https://opentype.js.org/">opentype.js</a> and the
@@ -34,7 +19,7 @@ this page's source for more info.
 <div id="musicFontSize"></div>
 <div id="musicFontInfo"></div>
 <p>The music glyphs below will be styled after you load the font.</p>
-<div class="music">
+<div class="music" style="font-size: 72px;">
 &#xE050; &#xE062; &#xE080; &#xE081; &#xE082; &#xE083; &#xE084; &#xE08A; &#xE08B; &#xE1E7; &#xE260; &#xE261;
 &#xE262; &#xE263; &#xE0A2; &#xE264; &#xE245; &#xE1F6; &#xE014; &#xE030; &#xE032; &#xE1FE; &#xE1FF; &#xE200;
 &#xE201; &#xE202; &#xE203; &#xE1D2; &#xE1D3; &#xE1D4; &#xE1D5; &#xE1D6; &#xE1D7; &#xE1D8; &#xE1D9; &#xE1DA;
@@ -49,7 +34,7 @@ this page's source for more info.
 <div id="textFontSize"></div>
 <div id="textFontInfo"></div>
 <p>The text below will be styled after you load the font.</p>
-<div class="text">
+<div class="text" style="font-family: monospace; font-size: 32px; line-height: 150%;">
 The quick brown fox jumped over 1,234,567,890 lazy dogs. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 Sed pretium aliquam tempor. Curabitur tincidunt malesuada ligula et fermentum. Integer varius iaculis condimentum.
 Nullam ultricies lorem vel nisi tincidunt iaculis. Vivamus faucibus enim in tortor lacinia dignissim. Vestibulum a
@@ -58,6 +43,8 @@ sem, nec hendrerit libero felis ac justo. Donec ac molestie arcu, nec pulvinar i
 tristique senectus et netus et malesuada fames ac turpis egestas. Quisque pretium enim a lacus ultrices, nec
 vestibulum ipsum viverra. Proin condimentum placerat libero ut consequat. Nulla vitae.
 </div>
+<script src="https://cdn.jsdelivr.net/npm/opentype.js@1.3.4/dist/opentype.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/wawoff2@2.0.1/build/decompress_binding.js"></script>
 <script>
   const loadedFonts = {
     music: [],

@@ -1,6 +1,29 @@
 ---
 title: Music
 
+extraHead:
+  <!-- 
+      In your browser's dev tools / network tab, you'll see that these index.css files are loaded immediately. 
+      However, the actual font files (*.woff2) are not loaded until the SHOW NEXT FONT button is clicked.
+  -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@vexflow-fonts/bravura/index.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@vexflow-fonts/bravuratext/index.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@vexflow-fonts/finaleash/index.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@vexflow-fonts/finalebroadway/index.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@vexflow-fonts/finalejazz/index.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@vexflow-fonts/finalemaestro/index.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@vexflow-fonts/gonville/index.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@vexflow-fonts/gootville/index.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@vexflow-fonts/gootvilletext/index.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@vexflow-fonts/leipzig/index.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@vexflow-fonts/leland/index.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@vexflow-fonts/lelandtext/index.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@vexflow-fonts/musejazz/index.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@vexflow-fonts/petaluma/index.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@vexflow-fonts/petalumatext/index.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@vexflow-fonts/sebastian/index.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@vexflow-fonts/sebastiantext/index.css" />
+
 eleventyNavigation:
     key: Music
     parent: Fonts
@@ -10,55 +33,13 @@ eleventyNavigation:
   Summary: Sample of the music fonts available in VexFlow. This page doesn't use any VexFlow features.
   Run: Open this html file in your web browser.
 -->
-<style>
-  .main-content {
-    font-family: sans-serif;
-    font-size: 22px;
-  }
-
-  button {
-    font-size: 18px;
-    padding: 10px;
-    cursor: pointer;
-  }
-
-  .music {
-    margin-top: 100px;
-    font-size: 100px;
-    display: none;
-  }
-
-  #info {
-    display: none;
-  }
-</style>
-<!-- 
-    In your browser's dev tools / network tab, you'll see that these index.css files are loaded immediately. 
-    However, the actual font files (*.woff2) are not loaded until the SHOW NEXT FONT button is clicked.
--->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@vexflow-fonts/bravura/index.css" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@vexflow-fonts/bravuratext/index.css" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@vexflow-fonts/finaleash/index.css" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@vexflow-fonts/finalebroadway/index.css" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@vexflow-fonts/finalejazz/index.css" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@vexflow-fonts/finalemaestro/index.css" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@vexflow-fonts/gonville/index.css" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@vexflow-fonts/gootville/index.css" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@vexflow-fonts/gootvilletext/index.css" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@vexflow-fonts/leipzig/index.css" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@vexflow-fonts/leland/index.css" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@vexflow-fonts/lelandtext/index.css" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@vexflow-fonts/musejazz/index.css" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@vexflow-fonts/petaluma/index.css" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@vexflow-fonts/petalumatext/index.css" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@vexflow-fonts/sebastian/index.css" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@vexflow-fonts/sebastiantext/index.css" />
-<button id="show-next-font" onclick="showNextFont()">SHOW NEXT FONT</button>
-<p id="info">
+<h1>Music</h1>
+<button id="show-next-font" onclick="showNextFont()" style="font-size: 18px; padding: 10px">SHOW NEXT FONT</button>
+<p id="info" style="display: none;">
   Glyphs below are set in <b><span id="font-name"></span></b>. Glyph code points were copied from:
   <a href="https://w3c.github.io/smufl/latest/">https://w3c.github.io/smufl/latest/</a>
 </p>
-<div class="music">
+<div class="music" style="margin-top: 100px; font-size: 100px; display: none;">
   &#xE560; &#xE1D7; &#xE050; &#xE062; &#xE080; &#xE081; &#xE082; &#xE083; &#xE084; &#xE08A; &#xE08B; &#xE1D2;
   &#xE1D3; &#xE1D4; &#xE1D5; &#xE1D6; &#xE1D7; &#xE1D8; &#xE1D9; &#xE1DA; &#xE1DB; &#xE1DC; &#xE1DD; &#xE1DE;
   &#xE1DF; &#xE1E0; &#xE1E1; &#xE1E2; &#xE1E7; &#xE260; &#xE261; &#xE262; &#xE263; &#xE264; &#xE245; &#xE269;

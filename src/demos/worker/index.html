@@ -1,6 +1,18 @@
 ---
 title: Worker
 
+extraHead: |
+  <style>
+    canvas {
+      width: 500px;
+      height: 200px;
+      border: 1px solid gray;
+      display: block;
+      margin-bottom: 10px;
+      background-color: white;
+    }
+  </style>
+
 eleventyNavigation:
     key: Using Workers
     parent: Worker
@@ -13,16 +25,7 @@ eleventyNavigation:
     Start a web server with `npx http-server -p 8080` from the `vexflow/` folder
     Navigate to http://127.0.0.1:8080/demos/worker/
 -->
-<style>
-  canvas {
-    width: 500px;
-    height: 200px;
-    border: 1px solid gray;
-    display: block;
-    margin-bottom: 10px;
-    background-color: white;
-  }
-</style>
+
 <h1>Worker</h1>
 <p>
   The five scores below are rendered by web workers via
@@ -36,36 +39,34 @@ eleventyNavigation:
 
 <p>see the source .js <a href="/js/worker-vexflow-core.js">here</a> and examine this page's source to see how it is used.</p>
 <div class="content"></div>
-    <script type="module">
-      if (window.Worker) {
-        const numScores = 5;
+<script type="module">
+  if (window.Worker) {
+    const numScores = 5;
 
-        const workers = [];
-        const offscreenCanvases = [];
-        for (let i = 0; i < numScores; i++) {
-          let container = document.getElementsByClassName('content')[0];
-          container.insertAdjacentHTML(
-            'beforeend',
-            `<canvas id="outputCanvas${i}" width="1000" height="400" style="display: block; margin: 0 auto; margin-top: 10px;""></canvas>`
-          );
+    const workers = [];
+    const offscreenCanvases = [];
+    for (let i = 0; i < numScores; i++) {
+      let container = document.getElementsByClassName('content')[0];
+      container.insertAdjacentHTML(
+        'beforeend',
+        `<canvas id="outputCanvas${i}" width="1000" height="400" style="display: block; margin: 0 auto; margin-top: 10px;""></canvas>`
+      );
 
-          const workerJS = '/vexflow-examples/js/worker-vexflow-core.js';
-          const w = new Worker(workerJS);
-          w.onmessage = function (e) {
-            console.log(`Message from #${i} / ${workerJS}:  [${e.data}]`);
-          };
-          workers.push(w);
-          const offscreen = document.getElementById('outputCanvas' + i).transferControlToOffscreen();
-          offscreenCanvases.push(offscreen);
-        }
+      const workerJS = '/vexflow-examples/js/worker-vexflow-core.js';
+      const w = new Worker(workerJS);
+      w.onmessage = function (e) {
+        console.log(`Message from #${i} / ${workerJS}:  [${e.data}]`);
+      };
+      workers.push(w);
+      const offscreen = document.getElementById('outputCanvas' + i).transferControlToOffscreen();
+      offscreenCanvases.push(offscreen);
+    }
 
-        for (let i = 0; i < numScores; i++) {
-          const canvas = offscreenCanvases[i];
-          workers[i].postMessage({ canvas: canvas }, [canvas] /* transfer list */);
-        }
-      } else {
-        alert("This browser doesn't support web workers.");
-      }
-    </script>
-  </body>
-</html>
+    for (let i = 0; i < numScores; i++) {
+      const canvas = offscreenCanvases[i];
+      workers[i].postMessage({ canvas: canvas }, [canvas] /* transfer list */);
+    }
+  } else {
+    alert("This browser doesn't support web workers.");
+  }
+</script>

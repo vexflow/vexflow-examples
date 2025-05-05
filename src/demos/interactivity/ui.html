@@ -1,46 +1,49 @@
 ---
 title: Hover Events
 
+extraHead: |
+  <style>
+    /* Bravura */
+    @font-face {
+      font-family: 'Bravura';
+      font-style: normal;
+      font-display: block;
+      font-weight: 400;
+      src:
+        local('Bravura'),
+        url(https://cdn.jsdelivr.net/npm/node_modules/@vexflow-fonts/bravura/bravura.woff2) format('woff2');
+    }
+
+    /* Bravura Text */
+    @font-face {
+      font-family: 'Bravura Text';
+      font-style: normal;
+      font-display: block;
+      font-weight: 400;
+      src:
+        local('Bravura Text'),
+        url(https://cdn.jsdelivr.net/npm/node_modules/@vexflow-fonts/bravuratext/bravuratext.woff2) format('woff2');
+    }
+
+    svg {
+      width: 600px;
+      height: 600px;
+      border: 1px solid gray;
+    }
+
+    svg > text {
+      font-family: 'Bravura';
+      font-size: 80pt;
+    }
+  </style>
+
 eleventyNavigation:
-    key: ui
-    parent: Interactivity
-    title: Hover Events
+  key: Hover Events
+  parent: Interactivity
+  title: Hover Events
 ---
 
-<style>
-  /* Bravura */
-  @font-face {
-    font-family: 'Bravura';
-    font-style: normal;
-    font-display: block;
-    font-weight: 400;
-    src:
-      local('Bravura'),
-      url(https://cdn.jsdelivr.net/npm/node_modules/@vexflow-fonts/bravura/bravura.woff2) format('woff2');
-  }
 
-  /* Bravura Text */
-  @font-face {
-    font-family: 'Bravura Text';
-    font-style: normal;
-    font-display: block;
-    font-weight: 400;
-    src:
-      local('Bravura Text'),
-      url(https://cdn.jsdelivr.net/npm/node_modules/@vexflow-fonts/bravuratext/bravuratext.woff2) format('woff2');
-  }
-
-  svg {
-    width: 600px;
-    height: 600px;
-    border: 1px solid gray;
-  }
-
-  svg > text {
-    font-family: 'Bravura';
-    font-size: 80pt;
-  }
-</style>
 <span style="font-family: Bravura"></span>
 <span style="font-family: Bravura Text"></span>
 <h1>Hover Events</h1>

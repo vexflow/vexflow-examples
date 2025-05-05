@@ -134,6 +134,10 @@ canvas{
     background-color: white;
 }
 
+.notation {
+    background-color: white;
+}
+
 /* hotfix for weird backgrounds that are in some of the tokens in prism css */
 pre *{
     background: none !important;

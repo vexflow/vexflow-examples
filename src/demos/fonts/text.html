@@ -1,6 +1,22 @@
 ---
 title: Text
 
+extraHead:
+  <!-- 
+    In your browser's dev tools / network tab, you'll see that these index.css files are loaded immediately. 
+    However, the actual font files (*.woff2) are not loaded until the button is clicked.
+  -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@vexflow-fonts/academico/index.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@vexflow-fonts/edwin/index.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@vexflow-fonts/finaleashtext/index.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@vexflow-fonts/finalebroadwaytext/index.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@vexflow-fonts/finalejazztext/index.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@vexflow-fonts/finalemaestrotext/index.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@vexflow-fonts/musejazztext/index.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@vexflow-fonts/nepomuk/index.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@vexflow-fonts/petalumascript/index.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@vexflow-fonts/robotoslab/index.css" />
+
 eleventyNavigation:
     key: Text
     parent: Fonts
@@ -10,41 +26,10 @@ eleventyNavigation:
   Summary: Sample of the text fonts available in VexFlow. This page doesn't use any VexFlow features.
   Run: Open this html file in your web browser.
 -->
-<style>
-
-.text {
-  font-family: monospace;
-  font-size: 32px;
-  margin: auto;
-}
-
-button {
-  font-size: 18px;
-  padding: 10px;
-  cursor: pointer;
-}
-
-.space {
-  height: 30px;
-}
-</style>
-<!-- 
-  In your browser's dev tools / network tab, you'll see that these index.css files are loaded immediately. 
-  However, the actual font files (*.woff2) are not loaded until the button is clicked.
--->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@vexflow-fonts/academico/index.css" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@vexflow-fonts/edwin/index.css" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@vexflow-fonts/finaleashtext/index.css" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@vexflow-fonts/finalebroadwaytext/index.css" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@vexflow-fonts/finalejazztext/index.css" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@vexflow-fonts/finalemaestrotext/index.css" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@vexflow-fonts/musejazztext/index.css" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@vexflow-fonts/nepomuk/index.css" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@vexflow-fonts/petalumascript/index.css" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@vexflow-fonts/robotoslab/index.css" />
-<button id="show-next-font" onclick="showNextFont()">SHOW NEXT FONT</button>
-<div class="space"></div>
-<div class="text">
+<h1>Text</h1>
+<button id="show-next-font" onclick="showNextFont()" style="font-size: 18px; padding: 10px; cursor: pointer;">SHOW NEXT FONT</button>
+<div class="space" style="height: 30px;"></div>
+<div class="text" style="font-family: monospace; font-size: 32px; margin: auto;">
   This text is in <b><span id="font-name">monospace</span></b
   >. <br /><br />
   VexFlow is a music engraving library written in Typescript.<br />

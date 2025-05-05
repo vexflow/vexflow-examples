@@ -1,6 +1,10 @@
 ---
 title: Bravura Score
 
+eleventyComputed:
+  extraHead:
+    <script src="https://cdn.jsdelivr.net/npm/vexflow@{% ver %}/build/cjs/vexflow-bravura.js"></script>
+
 eleventyNavigation:
     key: Bravura Score
     parent: Fonts
@@ -10,9 +14,6 @@ eleventyNavigation:
 This page uses `vexflow-bravura.js`, which statically bundles the Bravura and Academico fonts.
 You do not need to call `VexFlow.setFonts(...)`.
 -->
-
-<!-- Load Library -->
-<script src="https://cdn.jsdelivr.net/npm/vexflow@{% ver %}/build/cjs/vexflow-bravura.js"></script>
 <h1>Bravura Score</h1>
 <p>
   This page uses <b>vexflow-bravura.js</b>, which statically bundles the <b>Bravura</b> &amp;

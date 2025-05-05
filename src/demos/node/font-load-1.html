@@ -1,23 +1,12 @@
 ---
 title: Font Load 1
 
-extraHead: 
-    - <link rel="preload" href="https://cdn.jsdelivr.net/npm/@vexflow-fonts/academico/academico.woff2" as="font" crossorigin />
-    - <link rel="preload" href="https://cdn.jsdelivr.net/npm/@vexflow-fonts/bravura/bravura.otf" as="font" crossorigin />
-    - <link rel="preload" href="https://cdn.jsdelivr.net/npm/@vexflow-fonts/petaluma/petaluma.woff2" as="font" crossorigin />
-    - <link rel="preload" href="https://cdn.jsdelivr.net/npm/@vexflow-fonts/petalumascript/petalumascript.otf" as="font" crossorigin />
-
-
-eleventyNavigation:
-    key: font-load-1
-    parent: Node
-    title: font-load-1
----
-<!--
-Summary:
-  This demo does not use the VexFlow library.
-  It demonstrates the basic idea of preloading font files and declaring CSS @font-face rules.
--->
+extraHead:
+  - '<link rel="preload" href="https://cdn.jsdelivr.net/npm/@vexflow-fonts/academico/academico.woff2" as="font" crossorigin />'
+  - '<link rel="preload" href="https://cdn.jsdelivr.net/npm/@vexflow-fonts/bravura/bravura.otf" as="font" crossorigin />'
+  - '<link rel="preload" href="https://cdn.jsdelivr.net/npm/@vexflow-fonts/petaluma/petaluma.woff2" as="font" crossorigin />'
+  - '<link rel="preload" href="https://cdn.jsdelivr.net/npm/@vexflow-fonts/petalumascript/petalumascript.otf" as="font" crossorigin />'
+  - |
     <style>
       @font-face {
         font-family: 'Academico';
@@ -69,6 +58,17 @@ Summary:
         box-sizing: border-box;
       }
     </style>
+
+eleventyNavigation:
+  key: font-load-1
+  parent: Node
+  title: font-load-1
+---
+<!--
+Summary:
+  This demo does not use the VexFlow library.
+  It demonstrates the basic idea of preloading font files and declaring CSS @font-face rules.
+-->
     <h1>Font Load 1</h1>
     <p>see page source for more information.</p>
     <h2>CANVAS</h2>

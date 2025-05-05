@@ -1,41 +1,41 @@
 ---
 title: Glyph Inspector
 
+extraHead: |
+  <style>
+    div#top {
+      top: 0px;
+      background: var(--color-background-secondary);
+      position: fixed;
+      border-radius: 30px;
+    }
+    div#glyphs {
+      margin-top: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    p {
+      margin: 10px;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+    h1 {
+      margin: 10px;
+      font-size: 40px;
+    }
+    a{
+      cursor: pointer;
+    }
+  </style>
+
 eleventyNavigation:
     key: Glyph Inspector
     parent: Tools
     title: Glyph Inspector
 
 ---
-
-    <style>
-      div#top {
-        top: 0px;
-        background: var(--color-background-secondary);
-        position: fixed;
-        border-radius: 30px;
-      }
-      div#glyphs {
-        margin-top: 200px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-      }
-      p {
-        margin: 10px;
-        font-size: 13px;
-        line-height: 1.5;
-      }
-      h1 {
-        margin: 10px;
-        font-size: 40px;
-      }
-      a{
-        cursor: pointer;
-      }
-    </style>
-
     <!-- fonts.css defines all the @font-face rules. -->
     <link rel="stylesheet" href="/tests/fonts.css" type="text/css" media="screen" />
     <script src="/js/glyphnames.js"></script>
