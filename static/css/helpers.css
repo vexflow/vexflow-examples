@@ -1,3 +1,5 @@
+/* Helper classes used on site */
+
 .active{
     font-weight: bold;
     background-color: var(--color-background-secondary);

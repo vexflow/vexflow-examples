@@ -4,6 +4,11 @@ const RAW_VERSIONS = {
   v3: "3.0.9",
 };
 
+/**
+ * Global site data for VexFlow examples.
+ * 
+ * @see {@link https://www.11ty.dev/docs/data/ Eleventy Data}
+*/
 export default {
   name: "VexFlow",
   year: 2025,
