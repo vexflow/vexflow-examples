@@ -1,0 +1,16 @@
+/* Helper classes used on site */
+
+.active{
+    font-weight: bold;
+    /* background-color: var(--color-background-secondary); */
+    background-color: var(--color-nav-active-bg);
+}
+
+.desktop-only{
+    display: none;
+}
+
+.scrollable {
+    max-height: 400px;
+    overflow: auto;
+  }
