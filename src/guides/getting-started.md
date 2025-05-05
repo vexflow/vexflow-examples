@@ -2,7 +2,7 @@
 title: "Getting Started"
 layout: layouts/base.html
 eleventyNavigation:
-  key: QuickStart
+  key: Getting Started
   parent: Guides
 ---
 

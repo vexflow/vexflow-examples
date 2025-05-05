@@ -2,6 +2,6 @@
 eleventyNavigation:
   key: Opentype
   title: Opentype
-  order: 5
+  order: 8
 permalink: false
 ------

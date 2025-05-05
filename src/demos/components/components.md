@@ -2,6 +2,6 @@
 eleventyNavigation:
   key: Components
   title: Components
-  order: 6
+  order: 2
 permalink: false
 ------

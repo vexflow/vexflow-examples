@@ -2,6 +2,6 @@
 eleventyNavigation:
   key: Entry
   title: Entry
-  order: 1
+  order: 3
 permalink: false
 ---

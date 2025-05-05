@@ -2,6 +2,6 @@
 eleventyNavigation:
   key: Fonts
   title: Fonts
-  order: 2
+  order: 4
 permalink: false
 ------
