@@ -1,0 +1,509 @@
+/***************************************/
+
+/* Academico */
+
+@font-face {
+  font-family: 'Academico';
+  font-style: normal;
+  font-display: swap;
+  src:
+    local('Academico'),
+    url(https://cdn.jsdelivr.net/npm/@vexflow-fonts/academico/academico.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Academico';
+  font-style: normal;
+  font-display: swap;
+  font-weight: bold;
+  src:
+    local('Academico'),
+    url(https://cdn.jsdelivr.net/npm/@vexflow-fonts/academico/academico-bold.otf) format('woff2');
+}
+
+/***************************************/
+
+/* Bravura */
+
+@font-face {
+  font-family: 'Bravura';
+  font-style: normal;
+  font-display: block;
+  font-weight: 400;
+  src:
+    local('Bravura'),
+    url(https://cdn.jsdelivr.net/npm/@vexflow-fonts/bravura/bravura.woff2) format('woff2');
+}
+
+/***************************************/
+
+/* Bravura Text */
+
+@font-face {
+  font-family: 'Bravura Text';
+  font-style: normal;
+  font-display: block;
+  font-weight: 400;
+  src:
+    local('Bravura Text'),
+    url(https://cdn.jsdelivr.net/npm/@vexflow-fonts/bravuratext/bravuratext.woff2) format('woff2');
+}
+
+/***************************************/
+
+/* Edwin */
+
+@font-face {
+  font-family: 'Edwin';
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src:
+    local('Edwin'),
+    url(https://cdn.jsdelivr.net/npm/@vexflow-fonts/edwin/edwin-roman.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Edwin';
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+  src:
+    local('Edwin'),
+    url(https://cdn.jsdelivr.net/npm/@vexflow-fonts/edwin/edwin-bold.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Edwin';
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+  src:
+    local('Edwin'),
+    url(https://cdn.jsdelivr.net/npm/@vexflow-fonts/edwin/edwin-italic.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Edwin';
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+  src:
+    local('Edwin'),
+    url(https://cdn.jsdelivr.net/npm/@vexflow-fonts/edwin/edwin-bold-italic.woff2) format('woff2');
+}
+
+/***************************************/
+
+/* Finale Ash */
+
+@font-face {
+  font-family: 'Finale Ash';
+  font-style: normal;
+  font-display: block;
+  font-weight: 400;
+  src:
+    local('Finale Ash'),
+    url(https://cdn.jsdelivr.net/npm/@vexflow-fonts/finaleash/finaleash.woff2) format('woff2');
+}
+
+/***************************************/
+
+/* Finale Ash Text */
+
+@font-face {
+  font-family: 'Finale Ash Text';
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src:
+    local('Finale Ash Text'),
+    url(https://cdn.jsdelivr.net/npm/@vexflow-fonts/finaleashtext/finaleashtext.woff2) format('woff2');
+}
+
+/***************************************/
+
+/* Finale Broadway */
+
+@font-face {
+  font-family: 'Finale Broadway';
+  font-style: normal;
+  font-display: block;
+  font-weight: 400;
+  src:
+    local('Finale Broadway'),
+    url(https://cdn.jsdelivr.net/npm/@vexflow-fonts/finalebroadway/finalebroadway.woff2) format('woff2');
+}
+
+/***************************************/
+
+/* Finale Broadway Text */
+
+@font-face {
+  font-family: 'Finale Broadway Text';
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src:
+    local('Finale Broadway Text'),
+    url(https://cdn.jsdelivr.net/npm/@vexflow-fonts/finalebroadwaytext/finalebroadwaytext.woff2) format('woff2');
+}
+
+/***************************************/
+
+/* Finale Jazz */
+
+@font-face {
+  font-family: 'Finale Jazz';
+  font-style: normal;
+  font-display: block;
+  font-weight: 400;
+  src:
+    local('Finale Jazz'),
+    url(https://cdn.jsdelivr.net/npm/@vexflow-fonts/finalejazz/finalejazz.woff2) format('woff2');
+}
+
+/***************************************/
+
+/* Finale Jazz Text */
+
+@font-face {
+  font-family: 'Finale Jazz Text';
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src:
+    local('Finale Jazz Text'),
+    url(https://cdn.jsdelivr.net/npm/@vexflow-fonts/finalejazztext/finalejazztext.woff2) format('woff2');
+}
+
+/***************************************/
+
+/* Finale Maestro */
+
+@font-face {
+  font-family: 'Finale Maestro';
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src:
+    local('Finale Maestro'),
+    url(https://cdn.jsdelivr.net/npm/@vexflow-fonts/finalemaestro/finalemaestro.woff2) format('woff2');
+}
+
+/***************************************/
+
+/* Finale Maestro Text */
+
+@font-face {
+  font-family: 'Finale Maestro Text';
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src:
+    local('Finale Maestro Text'),
+    url(https://cdn.jsdelivr.net/npm/@vexflow-fonts/finalemaestrotext/finalemaestrotext-regular.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Finale Maestro Text';
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+  src:
+    local('Finale Maestro Text'),
+    url(https://cdn.jsdelivr.net/npm/@vexflow-fonts/finalemaestrotext/finalemaestrotext-bold.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Finale Maestro Text';
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+  src:
+    local('Finale Maestro Text'),
+    url(https://cdn.jsdelivr.net/npm/@vexflow-fonts/finalemaestrotext/finalemaestrotext-italic.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Finale Maestro Text';
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+  src:
+    local('Finale Maestro Text'),
+    url(https://cdn.jsdelivr.net/npm/@vexflow-fonts/finalemaestrotext/finalemaestrotext-bolditalic.woff2) format('woff2');
+}
+
+/***************************************/
+
+/* Gonville */
+/* Note: We do not use local('Gonville') because it is possible that the locally installed Gonville is not SMuFL compliant. */
+
+@font-face {
+  font-family: 'Gonville';
+  font-style: normal;
+  font-display: block;
+  font-weight: 400;
+  src:
+    url(https://cdn.jsdelivr.net/npm/@vexflow-fonts/gonville/gonville.woff2) format('woff2');
+}
+
+/***************************************/
+
+/* GonvilleSmufl */
+/* TODO: Remove this! */
+
+@font-face {
+  font-family: 'GonvilleSmufl';
+  font-style: normal;
+  font-display: block;
+  font-weight: 400;
+  src:
+    local('GonvilleSmufl'),
+    url(https://cdn.jsdelivr.net/npm/@vexflow-fonts/gonvillesmufl/gonvillesmufl.woff2) format('woff2');
+}
+
+/***************************************/
+
+/* Gootville */
+
+@font-face {
+  font-family: 'Gootville';
+  font-style: normal;
+  font-display: block;
+  font-weight: 400;
+  src:
+    local('Gootville'),
+    url(https://cdn.jsdelivr.net/npm/@vexflow-fonts/gootville/gootville.woff2) format('woff2');
+}
+
+/***************************************/
+
+/* Gootville Text */
+
+@font-face {
+  font-family: 'Gootville Text';
+  font-style: normal;
+  font-display: block;
+  font-weight: 400;
+  src:
+    local('Gootville Text'),
+    url(https://cdn.jsdelivr.net/npm/@vexflow-fonts/gootvilletext/gootvilletext.woff2) format('woff2');
+}
+
+/***************************************/
+
+/* Leipzig */
+
+@font-face {
+  font-family: 'Leipzig';
+  font-style: normal;
+  font-display: block;
+  font-weight: 400;
+  src:
+    local('Leipzig'),
+    url(https://cdn.jsdelivr.net/npm/@vexflow-fonts/leipzig/leipzig.woff2) format('woff2');
+}
+
+/***************************************/
+
+/* Leland */
+
+@font-face {
+  font-family: 'Leland';
+  font-style: normal;
+  font-display: block;
+  font-weight: 400;
+  src:
+    local('Leland'),
+    url(https://cdn.jsdelivr.net/npm/@vexflow-fonts/leland/leland.woff2) format('woff2');
+}
+
+/***************************************/
+
+/* Leland Text */
+
+@font-face {
+  font-family: 'Leland Text';
+  font-style: normal;
+  font-display: block;
+  font-weight: 400;
+  src:
+    local('Leland Text'),
+    url(https://cdn.jsdelivr.net/npm/@vexflow-fonts/lelandtext/lelandtext.woff2) format('woff2');
+}
+
+/***************************************/
+
+/* MuseJazz */
+
+@font-face {
+  font-family: 'MuseJazz';
+  font-style: normal;
+  font-display: block;
+  font-weight: 400;
+  src:
+    local('MuseJazz'),
+    url(https://cdn.jsdelivr.net/npm/@vexflow-fonts/musejazz/musejazz.woff2) format('woff2');
+}
+
+/***************************************/
+
+/* MuseJazz Text */
+
+@font-face {
+  font-family: 'MuseJazz Text';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src:
+    local('MuseJazz Text'),
+    url(https://cdn.jsdelivr.net/npm/@vexflow-fonts/musejazztext/musejazztext.woff2) format('woff2');
+}
+
+/***************************************/
+
+/* Nepomuk */
+
+@font-face {
+  font-family: 'Nepomuk';
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src:
+    local('Nepomuk'),
+    url(https://cdn.jsdelivr.net/npm/@vexflow-fonts/nepomuk/nepomuk-regular.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Nepomuk';
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+  src:
+    local('Nepomuk'),
+    url(https://cdn.jsdelivr.net/npm/@vexflow-fonts/nepomuk/nepomuk-bold.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Nepomuk';
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+  src:
+    local('Nepomuk'),
+    url(https://cdn.jsdelivr.net/npm/@vexflow-fonts/nepomuk/nepomuk-italic.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Nepomuk';
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+  src:
+    local('Nepomuk'),
+    url(https://cdn.jsdelivr.net/npm/@vexflow-fonts/nepomuk/nepomuk-bolditalic.woff2) format('woff2');
+}
+
+/***************************************/
+
+/* Petaluma */
+
+@font-face {
+  font-family: 'Petaluma';
+  font-style: normal;
+  font-display: block;
+  font-weight: 400;
+  src:
+    local('Petaluma'),
+    url(https://cdn.jsdelivr.net/npm/@vexflow-fonts/petaluma/petaluma.woff2) format('woff2');
+}
+
+/***************************************/
+
+/* Petaluma Script */
+
+@font-face {
+  font-family: 'Petaluma Script';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url(https://cdn.jsdelivr.net/npm/@vexflow-fonts/petalumascript/petalumascript.woff2) format('woff2');
+}
+
+/***************************************/
+
+/* Petaluma Text */
+
+@font-face {
+  font-family: 'Petaluma Text';
+  font-style: normal;
+  font-display: block;
+  font-weight: 400;
+  src:
+    local('Petaluma Text'),
+    url(https://cdn.jsdelivr.net/npm/@vexflow-fonts/petalumatext/petalumatext.woff2) format('woff2');
+}
+
+/***************************************/
+
+/* Roboto Slab */
+
+@font-face {
+  font-family: 'Roboto Slab';
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src:
+    local('Roboto Slab'),
+    url(https://cdn.jsdelivr.net/npm/@vexflow-fonts/robotoslab/robotoslab-regular-400.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Roboto Slab';
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src:
+    local('Roboto Slab'),
+    url(https://cdn.jsdelivr.net/npm/@vexflow-fonts/robotoslab/robotoslab-medium-500.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Roboto Slab';
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src:
+    local('Roboto Slab'),
+    url(https://cdn.jsdelivr.net/npm/@vexflow-fonts/robotoslab/robotoslab-bold-700.woff2) format('woff2');
+}
+
+/***************************************/
+
+/* Sebastian */
+
+@font-face {
+  font-family: 'Sebastian';
+  font-style: normal;
+  font-display: block;
+  font-weight: 400;
+  src:
+    local('Sebastian'),
+    url(https://cdn.jsdelivr.net/npm/@vexflow-fonts/sebastian/sebastian.woff2) format('woff2');
+}
+
+/***************************************/
+
+/* Sebastian Text */
+
+@font-face {
+  font-family: 'Sebastian Text';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src:
+    local('Sebastian Text'),
+    url(https://cdn.jsdelivr.net/npm/@vexflow-fonts/sebastiantext/sebastiantext.woff2) format('woff2');
+}

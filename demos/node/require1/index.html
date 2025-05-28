@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- site-wide stylesheets -->
+    <link rel="stylesheet" href="/vexflow-examples/css/reset.css">
+    <link rel="stylesheet" href="/vexflow-examples/css/theme.css">
+    <link rel="stylesheet" href="/vexflow-examples/css/helpers.css">   
+    <link rel="stylesheet" href="/vexflow-examples/css/layout.css">
+    <link rel="stylesheet" href="/vexflow-examples/css/base.css">
+    <!-- contains core js functionality for all examples -->
+    <script src="/vexflow-examples/js/main.js" defer=""></script>
+    <!-- styles for syntax highlighting  -->
+    <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet" media="(prefers-color-scheme: dark)">
+    <link href="https://unpkg.com/prismjs@1.20.0/themes/prism.css" rel="stylesheet" media="(prefers-color-scheme: light)">
+  <!-- allow extra tags in the head -->
+  
+  <title>Require Example 1</title>
+</head>
+<body>
+   <div class="container">
+      <div class="nav-container">
+    <h3 class="nav-title">Examples</h3>
+    <div class="site-nav">
+  
+  
+  
+  
+  
+
+  
+    
+    
+    <div class="section">
+      <h3 class="section-header">
+        Guides
+      </h3>
+      
+        <ul class="section-links">
+          
+            <li>
+              <a href="/vexflow-examples/guides/getting-started/" class="">Getting Started</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/guides/tutorial/" class="">Tutorial</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  
+    
+    
+    <div class="section">
+      <h3 class="section-header">
+        Components
+      </h3>
+      
+        <ul class="section-links">
+          
+            <li>
+              <a href="/vexflow-examples/demos/components/hairpin/" class="">hairpin</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/components/textbracket/" class="">textbracket</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  
+    
+    
+    <div class="section">
+      <h3 class="section-header">
+        Entry
+      </h3>
+      
+        <ul class="section-links">
+          
+            <li>
+              <a href="/vexflow-examples/demos/entry/vexflow-bravura.esm/" class="">vexflow-bravura.esm.js</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/entry/vexflow-bravura/" class="">vexflow-bravura.js</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/entry/vexflow-core.esm/" class="">vexflow-core.esm.js</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/entry/vexflow-core/" class="">vexflow-core.js</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/entry/vexflow-debug-with-tests/" class="">vexflow-debug-with-tests.js</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/entry/vexflow-debug/" class="">vexflow-debug.js</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/entry/vexflow.esm/" class="">vexflow.esm.js</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/entry/vexflow/" class="">vexflow.js</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  
+    
+    
+    <div class="section">
+      <h3 class="section-header">
+        Fonts
+      </h3>
+      
+        <ul class="section-links">
+          
+            <li>
+              <a href="/vexflow-examples/demos/fonts/async-await/" class="">Async Await</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/fonts/async-promise/" class="">Async Promise</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/fonts/bravura/" class="">Bravura</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/fonts/bravura-score/" class="">Bravura Score</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/fonts/five-staves/" class="">Five Staves</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/fonts/music/" class="">Music</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/fonts/text/" class="">Text</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  
+    
+    
+    <div class="section">
+      <h3 class="section-header">
+        Interactivity
+      </h3>
+      
+        <ul class="section-links">
+          
+            <li>
+              <a href="/vexflow-examples/demos/interactivity/ui/" class="">Hover Events</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/interactivity/canvas-interaction/" class="">canvas interactions</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/interactivity/svg-interaction/" class="">svg interactions</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  
+    
+    
+    <div class="section">
+      <h3 class="section-header">
+        Modules
+      </h3>
+      
+        <ul class="section-links">
+          
+            <li>
+              <a href="/vexflow-examples/demos/modules/script-tag/" class="">Async Await</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/modules/module/" class="">ES Modules</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/modules/both/" class="">Module and Script</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  
+    
+    
+    <div class="section">
+      <h3 class="section-header">
+        Node
+      </h3>
+      
+        <ul class="section-links">
+          
+            <li>
+              <a href="/vexflow-examples/demos/node/canvas/" class="">Canvas</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/node/font-draw/" class="">Font~Draw</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/node/import1/" class="">Import 1</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/node/import2/" class="">Import 2</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/node/import3/" class="">Import 3</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/node/pdf-canvas/" class="">PDF Canvas</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/node/pdf-svg/" class="">PDF SVG</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/node/require1/" class="active">Require 1</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/node/require2/" class="">Require 2</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/node/svg/" class="">SVG</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/node/customcontext/" class="">customContext</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/node/font-load-1/" class="">font-load-1</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/node/font-load-2/" class="">font-load-2</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  
+    
+    
+    <div class="section">
+      <h3 class="section-header">
+        Opentype
+      </h3>
+      
+        <ul class="section-links">
+          
+            <li>
+              <a href="/vexflow-examples/demos/opentype/canvas/" class="">Canvas</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/opentype/load/" class="">Load</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  
+    
+    
+    <div class="section">
+      <h3 class="section-header">
+        Tests
+      </h3>
+      
+        <ul class="section-links">
+          
+            <li>
+              <a href="/vexflow-examples/demos/tests/unit-tests/" class="">Unit Tests</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  
+    
+    
+    <div class="section">
+      <h3 class="section-header">
+        Tools
+      </h3>
+      
+        <ul class="section-links">
+          
+            <li>
+              <a href="/vexflow-examples/demos/tools/glyphs/" class="">Glyph Inspector</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  
+    
+    
+    <div class="section">
+      <h3 class="section-header">
+        Worker
+      </h3>
+      
+        <ul class="section-links">
+          
+            <li>
+              <a href="/vexflow-examples/demos/worker/" class="">Using Workers</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  
+</div>
+</div>
+      
+        <main class="main-content">
+          <section class="content-wrapper">
+            <button id="open-sidebar-btn" class="svg-btn svg-btn--lg">
+              <!-- menu svg -->
+              <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px"><path d="M165.13-254.62q-10.68 0-17.9-7.26-7.23-7.26-7.23-18t7.23-17.86q7.22-7.13 17.9-7.13h629.74q10.68 0 17.9 7.26 7.23 7.26 7.23 18t-7.23 17.87q-7.22 7.12-17.9 7.12H165.13Zm0-200.25q-10.68 0-17.9-7.27-7.23-7.26-7.23-17.99 0-10.74 7.23-17.87 7.22-7.13 17.9-7.13h629.74q10.68 0 17.9 7.27 7.23 7.26 7.23 17.99 0 10.74-7.23 17.87-7.22 7.13-17.9 7.13H165.13Zm0-200.26q-10.68 0-17.9-7.26-7.23-7.26-7.23-18t7.23-17.87q7.22-7.12 17.9-7.12h629.74q10.68 0 17.9 7.26 7.23 7.26 7.23 18t-7.23 17.86q-7.22 7.13-17.9 7.13H165.13Z"></path></svg>
+          </button>
+          <h1> Require Example 1 </h1>
+
+
+
+
+
+
+
+
+
+  <div class="code-demo">
+    
+    
+    <div class="code-block">
+    <button class="copy-btn svg-btn" type="button" aria-label="Copy code">
+    <svg fill="blue" viewBox="0 0 32 32" data-name="Layer 1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><title></title><path d="M27.2,8.22H23.78V5.42A3.42,3.42,0,0,0,20.36,2H5.42A3.42,3.42,0,0,0,2,5.42V20.36a3.43,3.43,0,0,0,3.42,3.42h2.8V27.2A2.81,2.81,0,0,0,11,30H27.2A2.81,2.81,0,0,0,30,27.2V11A2.81,2.81,0,0,0,27.2,8.22ZM5.42,21.91a1.55,1.55,0,0,1-1.55-1.55V5.42A1.54,1.54,0,0,1,5.42,3.87H20.36a1.55,1.55,0,0,1,1.55,1.55v2.8H11A2.81,2.81,0,0,0,8.22,11V21.91ZM28.13,27.2a.93.93,0,0,1-.93.93H11a.93.93,0,0,1-.93-.93V11a.93.93,0,0,1,.93-.93H27.2a.93.93,0,0,1,.93.93Z"></path></g></svg>
+    </button>
+    <pre><code class="language-js"><span class="token comment">// Summary: Demonstrate different ways to require() the VexFlow module.</span><br><span class="token comment">// Run:</span><br><span class="token comment">//   node require1.js</span><br><br><span class="token comment">// This version bundles music fonts Bravura, Petaluma, Gonville, and text fonts Academico and Petaluma Script.</span><br><span class="token keyword">const</span> ModuleA <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'vexflow'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Default Font Stack:'</span><span class="token punctuation">,</span> ModuleA<span class="token punctuation">.</span>VexFlow<span class="token punctuation">.</span><span class="token function">getFonts</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>ModuleA<span class="token punctuation">.</span>VexFlow<span class="token punctuation">.</span><span class="token constant">BUILD</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br><br><span class="token comment">// This version bundles Bravura and Academico.</span><br><span class="token keyword">const</span> ModuleB <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'vexflow/bravura'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Default Font Stack:'</span><span class="token punctuation">,</span> ModuleB<span class="token punctuation">.</span>VexFlow<span class="token punctuation">.</span><span class="token function">getFonts</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>ModuleB<span class="token punctuation">.</span>VexFlow<span class="token punctuation">.</span><span class="token constant">BUILD</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+  </div>
+  </div>
+          </section>
+        </main>
+        <!-- only shown when navbar is open on mobile to allow for easier closing -->
+        <div class="overlay" id="overlay"></div>
+    </div>
+</body>
+</html>

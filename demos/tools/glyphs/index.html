@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- site-wide stylesheets -->
+    <link rel="stylesheet" href="/vexflow-examples/css/reset.css">
+    <link rel="stylesheet" href="/vexflow-examples/css/theme.css">
+    <link rel="stylesheet" href="/vexflow-examples/css/helpers.css">   
+    <link rel="stylesheet" href="/vexflow-examples/css/layout.css">
+    <link rel="stylesheet" href="/vexflow-examples/css/base.css">
+    <!-- contains core js functionality for all examples -->
+    <script src="/vexflow-examples/js/main.js" defer=""></script>
+    <!-- styles for syntax highlighting  -->
+    <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet" media="(prefers-color-scheme: dark)">
+    <link href="https://unpkg.com/prismjs@1.20.0/themes/prism.css" rel="stylesheet" media="(prefers-color-scheme: light)">
+  <!-- allow extra tags in the head -->
+  
+    
+      <style>
+  div#top {
+    top: 0px;
+    background: var(--color-background-secondary);
+    position: fixed;
+    border-radius: 30px;
+  }
+  div#glyphs {
+    margin-top: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  p {
+    margin: 10px;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  h1 {
+    margin: 10px;
+    font-size: 40px;
+  }
+  a{
+    cursor: pointer;
+  }
+</style>
+
+    
+  
+  <title>Glyph Inspector</title>
+</head>
+<body>
+   <div class="container">
+      <div class="nav-container">
+    <h3 class="nav-title">Examples</h3>
+    <div class="site-nav">
+  
+  
+  
+  
+  
+
+  
+    
+    
+    <div class="section">
+      <h3 class="section-header">
+        Guides
+      </h3>
+      
+        <ul class="section-links">
+          
+            <li>
+              <a href="/vexflow-examples/guides/getting-started/" class="">Getting Started</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/guides/tutorial/" class="">Tutorial</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  
+    
+    
+    <div class="section">
+      <h3 class="section-header">
+        Components
+      </h3>
+      
+        <ul class="section-links">
+          
+            <li>
+              <a href="/vexflow-examples/demos/components/hairpin/" class="">hairpin</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/components/textbracket/" class="">textbracket</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  
+    
+    
+    <div class="section">
+      <h3 class="section-header">
+        Entry
+      </h3>
+      
+        <ul class="section-links">
+          
+            <li>
+              <a href="/vexflow-examples/demos/entry/vexflow-bravura.esm/" class="">vexflow-bravura.esm.js</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/entry/vexflow-bravura/" class="">vexflow-bravura.js</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/entry/vexflow-core.esm/" class="">vexflow-core.esm.js</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/entry/vexflow-core/" class="">vexflow-core.js</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/entry/vexflow-debug-with-tests/" class="">vexflow-debug-with-tests.js</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/entry/vexflow-debug/" class="">vexflow-debug.js</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/entry/vexflow.esm/" class="">vexflow.esm.js</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/entry/vexflow/" class="">vexflow.js</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  
+    
+    
+    <div class="section">
+      <h3 class="section-header">
+        Fonts
+      </h3>
+      
+        <ul class="section-links">
+          
+            <li>
+              <a href="/vexflow-examples/demos/fonts/async-await/" class="">Async Await</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/fonts/async-promise/" class="">Async Promise</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/fonts/bravura/" class="">Bravura</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/fonts/bravura-score/" class="">Bravura Score</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/fonts/five-staves/" class="">Five Staves</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/fonts/music/" class="">Music</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/fonts/text/" class="">Text</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  
+    
+    
+    <div class="section">
+      <h3 class="section-header">
+        Interactivity
+      </h3>
+      
+        <ul class="section-links">
+          
+            <li>
+              <a href="/vexflow-examples/demos/interactivity/ui/" class="">Hover Events</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/interactivity/canvas-interaction/" class="">canvas interactions</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/interactivity/svg-interaction/" class="">svg interactions</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  
+    
+    
+    <div class="section">
+      <h3 class="section-header">
+        Modules
+      </h3>
+      
+        <ul class="section-links">
+          
+            <li>
+              <a href="/vexflow-examples/demos/modules/script-tag/" class="">Async Await</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/modules/module/" class="">ES Modules</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/modules/both/" class="">Module and Script</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  
+    
+    
+    <div class="section">
+      <h3 class="section-header">
+        Node
+      </h3>
+      
+        <ul class="section-links">
+          
+            <li>
+              <a href="/vexflow-examples/demos/node/canvas/" class="">Canvas</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/node/font-draw/" class="">Font~Draw</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/node/import1/" class="">Import 1</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/node/import2/" class="">Import 2</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/node/import3/" class="">Import 3</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/node/pdf-canvas/" class="">PDF Canvas</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/node/pdf-svg/" class="">PDF SVG</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/node/require1/" class="">Require 1</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/node/require2/" class="">Require 2</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/node/svg/" class="">SVG</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/node/customcontext/" class="">customContext</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/node/font-load-1/" class="">font-load-1</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/node/font-load-2/" class="">font-load-2</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  
+    
+    
+    <div class="section">
+      <h3 class="section-header">
+        Opentype
+      </h3>
+      
+        <ul class="section-links">
+          
+            <li>
+              <a href="/vexflow-examples/demos/opentype/canvas/" class="">Canvas</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/opentype/load/" class="">Load</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  
+    
+    
+    <div class="section">
+      <h3 class="section-header">
+        Tests
+      </h3>
+      
+        <ul class="section-links">
+          
+            <li>
+              <a href="/vexflow-examples/demos/tests/unit-tests/" class="">Unit Tests</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  
+    
+    
+    <div class="section">
+      <h3 class="section-header">
+        Tools
+      </h3>
+      
+        <ul class="section-links">
+          
+            <li>
+              <a href="/vexflow-examples/demos/tools/glyphs/" class="active">Glyph Inspector</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  
+    
+    
+    <div class="section">
+      <h3 class="section-header">
+        Worker
+      </h3>
+      
+        <ul class="section-links">
+          
+            <li>
+              <a href="/vexflow-examples/demos/worker/" class="">Using Workers</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  
+</div>
+</div>
+      
+        <main class="main-content">
+          <section class="content-wrapper">
+            <button id="open-sidebar-btn" class="svg-btn svg-btn--lg">
+              <!-- menu svg -->
+              <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px"><path d="M165.13-254.62q-10.68 0-17.9-7.26-7.23-7.26-7.23-18t7.23-17.86q7.22-7.13 17.9-7.13h629.74q10.68 0 17.9 7.26 7.23 7.26 7.23 18t-7.23 17.87q-7.22 7.12-17.9 7.12H165.13Zm0-200.25q-10.68 0-17.9-7.27-7.23-7.26-7.23-17.99 0-10.74 7.23-17.87 7.22-7.13 17.9-7.13h629.74q10.68 0 17.9 7.27 7.23 7.26 7.23 17.99 0 10.74-7.23 17.87-7.22 7.13-17.9 7.13H165.13Zm0-200.26q-10.68 0-17.9-7.26-7.23-7.26-7.23-18t7.23-17.87q7.22-7.12 17.9-7.12h629.74q10.68 0 17.9 7.26 7.23 7.26 7.23 18t-7.23 17.86q-7.22 7.13-17.9 7.13H165.13Z"></path></svg>
+          </button>
+              <!-- fonts.css defines all the @font-face rules. -->
+    <link rel="stylesheet" href="/vexflow-examples/tests/fonts.css" type="text/css" media="screen">
+    <script src="/vexflow-examples/js/glyphnames.js"></script>
+
+    <div id="font-preload">
+      <!--
+        Preload fonts and styles for testing.
+        The empty tags <b></b>, <i></i>, and <span style="font-weight: xxx"></span> are for loading different font weights/styles. 
+      -->
+      <!--
+        On this page, we are only concerned with music engraving fonts.
+        Do not load Academico, Edwin, Nepomuk, Roboto Slab, or any Finale font that is for text.
+      -->
+      <span style="font-family: Bravura"></span>
+      <span style="font-family: Bravura Text"></span>
+      <span style="font-family: Finale Ash"></span>
+      <span style="font-family: Finale Broadway"></span>
+      <span style="font-family: Finale Jazz"></span>
+      <span style="font-family: Finale Maestro"></span>
+      <span style="font-family: Gonville"></span>
+      <span style="font-family: GonvilleSmufl"></span>
+      <span style="font-family: Gootville"></span>
+      <span style="font-family: Gootville Text"></span>
+      <span style="font-family: Leipzig"></span>
+      <span style="font-family: Leland"></span>
+      <span style="font-family: Leland Text"></span>
+      <span style="font-family: MuseJazz"></span>
+      <span style="font-family: Petaluma"></span>
+      <span style="font-family: Petaluma Text"></span>
+      <span style="font-family: Sebastian"></span>
+      <span style="font-family: Sebastian Text"></span>
+    </div>
+
+    <div id="parent">
+      <div id="top">
+        <h1 id="title">Glyph Inspector</h1>
+        <p>
+          <a onclick="chooseFont('Bravura')">Bravura</a> &nbsp;
+          <a onclick="chooseFont('Bravura Text')">Bravura Text</a> &nbsp;
+          <a onclick="chooseFont('FinaleAsh')">FinaleAsh</a> &nbsp;
+          <a onclick="chooseFont('FinaleBroadway')">FinaleBroadway</a> &nbsp;
+          <a onclick="chooseFont('FinaleJazz')">FinaleJazz</a> &nbsp;
+          <a onclick="chooseFont('FinaleMaestro')">FinaleMaestro</a> &nbsp;
+          <a onclick="chooseFont('Gonville')">Gonville</a> &nbsp;
+          <a onclick="chooseFont('GonvilleSmufl')">GonvilleSmufl / Rodrigo</a> &nbsp;
+          <a onclick="chooseFont('Gootville')">Gootville</a> &nbsp;
+          <a onclick="chooseFont('Gootville Text')">Gootville Text</a> &nbsp;<br>
+          <a onclick="chooseFont('Leipzig')">Leipzig</a> &nbsp; 
+          <a onclick="chooseFont('Leland')">Leland</a> &nbsp;
+          <a onclick="chooseFont('Leland Text')">Leland Text</a> &nbsp;
+          <a onclick="chooseFont('MuseJazz')">MuseJazz</a> &nbsp;
+          <a onclick="chooseFont('Petaluma')">Petaluma</a> &nbsp;
+          <a onclick="chooseFont('Petaluma Text')">Petaluma Text</a> &nbsp;
+          <a onclick="chooseFont('Sebastian')">Sebastian</a> &nbsp;
+          <a onclick="chooseFont('Sebastian Text')">Sebastian Text</a> &nbsp;
+        </p>
+        <p>note: Cross indicates render coordinates.</p>
+      </div>
+      <div id="glyphs"></div>
+    </div>
+<script type="module">
+  // Only proceed after all fonts have loaded.
+  const fontFaceSet = await document.fonts.ready;
+  // Show font loading status in the console.
+  const fontFaces = [...fontFaceSet];
+  for (const fontFace of fontFaces) {
+    const fontInfo = fontFace.family + ' / ' + fontFace.weight + ' / ' + fontFace.style;
+    if (fontFace.status === 'loaded') {
+      console.log(fontInfo + ' loaded!');
+    } else if (fontFace.status === 'unloaded') {
+      console.warn('*** ' + fontInfo + ' IS NOT LOADED! ***');
+    } else if (fontFace.status === 'error') {
+      console.error(fontInfo + ' ERROR');
+    } else {
+      console.log(fontInfo + ' has status: ' + fontFace.status);
+    }
+  }
+
+  function codepoint2decimal(codepoint) {
+    // Return the decimal value of 'XXXX' of codepoint, which has a string format 'U+XXXX'
+    return parseInt(codepoint.substring(2), 16);
+  }
+
+  function drawGlyph(canvasId, glyphCode, glyphName, fontName) {
+    let canvas = document.getElementById(canvasId);
+    if (!canvas) {
+      canvas = document.createElement('canvas');
+      canvas.id = canvasId;
+      // Retina display trick:
+      // Make the canvas twice as large as our width x height.
+      // Then set the scale to (2, 2).
+      canvas.width = 300;
+      canvas.height = 300;
+      canvas.style.height = '150px';
+      canvas.style.width = '150px';
+      glyphs.appendChild(canvas);
+    } else {
+      // Clear canvas
+      canvas.width = 300;
+      canvas.height = 300;
+    }
+    var ctx = canvas.getContext('2d');
+    ctx.setTransform(2, 0, 0, 2, 0, 0); // reset the scale to (2, 2)
+
+    var x = 10;
+    var y = 50;
+    // Show the glyph name.
+    const code = parseInt(glyphCode, 16);
+    ctx.fillStyle = '#222';
+    ctx.strokeStyle = '#222';
+    ctx.font = '9pt sans-serif';
+    ctx.fillText(glyphCode, x, y + 40);
+    // if the name has more than 25 characters, break it up into two lines.
+    if (glyphName.length > 20) {
+      ctx.fillText(glyphName.slice(0, 17) + '...', x, y + 50);
+      ctx.fillText(glyphName.slice(17 - glyphName.length), x, y + 60);
+    } else ctx.fillText(glyphName, x, y + 50);
+
+    const originX = x + 50;
+    const originY = y;
+
+    // Show the glyph outline.
+    ctx.fillStyle = '#006400';
+    ctx.font = '30pt ' + fontName;
+    ctx.fillText(String.fromCodePoint(code), originX, originY);
+    // See the GlyphMetrics interface in glyph.ts.
+    const metrics = ctx.measureText(String.fromCharCode(code));
+    ctx.save();
+    ctx.font = '9pt monospace';
+    const height = metrics.actualBoundingBoxDescent + metrics.actualBoundingBoxAscent;
+    ctx.fillText('w: ' + Math.round(metrics.width), x, y - 6);
+    ctx.fillText('h: ' + Math.round(height), x, y + 6);
+    ctx.restore();
+    // draw magenta cross hairs at the glyph's origin
+    ctx.strokeStyle = 'magenta';
+    ctx.beginPath();
+    ctx.moveTo(originX - 6, originY);
+    ctx.lineTo(originX + 6, originY);
+    ctx.moveTo(originX, originY - 6);
+    ctx.lineTo(originX, originY + 6);
+    ctx.stroke();
+  }
+
+  // Make this function available to the <a onclick="chooseFont(...)">...</a> links.
+  window.chooseFont = function chooseFont(fontName) {
+    document.getElementById('title').innerText = 'Glyph Inspector – ' + fontName;
+
+    var glyphs = document.getElementById('glyphs');
+    const arr = Object.keys(SMuFLGlyphInfo).sort(function (a, b) {
+      return codepoint2decimal(SMuFLGlyphInfo[a].codepoint) - codepoint2decimal(SMuFLGlyphInfo[b].codepoint);
+    });
+    arr.forEach((glyphName, index) => {
+      var glyphCode = SMuFLGlyphInfo[glyphName].codepoint.substring(2);
+      var canvasId = glyphCode + '_' + glyphName;
+      drawGlyph(canvasId, glyphCode, glyphName, fontName);
+      var alternateCodepoint = SMuFLGlyphInfo[glyphName].alternateCodepoint;
+      if (alternateCodepoint) {
+        glyphCode = alternateCodepoint.substring(2);
+        canvasId = glyphCode + '_' + glyphName;
+        drawGlyph(canvasId, glyphCode, glyphName, fontName);
+      }
+    });
+  };
+</script>
+          </section>
+        </main>
+        <!-- only shown when navbar is open on mobile to allow for easier closing -->
+        <div class="overlay" id="overlay"></div>
+    </div>
+</body>
+</html>

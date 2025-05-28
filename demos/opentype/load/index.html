@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- site-wide stylesheets -->
+    <link rel="stylesheet" href="/vexflow-examples/css/reset.css">
+    <link rel="stylesheet" href="/vexflow-examples/css/theme.css">
+    <link rel="stylesheet" href="/vexflow-examples/css/helpers.css">   
+    <link rel="stylesheet" href="/vexflow-examples/css/layout.css">
+    <link rel="stylesheet" href="/vexflow-examples/css/base.css">
+    <!-- contains core js functionality for all examples -->
+    <script src="/vexflow-examples/js/main.js" defer=""></script>
+    <!-- styles for syntax highlighting  -->
+    <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet" media="(prefers-color-scheme: dark)">
+    <link href="https://unpkg.com/prismjs@1.20.0/themes/prism.css" rel="stylesheet" media="(prefers-color-scheme: light)">
+  <!-- allow extra tags in the head -->
+  
+  <title>Load</title>
+</head>
+<body>
+   <div class="container">
+      <div class="nav-container">
+    <h3 class="nav-title">Examples</h3>
+    <div class="site-nav">
+  
+  
+  
+  
+  
+
+  
+    
+    
+    <div class="section">
+      <h3 class="section-header">
+        Guides
+      </h3>
+      
+        <ul class="section-links">
+          
+            <li>
+              <a href="/vexflow-examples/guides/getting-started/" class="">Getting Started</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/guides/tutorial/" class="">Tutorial</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  
+    
+    
+    <div class="section">
+      <h3 class="section-header">
+        Components
+      </h3>
+      
+        <ul class="section-links">
+          
+            <li>
+              <a href="/vexflow-examples/demos/components/hairpin/" class="">hairpin</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/components/textbracket/" class="">textbracket</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  
+    
+    
+    <div class="section">
+      <h3 class="section-header">
+        Entry
+      </h3>
+      
+        <ul class="section-links">
+          
+            <li>
+              <a href="/vexflow-examples/demos/entry/vexflow-bravura.esm/" class="">vexflow-bravura.esm.js</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/entry/vexflow-bravura/" class="">vexflow-bravura.js</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/entry/vexflow-core.esm/" class="">vexflow-core.esm.js</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/entry/vexflow-core/" class="">vexflow-core.js</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/entry/vexflow-debug-with-tests/" class="">vexflow-debug-with-tests.js</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/entry/vexflow-debug/" class="">vexflow-debug.js</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/entry/vexflow.esm/" class="">vexflow.esm.js</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/entry/vexflow/" class="">vexflow.js</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  
+    
+    
+    <div class="section">
+      <h3 class="section-header">
+        Fonts
+      </h3>
+      
+        <ul class="section-links">
+          
+            <li>
+              <a href="/vexflow-examples/demos/fonts/async-await/" class="">Async Await</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/fonts/async-promise/" class="">Async Promise</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/fonts/bravura/" class="">Bravura</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/fonts/bravura-score/" class="">Bravura Score</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/fonts/five-staves/" class="">Five Staves</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/fonts/music/" class="">Music</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/fonts/text/" class="">Text</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  
+    
+    
+    <div class="section">
+      <h3 class="section-header">
+        Interactivity
+      </h3>
+      
+        <ul class="section-links">
+          
+            <li>
+              <a href="/vexflow-examples/demos/interactivity/ui/" class="">Hover Events</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/interactivity/canvas-interaction/" class="">canvas interactions</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/interactivity/svg-interaction/" class="">svg interactions</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  
+    
+    
+    <div class="section">
+      <h3 class="section-header">
+        Modules
+      </h3>
+      
+        <ul class="section-links">
+          
+            <li>
+              <a href="/vexflow-examples/demos/modules/script-tag/" class="">Async Await</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/modules/module/" class="">ES Modules</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/modules/both/" class="">Module and Script</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  
+    
+    
+    <div class="section">
+      <h3 class="section-header">
+        Node
+      </h3>
+      
+        <ul class="section-links">
+          
+            <li>
+              <a href="/vexflow-examples/demos/node/canvas/" class="">Canvas</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/node/font-draw/" class="">Font~Draw</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/node/import1/" class="">Import 1</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/node/import2/" class="">Import 2</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/node/import3/" class="">Import 3</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/node/pdf-canvas/" class="">PDF Canvas</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/node/pdf-svg/" class="">PDF SVG</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/node/require1/" class="">Require 1</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/node/require2/" class="">Require 2</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/node/svg/" class="">SVG</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/node/customcontext/" class="">customContext</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/node/font-load-1/" class="">font-load-1</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/node/font-load-2/" class="">font-load-2</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  
+    
+    
+    <div class="section">
+      <h3 class="section-header">
+        Opentype
+      </h3>
+      
+        <ul class="section-links">
+          
+            <li>
+              <a href="/vexflow-examples/demos/opentype/canvas/" class="">Canvas</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/opentype/load/" class="active">Load</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  
+    
+    
+    <div class="section">
+      <h3 class="section-header">
+        Tests
+      </h3>
+      
+        <ul class="section-links">
+          
+            <li>
+              <a href="/vexflow-examples/demos/tests/unit-tests/" class="">Unit Tests</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  
+    
+    
+    <div class="section">
+      <h3 class="section-header">
+        Tools
+      </h3>
+      
+        <ul class="section-links">
+          
+            <li>
+              <a href="/vexflow-examples/demos/tools/glyphs/" class="">Glyph Inspector</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  
+    
+    
+    <div class="section">
+      <h3 class="section-header">
+        Worker
+      </h3>
+      
+        <ul class="section-links">
+          
+            <li>
+              <a href="/vexflow-examples/demos/worker/" class="">Using Workers</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  
+</div>
+</div>
+      
+        <main class="main-content">
+          <section class="content-wrapper">
+            <button id="open-sidebar-btn" class="svg-btn svg-btn--lg">
+              <!-- menu svg -->
+              <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px"><path d="M165.13-254.62q-10.68 0-17.9-7.26-7.23-7.26-7.23-18t7.23-17.86q7.22-7.13 17.9-7.13h629.74q10.68 0 17.9 7.26 7.23 7.26 7.23 18t-7.23 17.87q-7.22 7.12-17.9 7.12H165.13Zm0-200.25q-10.68 0-17.9-7.27-7.23-7.26-7.23-17.99 0-10.74 7.23-17.87 7.22-7.13 17.9-7.13h629.74q10.68 0 17.9 7.27 7.23 7.26 7.23 17.99 0 10.74-7.23 17.87-7.22 7.13-17.9 7.13H165.13Zm0-200.26q-10.68 0-17.9-7.26-7.23-7.26-7.23-18t7.23-17.87q7.22-7.12 17.9-7.12h629.74q10.68 0 17.9 7.26 7.23 7.26 7.23 18t-7.23 17.86q-7.22 7.13-17.9 7.13H165.13Z"></path></svg>
+          </button>
+          <h1>Load Fonts</h1>
+<p>
+This page demonstrates <a href="https://opentype.js.org/">opentype.js</a> and the
+<a href="https://developer.mozilla.org/en-US/docs/Web/API/FontFace">FontFace API</a>. See
+this page's source for more info.
+</p>
+<br><br>
+<label for="musicFontInput">Choose a <b>SMuFL Music Font</b> File:</label>
+<input id="musicFontInput" type="file" accept=".woff, .woff2, .otf">
+<br><br>
+<div id="musicFontSize"></div>
+<div id="musicFontInfo"></div>
+<p>The music glyphs below will be styled after you load the font.</p>
+<div class="music" style="font-size: 72px;">
+&#xE050; &#xE062; &#xE080; &#xE081; &#xE082; &#xE083; &#xE084; &#xE08A; &#xE08B; &#xE1E7; &#xE260; &#xE261;
+&#xE262; &#xE263; &#xE0A2; &#xE264; &#xE245; &#xE1F6; &#xE014; &#xE030; &#xE032; &#xE1FE; &#xE1FF; &#xE200;
+&#xE201; &#xE202; &#xE203; &#xE1D2; &#xE1D3; &#xE1D4; &#xE1D5; &#xE1D6; &#xE1D7; &#xE1D8; &#xE1D9; &#xE1DA;
+&#xE1DB; &#xE1DC; &#xE1DD; &#xE1DE; &#xE1DF; &#xE1E0; &#xE1E1; &#xE1E2; &#xE269; &#xE002; &#xE560; &#xE1D7;
+</div>
+<br><br>
+<hr>
+<br><br>
+<label for="textFontInput">Choose a <b>Text Font</b> File:</label>
+<input id="textFontInput" type="file" accept=".woff, .woff2, .otf">
+<br><br>
+<div id="textFontSize"></div>
+<div id="textFontInfo"></div>
+<p>The text below will be styled after you load the font.</p>
+<div class="text" style="font-family: monospace; font-size: 32px; line-height: 150%;">
+The quick brown fox jumped over 1,234,567,890 lazy dogs. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Sed pretium aliquam tempor. Curabitur tincidunt malesuada ligula et fermentum. Integer varius iaculis condimentum.
+Nullam ultricies lorem vel nisi tincidunt iaculis. Vivamus faucibus enim in tortor lacinia dignissim. Vestibulum a
+dolor quis lorem condimentum aliquam in id nunc. Nulla tristique, purus eget faucibus mattis, est nulla dapibus
+sem, nec hendrerit libero felis ac justo. Donec ac molestie arcu, nec pulvinar ipsum. Pellentesque habitant morbi
+tristique senectus et netus et malesuada fames ac turpis egestas. Quisque pretium enim a lacus ultrices, nec
+vestibulum ipsum viverra. Proin condimentum placerat libero ut consequat. Nulla vitae.
+</div>
+<script src="https://cdn.jsdelivr.net/npm/opentype.js@1.3.4/dist/opentype.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/wawoff2@2.0.1/build/decompress_binding.js"></script>
+<script>
+  const loadedFonts = {
+    music: [],
+    text: [],
+  };
+
+  function onFontSelected(file, fontType) {
+    file.arrayBuffer().then((buffer) => {
+      let uncompressedFontData;
+      if (getFileType(file) === 'woff2') {
+        uncompressedFontData = Module.decompress(buffer);
+      } else {
+        uncompressedFontData = new Uint8Array(buffer);
+      }
+      const fontSize = `<b>Font File Size:</b> ${file.size}  bytes<br /><b>Uncompressed Size:</b> ${uncompressedFontData.length} bytes`;
+      document.getElementById(fontType + 'FontSize').innerHTML = fontSize;
+      const fontName = parseFont(uncompressedFontData, fontType);
+
+      convertFontFileToBase64(file, (base64) => {
+        loadFontFace(fontName, fontType, base64);
+      });
+    });
+  }
+
+  const inputMusic = document.querySelector('#musicFontInput');
+  inputMusic.onchange = function () {
+    onFontSelected(this.files[0], 'music');
+  };
+
+  const inputText = document.querySelector('#textFontInput');
+  inputText.onchange = function () {
+    onFontSelected(this.files[0], 'text');
+  };
+
+  // This demo only supports woff2 / woff / otf.
+  function getFileType(file) {
+    const fileName = file.name.toLowerCase();
+    if (fileName.endsWith('.woff2')) {
+      return 'woff2';
+    } else if (fileName.endsWith('.woff')) {
+      return 'woff';
+    } else {
+      return 'otf';
+    }
+  }
+
+  function parseFont(fontData, fontType) {
+    const fontBuffer = fontData.buffer.slice(fontData.byteOffset, fontData.byteLength + fontData.byteOffset);
+    const font = opentype.parse(fontBuffer);
+    console.log(font);
+    const fontName = font.names.fontFamily.en;
+    let fontInfo = `<b>Font Family Name:</b> ${fontName}<br />`;
+    fontInfo += `<b>Num Glyphs:</b> ${font.glyphs.length}<br />`;
+    document.getElementById(fontType + 'FontInfo').innerHTML = fontInfo;
+
+    return fontName;
+  }
+
+  // Use the browser's FontFace API to load and display the font.
+  function loadFontFace(fontName, fontType, base64EncodedFont) {
+    const fontFace = new FontFace(fontName, `url('data:font/woff2;charset=utf-8;base64,${base64EncodedFont}')`);
+    const fontFaceLoadPromise = fontFace.load();
+    document.fonts.add(fontFace);
+
+    loadedFonts[fontType].unshift(fontName);
+    // Set the font stack on the music or text.
+    document.querySelector('.' + fontType).style.fontFamily = loadedFonts[fontType].join(', ');
+  }
+
+  function convertFontFileToBase64(file, callback) {
+    const reader = new FileReader();
+    reader.onload = function (evt) {
+      const dataurl = evt.target.result;
+      callback(dataurl.substr(dataurl.indexOf(',') + 1));
+    };
+    reader.readAsDataURL(file);
+  }
+</script>
+
+          </section>
+        </main>
+        <!-- only shown when navbar is open on mobile to allow for easier closing -->
+        <div class="overlay" id="overlay"></div>
+    </div>
+</body>
+</html>

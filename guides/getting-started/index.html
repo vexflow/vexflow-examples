@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- site-wide stylesheets -->
+    <link rel="stylesheet" href="/vexflow-examples/css/reset.css">
+    <link rel="stylesheet" href="/vexflow-examples/css/theme.css">
+    <link rel="stylesheet" href="/vexflow-examples/css/helpers.css">   
+    <link rel="stylesheet" href="/vexflow-examples/css/layout.css">
+    <link rel="stylesheet" href="/vexflow-examples/css/base.css">
+    <!-- contains core js functionality for all examples -->
+    <script src="/vexflow-examples/js/main.js" defer=""></script>
+    <!-- styles for syntax highlighting  -->
+    <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet" media="(prefers-color-scheme: dark)">
+    <link href="https://unpkg.com/prismjs@1.20.0/themes/prism.css" rel="stylesheet" media="(prefers-color-scheme: light)">
+  <!-- allow extra tags in the head -->
+  
+  <title>Getting Started</title>
+</head>
+<body>
+   <div class="container">
+      <div class="nav-container">
+    <h3 class="nav-title">Examples</h3>
+    <div class="site-nav">
+  
+  
+  
+  
+  
+
+  
+    
+    
+    <div class="section">
+      <h3 class="section-header">
+        Guides
+      </h3>
+      
+        <ul class="section-links">
+          
+            <li>
+              <a href="/vexflow-examples/guides/getting-started/" class="active">Getting Started</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/guides/tutorial/" class="">Tutorial</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  
+    
+    
+    <div class="section">
+      <h3 class="section-header">
+        Components
+      </h3>
+      
+        <ul class="section-links">
+          
+            <li>
+              <a href="/vexflow-examples/demos/components/hairpin/" class="">hairpin</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/components/textbracket/" class="">textbracket</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  
+    
+    
+    <div class="section">
+      <h3 class="section-header">
+        Entry
+      </h3>
+      
+        <ul class="section-links">
+          
+            <li>
+              <a href="/vexflow-examples/demos/entry/vexflow-bravura.esm/" class="">vexflow-bravura.esm.js</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/entry/vexflow-bravura/" class="">vexflow-bravura.js</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/entry/vexflow-core.esm/" class="">vexflow-core.esm.js</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/entry/vexflow-core/" class="">vexflow-core.js</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/entry/vexflow-debug-with-tests/" class="">vexflow-debug-with-tests.js</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/entry/vexflow-debug/" class="">vexflow-debug.js</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/entry/vexflow.esm/" class="">vexflow.esm.js</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/entry/vexflow/" class="">vexflow.js</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  
+    
+    
+    <div class="section">
+      <h3 class="section-header">
+        Fonts
+      </h3>
+      
+        <ul class="section-links">
+          
+            <li>
+              <a href="/vexflow-examples/demos/fonts/async-await/" class="">Async Await</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/fonts/async-promise/" class="">Async Promise</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/fonts/bravura/" class="">Bravura</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/fonts/bravura-score/" class="">Bravura Score</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/fonts/five-staves/" class="">Five Staves</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/fonts/music/" class="">Music</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/fonts/text/" class="">Text</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  
+    
+    
+    <div class="section">
+      <h3 class="section-header">
+        Interactivity
+      </h3>
+      
+        <ul class="section-links">
+          
+            <li>
+              <a href="/vexflow-examples/demos/interactivity/ui/" class="">Hover Events</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/interactivity/canvas-interaction/" class="">canvas interactions</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/interactivity/svg-interaction/" class="">svg interactions</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  
+    
+    
+    <div class="section">
+      <h3 class="section-header">
+        Modules
+      </h3>
+      
+        <ul class="section-links">
+          
+            <li>
+              <a href="/vexflow-examples/demos/modules/script-tag/" class="">Async Await</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/modules/module/" class="">ES Modules</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/modules/both/" class="">Module and Script</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  
+    
+    
+    <div class="section">
+      <h3 class="section-header">
+        Node
+      </h3>
+      
+        <ul class="section-links">
+          
+            <li>
+              <a href="/vexflow-examples/demos/node/canvas/" class="">Canvas</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/node/font-draw/" class="">Font~Draw</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/node/import1/" class="">Import 1</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/node/import2/" class="">Import 2</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/node/import3/" class="">Import 3</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/node/pdf-canvas/" class="">PDF Canvas</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/node/pdf-svg/" class="">PDF SVG</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/node/require1/" class="">Require 1</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/node/require2/" class="">Require 2</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/node/svg/" class="">SVG</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/node/customcontext/" class="">customContext</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/node/font-load-1/" class="">font-load-1</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/node/font-load-2/" class="">font-load-2</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  
+    
+    
+    <div class="section">
+      <h3 class="section-header">
+        Opentype
+      </h3>
+      
+        <ul class="section-links">
+          
+            <li>
+              <a href="/vexflow-examples/demos/opentype/canvas/" class="">Canvas</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/opentype/load/" class="">Load</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  
+    
+    
+    <div class="section">
+      <h3 class="section-header">
+        Tests
+      </h3>
+      
+        <ul class="section-links">
+          
+            <li>
+              <a href="/vexflow-examples/demos/tests/unit-tests/" class="">Unit Tests</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  
+    
+    
+    <div class="section">
+      <h3 class="section-header">
+        Tools
+      </h3>
+      
+        <ul class="section-links">
+          
+            <li>
+              <a href="/vexflow-examples/demos/tools/glyphs/" class="">Glyph Inspector</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  
+    
+    
+    <div class="section">
+      <h3 class="section-header">
+        Worker
+      </h3>
+      
+        <ul class="section-links">
+          
+            <li>
+              <a href="/vexflow-examples/demos/worker/" class="">Using Workers</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  
+</div>
+</div>
+      
+        <main class="main-content">
+          <section class="content-wrapper">
+            <button id="open-sidebar-btn" class="svg-btn svg-btn--lg">
+              <!-- menu svg -->
+              <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px"><path d="M165.13-254.62q-10.68 0-17.9-7.26-7.23-7.26-7.23-18t7.23-17.86q7.22-7.13 17.9-7.13h629.74q10.68 0 17.9 7.26 7.23 7.26 7.23 18t-7.23 17.87q-7.22 7.12-17.9 7.12H165.13Zm0-200.25q-10.68 0-17.9-7.27-7.23-7.26-7.23-17.99 0-10.74 7.23-17.87 7.22-7.13 17.9-7.13h629.74q10.68 0 17.9 7.27 7.23 7.26 7.23 17.99 0 10.74-7.23 17.87-7.22 7.13-17.9 7.13H165.13Zm0-200.26q-10.68 0-17.9-7.26-7.23-7.26-7.23-18t7.23-17.87q7.22-7.12 17.9-7.12h629.74q10.68 0 17.9 7.26 7.23 7.26 7.23 18t-7.23 17.86q-7.22 7.13-17.9 7.13H165.13Z"></path></svg>
+          </button>
+          <h1>VexFlow</h1>
+<p>VexFlow is an open-source library for rendering music notation. It is written in TypeScript (compiled to ES6), and outputs scores to HTML Canvas and SVG. It works in browsers and also in Node.js projects (e.g., a command line script to save a score as a PDF).</p>
+<p>The guide below refers to VexFlow 5.</p>
+<h2>Quick Start</h2>
+<p>The quickest way to add VexFlow to a web page is via a <code>&lt;script&gt;</code> tag.</p>
+<div class="code-block">
+    <button class="copy-btn svg-btn" type="button" aria-label="Copy code">
+    <svg fill="blue" viewBox="0 0 32 32" data-name="Layer 1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><title></title><path d="M27.2,8.22H23.78V5.42A3.42,3.42,0,0,0,20.36,2H5.42A3.42,3.42,0,0,0,2,5.42V20.36a3.43,3.43,0,0,0,3.42,3.42h2.8V27.2A2.81,2.81,0,0,0,11,30H27.2A2.81,2.81,0,0,0,30,27.2V11A2.81,2.81,0,0,0,27.2,8.22ZM5.42,21.91a1.55,1.55,0,0,1-1.55-1.55V5.42A1.54,1.54,0,0,1,5.42,3.87H20.36a1.55,1.55,0,0,1,1.55,1.55v2.8H11A2.81,2.81,0,0,0,8.22,11V21.91ZM28.13,27.2a.93.93,0,0,1-.93.93H11a.93.93,0,0,1-.93-.93V11a.93.93,0,0,1,.93-.93H27.2a.93.93,0,0,1,.93.93Z"></path></g></svg>
+    </button>
+    <pre><code class="language-html"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">doctype</span> <span class="token name">html</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
+    <span class="token comment">&lt;!-- IMPORTANT: Set the character set to UTF-8. Otherwise you may get weird symbols on the score. --></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>utf-8<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+    <span class="token comment">&lt;!-- Div where the scores will be output --></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>output<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+
+    <span class="token comment">&lt;!-- Load library --></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/vexflow@5.0.0/build/cjs/vexflow-core.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+
+    <span class="token comment">&lt;!-- Load Bravura and Academico (see vexflow-fonts for available fonts) --></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+    <span class="token comment">/* global VexFlow */</span>
+    VexFlow<span class="token punctuation">.</span><span class="token function">loadFonts</span><span class="token punctuation">(</span><span class="token string">'Bravura'</span><span class="token punctuation">,</span> <span class="token string">'Academico'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+      VexFlow<span class="token punctuation">.</span><span class="token function">setFonts</span><span class="token punctuation">(</span><span class="token string">'Bravura'</span><span class="token punctuation">,</span> <span class="token string">'Academico'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token comment">// YOUR CODE GOES HERE</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></code></pre>
+  </div>
+<p>It is also possible to use face fonts</p>
+<div class="code-block">
+    <button class="copy-btn svg-btn" type="button" aria-label="Copy code">
+    <svg fill="blue" viewBox="0 0 32 32" data-name="Layer 1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><title></title><path d="M27.2,8.22H23.78V5.42A3.42,3.42,0,0,0,20.36,2H5.42A3.42,3.42,0,0,0,2,5.42V20.36a3.43,3.43,0,0,0,3.42,3.42h2.8V27.2A2.81,2.81,0,0,0,11,30H27.2A2.81,2.81,0,0,0,30,27.2V11A2.81,2.81,0,0,0,27.2,8.22ZM5.42,21.91a1.55,1.55,0,0,1-1.55-1.55V5.42A1.54,1.54,0,0,1,5.42,3.87H20.36a1.55,1.55,0,0,1,1.55,1.55v2.8H11A2.81,2.81,0,0,0,8.22,11V21.91ZM28.13,27.2a.93.93,0,0,1-.93.93H11a.93.93,0,0,1-.93-.93V11a.93.93,0,0,1,.93-.93H27.2a.93.93,0,0,1,.93.93Z"></path></g></svg>
+    </button>
+    <pre><code class="language-html"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">doctype</span> <span class="token name">html</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
+    <span class="token comment">&lt;!-- IMPORTANT: Set the character set to UTF-8. Otherwise you may get weird symbols on the score. --></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>utf-8<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+    <span class="token comment">&lt;!-- Load Bravura and Academico (see vexflow-fonts for available fonts) --></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">></span></span><span class="token style"><span class="token language-css">
+      <span class="token atrule"><span class="token rule">@font-face</span></span> <span class="token punctuation">{</span>
+        <span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">'Bravura'</span><span class="token punctuation">;</span>
+        <span class="token property">src</span><span class="token punctuation">:</span> <span class="token url"><span class="token function">url</span><span class="token punctuation">(</span>https://cdn.jsdelivr.net/npm/@vexflow-fonts/bravura/bravura.woff2<span class="token punctuation">)</span></span> <span class="token function">format</span><span class="token punctuation">(</span>woff2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      <span class="token atrule"><span class="token rule">@font-face</span></span> <span class="token punctuation">{</span>
+        <span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">'Academico'</span><span class="token punctuation">;</span>
+        <span class="token property">src</span><span class="token punctuation">:</span> <span class="token url"><span class="token function">url</span><span class="token punctuation">(</span>https://cdn.jsdelivr.net/npm/@vexflow-fonts/academico/academico.woff2<span class="token punctuation">)</span></span> <span class="token function">format</span><span class="token punctuation">(</span>woff2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css"><span class="token property">font-family</span><span class="token punctuation">:</span> Academico</span><span class="token punctuation">"</span></span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css"><span class="token property">font-family</span><span class="token punctuation">:</span> Bravura</span><span class="token punctuation">"</span></span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+
+    <span class="token comment">&lt;!-- Div where the scores will be output --></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>output<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+
+    <span class="token comment">&lt;!-- Load library --></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/vexflow@5.0.0/build/cjs/vexflow.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+      document<span class="token punctuation">.</span>fonts<span class="token punctuation">.</span>ready<span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+        VexFlow<span class="token punctuation">.</span><span class="token function">setFonts</span><span class="token punctuation">(</span><span class="token string">'Bravura'</span><span class="token punctuation">,</span> <span class="token string">'Academico'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">// YOUR CODE GOES HERE</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></code></pre>
+  </div>
+<p>Specifying a particular version <code>vexflow@x.y.z</code> is good practice, to prevent rare issues with a future update breaking your deployment. During development &amp; testing, feel free to use the latest release by omitting the version number: https://cdn.jsdelivr.net/npm/vexflow/build/cjs/vexflow.js</p>
+<p>If your project uses a bundler, you can install VexFlow from npm:</p>
+<div class="code-block">
+    <button class="copy-btn svg-btn" type="button" aria-label="Copy code">
+    <svg fill="blue" viewBox="0 0 32 32" data-name="Layer 1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><title></title><path d="M27.2,8.22H23.78V5.42A3.42,3.42,0,0,0,20.36,2H5.42A3.42,3.42,0,0,0,2,5.42V20.36a3.43,3.43,0,0,0,3.42,3.42h2.8V27.2A2.81,2.81,0,0,0,11,30H27.2A2.81,2.81,0,0,0,30,27.2V11A2.81,2.81,0,0,0,27.2,8.22ZM5.42,21.91a1.55,1.55,0,0,1-1.55-1.55V5.42A1.54,1.54,0,0,1,5.42,3.87H20.36a1.55,1.55,0,0,1,1.55,1.55v2.8H11A2.81,2.81,0,0,0,8.22,11V21.91ZM28.13,27.2a.93.93,0,0,1-.93.93H11a.93.93,0,0,1-.93-.93V11a.93.93,0,0,1,.93-.93H27.2a.93.93,0,0,1,.93.93Z"></path></g></svg>
+    </button>
+    <pre><code class="language-sh"><span class="token function">npm</span> <span class="token function">install</span> vexflow</code></pre>
+  </div>
+<h2>Factory (with EasyScore)</h2>
+<p>Factory is VexFlow's recommended API for creating music notation. EasyScore is VexFlow's high-level API for creating voices and notes. On a web page containing a <code>&lt;div id=&quot;output&quot;&gt;&lt;/div&gt;</code>, the following code displays a score:</p>
+  <div class="code-demo">
+<p><iframe srcdoc="&lt;!doctype html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;!-- IMPORTANT: Set the character set to UTF-8. Otherwise you may get weird symbols on the score. --&gt;
+    &lt;meta charset=&quot;utf-8&quot; /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div id=&quot;output&quot;&gt;&lt;/div&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/vexflow@5.0.0/build/cjs/vexflow-core.js&quot;&gt;&lt;/script&gt;
+    &lt;script&gt;
+    /* global VexFlow */
+    VexFlow.loadFonts(&#39;Bravura&#39;, &#39;Academico&#39;).then(() =&gt; {
+      VexFlow.setFonts(&#39;Bravura&#39;, &#39;Academico&#39;);
+      const factory = new VexFlow.Factory({
+        renderer: { elementId: &#39;output&#39;, width: 500, height: 200 },
+      });
+      const score = factory.EasyScore();
+      const system = factory.System();
+      system
+        .addStave({
+          voices: [
+            score.voice(score.notes(&#39;C#5/q, B4, A4, G#4&#39;, { stem: &#39;up&#39; })),
+            score.voice(score.notes(&#39;C#4/h, C#4&#39;, { stem: &#39;down&#39; })),
+          ],
+        })
+        .addClef(&#39;treble&#39;)
+        .addTimeSignature(&#39;4/4&#39;);
+      factory.draw();
+    });
+    &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;" style="width:100%;height:250px;border:1px solid #ddd" loading="lazy"></iframe>
+</p><form action="https://jsfiddle.net/api/post/library/pure" method="post" target="_blank">
+<textarea hidden="" name="html">&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;!-- IMPORTANT: Set the character set to UTF-8. Otherwise you may get weird symbols on the score. --&gt;
+&lt;meta charset=&quot;utf-8&quot; /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id=&quot;output&quot;&gt;&lt;/div&gt;
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/vexflow@5.0.0/build/cjs/vexflow-core.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+/* global VexFlow */
+VexFlow.loadFonts('Bravura', 'Academico').then(() =&gt; {
+VexFlow.setFonts('Bravura', 'Academico');
+const factory = new VexFlow.Factory({
+renderer: { elementId: 'output', width: 500, height: 200 },
+});
+const score = factory.EasyScore();
+const system = factory.System();
+system
+.addStave({
+voices: [
+score.voice(score.notes('C#5/q, B4, A4, G#4', { stem: 'up' })),
+score.voice(score.notes('C#4/h, C#4', { stem: 'down' })),
+],
+})
+.addClef('treble')
+.addTimeSignature('4/4');
+factory.draw();
+});
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</textarea><br>
+<input type="submit" value="Edit in JSFiddle">
+</form><p></p>
+<p></p><div class="code-block">
+    <button class="copy-btn svg-btn" type="button" aria-label="Copy code">
+    <svg fill="blue" viewBox="0 0 32 32" data-name="Layer 1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><title></title><path d="M27.2,8.22H23.78V5.42A3.42,3.42,0,0,0,20.36,2H5.42A3.42,3.42,0,0,0,2,5.42V20.36a3.43,3.43,0,0,0,3.42,3.42h2.8V27.2A2.81,2.81,0,0,0,11,30H27.2A2.81,2.81,0,0,0,30,27.2V11A2.81,2.81,0,0,0,27.2,8.22ZM5.42,21.91a1.55,1.55,0,0,1-1.55-1.55V5.42A1.54,1.54,0,0,1,5.42,3.87H20.36a1.55,1.55,0,0,1,1.55,1.55v2.8H11A2.81,2.81,0,0,0,8.22,11V21.91ZM28.13,27.2a.93.93,0,0,1-.93.93H11a.93.93,0,0,1-.93-.93V11a.93.93,0,0,1,.93-.93H27.2a.93.93,0,0,1,.93.93Z"></path></g></svg>
+    </button>
+    <pre><code class="language-html"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">doctype</span> <span class="token name">html</span><span class="token punctuation">&gt;</span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span><br>    <span class="token comment">&lt;!-- IMPORTANT: Set the character set to UTF-8. Otherwise you may get weird symbols on the score. --&gt;</span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>utf-8<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>output<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>https://cdn.jsdelivr.net/npm/vexflow@5.0.0/build/cjs/vexflow-core.js<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript"><br>    <span class="token comment">/* global VexFlow */</span><br>    VexFlow<span class="token punctuation">.</span><span class="token function">loadFonts</span><span class="token punctuation">(</span><span class="token string">'Bravura'</span><span class="token punctuation">,</span> <span class="token string">'Academico'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span><br>      VexFlow<span class="token punctuation">.</span><span class="token function">setFonts</span><span class="token punctuation">(</span><span class="token string">'Bravura'</span><span class="token punctuation">,</span> <span class="token string">'Academico'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>      <span class="token keyword">const</span> factory <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">VexFlow<span class="token punctuation">.</span>Factory</span><span class="token punctuation">(</span><span class="token punctuation">{</span><br>        <span class="token literal-property property">renderer</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token literal-property property">elementId</span><span class="token operator">:</span> <span class="token string">'output'</span><span class="token punctuation">,</span> <span class="token literal-property property">width</span><span class="token operator">:</span> <span class="token number">500</span><span class="token punctuation">,</span> <span class="token literal-property property">height</span><span class="token operator">:</span> <span class="token number">200</span> <span class="token punctuation">}</span><span class="token punctuation">,</span><br>      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>      <span class="token keyword">const</span> score <span class="token operator">=</span> factory<span class="token punctuation">.</span><span class="token function">EasyScore</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>      <span class="token keyword">const</span> system <span class="token operator">=</span> factory<span class="token punctuation">.</span><span class="token function">System</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>      system<br>        <span class="token punctuation">.</span><span class="token function">addStave</span><span class="token punctuation">(</span><span class="token punctuation">{</span><br>          <span class="token literal-property property">voices</span><span class="token operator">:</span> <span class="token punctuation">[</span><br>            score<span class="token punctuation">.</span><span class="token function">voice</span><span class="token punctuation">(</span>score<span class="token punctuation">.</span><span class="token function">notes</span><span class="token punctuation">(</span><span class="token string">'C#5/q, B4, A4, G#4'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token literal-property property">stem</span><span class="token operator">:</span> <span class="token string">'up'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span><br>            score<span class="token punctuation">.</span><span class="token function">voice</span><span class="token punctuation">(</span>score<span class="token punctuation">.</span><span class="token function">notes</span><span class="token punctuation">(</span><span class="token string">'C#4/h, C#4'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token literal-property property">stem</span><span class="token operator">:</span> <span class="token string">'down'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span><br>          <span class="token punctuation">]</span><span class="token punctuation">,</span><br>        <span class="token punctuation">}</span><span class="token punctuation">)</span><br>        <span class="token punctuation">.</span><span class="token function">addClef</span><span class="token punctuation">(</span><span class="token string">'treble'</span><span class="token punctuation">)</span><br>        <span class="token punctuation">.</span><span class="token function">addTimeSignature</span><span class="token punctuation">(</span><span class="token string">'4/4'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>      factory<span class="token punctuation">.</span><span class="token function">draw</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>    </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span></code></pre>
+  </div><p></p>
+  </div>
+<h2>Native API</h2>
+<p>If you need more control, you can use the low-level VexFlow API. Below, we render a stave using SVG.</p>
+  <div class="code-demo">
+<p><iframe srcdoc="&lt;!doctype html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;!-- IMPORTANT: Set the character set to UTF-8. Otherwise you may get weird symbols on the score. --&gt;
+    &lt;meta charset=&quot;utf-8&quot; /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+  &lt;!-- Div where the scores will be output --&gt;
+  &lt;div id=&quot;output&quot;&gt;&lt;/div&gt;
+  &lt;!-- Load library --&gt;
+  &lt;script src=&quot;https://cdn.jsdelivr.net/npm/vexflow@5.0.0/build/cjs/vexflow-core.js&quot;&gt;&lt;/script&gt;
+  &lt;script&gt;
+  /* global VexFlow */
+  VexFlow.loadFonts(&#39;Bravura&#39;, &#39;Academico&#39;).then(() =&gt; {
+    VexFlow.setFonts(&#39;Bravura&#39;, &#39;Academico&#39;);
+    const { Renderer, Stave } = VexFlow;
+    // Create an SVG renderer and attach it to the DIV element with id=&quot;output&quot;.
+    const div = document.getElementById(&#39;output&#39;);
+    const renderer = new Renderer(div, Renderer.Backends.SVG);
+    // Configure the rendering context.
+    renderer.resize(500, 500);
+    const context = renderer.getContext();
+    context.setFont(&#39;Arial&#39;, 10);
+    // Create a stave of width 400 at position 10, 40.
+    const stave = new Stave(10, 40, 400);
+    // Add a clef and time signature.
+    stave.addClef(&#39;treble&#39;).addTimeSignature(&#39;4/4&#39;);
+    // Connect it to the rendering context and draw!
+    stave.setContext(context).draw();
+  });
+  &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;" style="width:100%;height:250px;border:1px solid #ddd" loading="lazy"></iframe>
+</p><form action="https://jsfiddle.net/api/post/library/pure" method="post" target="_blank">
+<textarea hidden="" name="html">&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;!-- IMPORTANT: Set the character set to UTF-8. Otherwise you may get weird symbols on the score. --&gt;
+&lt;meta charset=&quot;utf-8&quot; /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;!-- Div where the scores will be output --&gt;
+&lt;div id=&quot;output&quot;&gt;&lt;/div&gt;
+&lt;!-- Load library --&gt;
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/vexflow@5.0.0/build/cjs/vexflow-core.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+/* global VexFlow */
+VexFlow.loadFonts('Bravura', 'Academico').then(() =&gt; {
+VexFlow.setFonts('Bravura', 'Academico');
+const { Renderer, Stave } = VexFlow;
+// Create an SVG renderer and attach it to the DIV element with id=&quot;output&quot;.
+const div = document.getElementById('output');
+const renderer = new Renderer(div, Renderer.Backends.SVG);
+// Configure the rendering context.
+renderer.resize(500, 500);
+const context = renderer.getContext();
+context.setFont('Arial', 10);
+// Create a stave of width 400 at position 10, 40.
+const stave = new Stave(10, 40, 400);
+// Add a clef and time signature.
+stave.addClef('treble').addTimeSignature('4/4');
+// Connect it to the rendering context and draw!
+stave.setContext(context).draw();
+});
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</textarea><br>
+<input type="submit" value="Edit in JSFiddle">
+</form><p></p>
+<p></p><div class="code-block">
+    <button class="copy-btn svg-btn" type="button" aria-label="Copy code">
+    <svg fill="blue" viewBox="0 0 32 32" data-name="Layer 1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><title></title><path d="M27.2,8.22H23.78V5.42A3.42,3.42,0,0,0,20.36,2H5.42A3.42,3.42,0,0,0,2,5.42V20.36a3.43,3.43,0,0,0,3.42,3.42h2.8V27.2A2.81,2.81,0,0,0,11,30H27.2A2.81,2.81,0,0,0,30,27.2V11A2.81,2.81,0,0,0,27.2,8.22ZM5.42,21.91a1.55,1.55,0,0,1-1.55-1.55V5.42A1.54,1.54,0,0,1,5.42,3.87H20.36a1.55,1.55,0,0,1,1.55,1.55v2.8H11A2.81,2.81,0,0,0,8.22,11V21.91ZM28.13,27.2a.93.93,0,0,1-.93.93H11a.93.93,0,0,1-.93-.93V11a.93.93,0,0,1,.93-.93H27.2a.93.93,0,0,1,.93.93Z"></path></g></svg>
+    </button>
+    <pre><code class="language-html"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">doctype</span> <span class="token name">html</span><span class="token punctuation">&gt;</span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span><br>    <span class="token comment">&lt;!-- IMPORTANT: Set the character set to UTF-8. Otherwise you may get weird symbols on the score. --&gt;</span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>utf-8<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span><br>  <span class="token comment">&lt;!-- Div where the scores will be output --&gt;</span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>output<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span><br>  <span class="token comment">&lt;!-- Load library --&gt;</span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>https://cdn.jsdelivr.net/npm/vexflow@5.0.0/build/cjs/vexflow-core.js<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript"><br>  <span class="token comment">/* global VexFlow */</span><br>  VexFlow<span class="token punctuation">.</span><span class="token function">loadFonts</span><span class="token punctuation">(</span><span class="token string">'Bravura'</span><span class="token punctuation">,</span> <span class="token string">'Academico'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span><br>    VexFlow<span class="token punctuation">.</span><span class="token function">setFonts</span><span class="token punctuation">(</span><span class="token string">'Bravura'</span><span class="token punctuation">,</span> <span class="token string">'Academico'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>    <span class="token keyword">const</span> <span class="token punctuation">{</span> Renderer<span class="token punctuation">,</span> Stave <span class="token punctuation">}</span> <span class="token operator">=</span> VexFlow<span class="token punctuation">;</span><br>    <span class="token comment">// Create an SVG renderer and attach it to the DIV element with id=&quot;output&quot;.</span><br>    <span class="token keyword">const</span> div <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'output'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>    <span class="token keyword">const</span> renderer <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Renderer</span><span class="token punctuation">(</span>div<span class="token punctuation">,</span> Renderer<span class="token punctuation">.</span>Backends<span class="token punctuation">.</span><span class="token constant">SVG</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>    <span class="token comment">// Configure the rendering context.</span><br>    renderer<span class="token punctuation">.</span><span class="token function">resize</span><span class="token punctuation">(</span><span class="token number">500</span><span class="token punctuation">,</span> <span class="token number">500</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>    <span class="token keyword">const</span> context <span class="token operator">=</span> renderer<span class="token punctuation">.</span><span class="token function">getContext</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>    context<span class="token punctuation">.</span><span class="token function">setFont</span><span class="token punctuation">(</span><span class="token string">'Arial'</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>    <span class="token comment">// Create a stave of width 400 at position 10, 40.</span><br>    <span class="token keyword">const</span> stave <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Stave</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">40</span><span class="token punctuation">,</span> <span class="token number">400</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>    <span class="token comment">// Add a clef and time signature.</span><br>    stave<span class="token punctuation">.</span><span class="token function">addClef</span><span class="token punctuation">(</span><span class="token string">'treble'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">addTimeSignature</span><span class="token punctuation">(</span><span class="token string">'4/4'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>    <span class="token comment">// Connect it to the rendering context and draw!</span><br>    stave<span class="token punctuation">.</span><span class="token function">setContext</span><span class="token punctuation">(</span>context<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">draw</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>  </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span></code></pre>
+  </div><p></p>
+  </div>
+          </section>
+        </main>
+        <!-- only shown when navbar is open on mobile to allow for easier closing -->
+        <div class="overlay" id="overlay"></div>
+    </div>
+</body>
+</html>

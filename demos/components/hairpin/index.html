@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- site-wide stylesheets -->
+    <link rel="stylesheet" href="/vexflow-examples/css/reset.css">
+    <link rel="stylesheet" href="/vexflow-examples/css/theme.css">
+    <link rel="stylesheet" href="/vexflow-examples/css/helpers.css">   
+    <link rel="stylesheet" href="/vexflow-examples/css/layout.css">
+    <link rel="stylesheet" href="/vexflow-examples/css/base.css">
+    <!-- contains core js functionality for all examples -->
+    <script src="/vexflow-examples/js/main.js" defer=""></script>
+    <!-- styles for syntax highlighting  -->
+    <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet" media="(prefers-color-scheme: dark)">
+    <link href="https://unpkg.com/prismjs@1.20.0/themes/prism.css" rel="stylesheet" media="(prefers-color-scheme: light)">
+  <!-- allow extra tags in the head -->
+  
+  <title>hairpin</title>
+</head>
+<body>
+   <div class="container">
+      <div class="nav-container">
+    <h3 class="nav-title">Examples</h3>
+    <div class="site-nav">
+  
+  
+  
+  
+  
+
+  
+    
+    
+    <div class="section">
+      <h3 class="section-header">
+        Guides
+      </h3>
+      
+        <ul class="section-links">
+          
+            <li>
+              <a href="/vexflow-examples/guides/getting-started/" class="">Getting Started</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/guides/tutorial/" class="">Tutorial</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  
+    
+    
+    <div class="section">
+      <h3 class="section-header">
+        Components
+      </h3>
+      
+        <ul class="section-links">
+          
+            <li>
+              <a href="/vexflow-examples/demos/components/hairpin/" class="active">hairpin</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/components/textbracket/" class="">textbracket</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  
+    
+    
+    <div class="section">
+      <h3 class="section-header">
+        Entry
+      </h3>
+      
+        <ul class="section-links">
+          
+            <li>
+              <a href="/vexflow-examples/demos/entry/vexflow-bravura.esm/" class="">vexflow-bravura.esm.js</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/entry/vexflow-bravura/" class="">vexflow-bravura.js</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/entry/vexflow-core.esm/" class="">vexflow-core.esm.js</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/entry/vexflow-core/" class="">vexflow-core.js</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/entry/vexflow-debug-with-tests/" class="">vexflow-debug-with-tests.js</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/entry/vexflow-debug/" class="">vexflow-debug.js</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/entry/vexflow.esm/" class="">vexflow.esm.js</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/entry/vexflow/" class="">vexflow.js</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  
+    
+    
+    <div class="section">
+      <h3 class="section-header">
+        Fonts
+      </h3>
+      
+        <ul class="section-links">
+          
+            <li>
+              <a href="/vexflow-examples/demos/fonts/async-await/" class="">Async Await</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/fonts/async-promise/" class="">Async Promise</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/fonts/bravura/" class="">Bravura</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/fonts/bravura-score/" class="">Bravura Score</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/fonts/five-staves/" class="">Five Staves</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/fonts/music/" class="">Music</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/fonts/text/" class="">Text</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  
+    
+    
+    <div class="section">
+      <h3 class="section-header">
+        Interactivity
+      </h3>
+      
+        <ul class="section-links">
+          
+            <li>
+              <a href="/vexflow-examples/demos/interactivity/ui/" class="">Hover Events</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/interactivity/canvas-interaction/" class="">canvas interactions</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/interactivity/svg-interaction/" class="">svg interactions</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  
+    
+    
+    <div class="section">
+      <h3 class="section-header">
+        Modules
+      </h3>
+      
+        <ul class="section-links">
+          
+            <li>
+              <a href="/vexflow-examples/demos/modules/script-tag/" class="">Async Await</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/modules/module/" class="">ES Modules</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/modules/both/" class="">Module and Script</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  
+    
+    
+    <div class="section">
+      <h3 class="section-header">
+        Node
+      </h3>
+      
+        <ul class="section-links">
+          
+            <li>
+              <a href="/vexflow-examples/demos/node/canvas/" class="">Canvas</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/node/font-draw/" class="">Font~Draw</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/node/import1/" class="">Import 1</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/node/import2/" class="">Import 2</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/node/import3/" class="">Import 3</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/node/pdf-canvas/" class="">PDF Canvas</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/node/pdf-svg/" class="">PDF SVG</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/node/require1/" class="">Require 1</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/node/require2/" class="">Require 2</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/node/svg/" class="">SVG</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/node/customcontext/" class="">customContext</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/node/font-load-1/" class="">font-load-1</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/node/font-load-2/" class="">font-load-2</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  
+    
+    
+    <div class="section">
+      <h3 class="section-header">
+        Opentype
+      </h3>
+      
+        <ul class="section-links">
+          
+            <li>
+              <a href="/vexflow-examples/demos/opentype/canvas/" class="">Canvas</a>
+            </li>
+          
+            <li>
+              <a href="/vexflow-examples/demos/opentype/load/" class="">Load</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  
+    
+    
+    <div class="section">
+      <h3 class="section-header">
+        Tests
+      </h3>
+      
+        <ul class="section-links">
+          
+            <li>
+              <a href="/vexflow-examples/demos/tests/unit-tests/" class="">Unit Tests</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  
+    
+    
+    <div class="section">
+      <h3 class="section-header">
+        Tools
+      </h3>
+      
+        <ul class="section-links">
+          
+            <li>
+              <a href="/vexflow-examples/demos/tools/glyphs/" class="">Glyph Inspector</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  
+    
+    
+    <div class="section">
+      <h3 class="section-header">
+        Worker
+      </h3>
+      
+        <ul class="section-links">
+          
+            <li>
+              <a href="/vexflow-examples/demos/worker/" class="">Using Workers</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  
+</div>
+</div>
+      
+        <main class="main-content">
+          <section class="content-wrapper">
+            <button id="open-sidebar-btn" class="svg-btn svg-btn--lg">
+              <!-- menu svg -->
+              <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px"><path d="M165.13-254.62q-10.68 0-17.9-7.26-7.23-7.26-7.23-18t7.23-17.86q7.22-7.13 17.9-7.13h629.74q10.68 0 17.9 7.26 7.23 7.26 7.23 18t-7.23 17.87q-7.22 7.12-17.9 7.12H165.13Zm0-200.25q-10.68 0-17.9-7.27-7.23-7.26-7.23-17.99 0-10.74 7.23-17.87 7.22-7.13 17.9-7.13h629.74q10.68 0 17.9 7.27 7.23 7.26 7.23 17.99 0 10.74-7.23 17.87-7.22 7.13-17.9 7.13H165.13Zm0-200.26q-10.68 0-17.9-7.26-7.23-7.26-7.23-18t7.23-17.87q7.22-7.12 17.9-7.12h629.74q10.68 0 17.9 7.26 7.23 7.26 7.23 18t-7.23 17.86q-7.22 7.13-17.9 7.13H165.13Z"></path></svg>
+          </button>
+          <h1> hairpin </h1>
+
+
+
+
+
+
+
+
+
+  <div class="code-demo">
+    
+    <iframe srcdoc="&lt;html&gt;
+  &lt;head&gt;
+    &lt;!-- IMPORTANT: Set the character set to UTF-8. Otherwise you may get weird symbols on the score. --&gt;
+    &lt;meta charset=&quot;utf-8&quot; /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;!-- Div where the scores will be output --&gt;
+    &lt;div id=&quot;output&quot;&gt;&lt;/div&gt;
+
+    &lt;!-- Load library --&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/vexflow@5.0.0/build/cjs/vexflow-core.js&quot;&gt;&lt;/script&gt;
+
+    &lt;script&gt;
+    /* global VexFlow */
+    VexFlow.loadFonts(&#39;Bravura&#39;, &#39;Academico&#39;).then(() =&gt; {
+      VexFlow.setFonts(&#39;Bravura&#39;, &#39;Academico&#39;);
+      const { Factory, StaveHairpin } = VexFlow;
+      const factory = new Factory({
+        renderer: { elementId: &#39;output&#39;, width: 1000, height: 200 },
+      });
+
+      const system = factory.System({ width: 400 });
+      const system2 = factory.System({ x: 400, width: 350 });
+
+      const notes = [
+        factory.StaveNote({
+          keys: [&#39;e/5&#39;],
+          duration: &#39;q&#39;,
+        }),
+
+        factory.StaveNote({
+          keys: [&#39;e/4&#39;, &#39;d/5&#39;],
+          duration: &#39;h&#39;,
+        }),
+
+        factory.StaveNote({
+          keys: [&#39;c/5&#39;, &#39;e/5&#39;, &#39;g/5&#39;],
+          duration: &#39;q&#39;,
+        }),
+      ];
+
+      const notes2 = [
+        factory.StaveNote({
+          keys: [&#39;e/5&#39;],
+          duration: &#39;q&#39;,
+        }),
+
+        factory.StaveNote({
+          keys: [&#39;e/4&#39;, &#39;d/5&#39;],
+          duration: &#39;h&#39;,
+        }),
+
+        factory.StaveNote({
+          keys: [&#39;c/5&#39;, &#39;e/5&#39;, &#39;g/5&#39;],
+          duration: &#39;q&#39;,
+        }),
+      ];
+
+      const voice = factory.Voice().addTickables(notes);
+      const voice2 = factory.Voice().addTickables(notes2);
+
+      system
+        .addStave({
+          voices: [voice],
+        })
+        .addClef(&#39;treble&#39;)
+        .addTimeSignature(&#39;4/4&#39;);
+
+      system2
+        .addStave({
+          voices: [voice2],
+        });
+
+      factory.draw();
+
+      const hairpin = new StaveHairpin({ firstNote: notes[1], lastNote: notes2[1] }, 2);
+      hairpin.setContext(factory.getContext());
+      hairpin.setPosition(4);
+      hairpin.draw();
+    });
+    &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;" style="width:100%;height:250px;border:1px solid #ddd" loading="lazy"></iframe>
+           <form action="https://jsfiddle.net/api/post/library/pure" method="post" target="_blank">
+            <textarea hidden="" name="html">&lt;html&gt;
+  &lt;head&gt;
+    &lt;!-- IMPORTANT: Set the character set to UTF-8. Otherwise you may get weird symbols on the score. --&gt;
+    &lt;meta charset=&quot;utf-8&quot; /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;!-- Div where the scores will be output --&gt;
+    &lt;div id=&quot;output&quot;&gt;&lt;/div&gt;
+
+    &lt;!-- Load library --&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/vexflow@5.0.0/build/cjs/vexflow-core.js&quot;&gt;&lt;/script&gt;
+
+    &lt;script&gt;
+    /* global VexFlow */
+    VexFlow.loadFonts(&#39;Bravura&#39;, &#39;Academico&#39;).then(() =&gt; {
+      VexFlow.setFonts(&#39;Bravura&#39;, &#39;Academico&#39;);
+      const { Factory, StaveHairpin } = VexFlow;
+      const factory = new Factory({
+        renderer: { elementId: &#39;output&#39;, width: 1000, height: 200 },
+      });
+
+      const system = factory.System({ width: 400 });
+      const system2 = factory.System({ x: 400, width: 350 });
+
+      const notes = [
+        factory.StaveNote({
+          keys: [&#39;e/5&#39;],
+          duration: &#39;q&#39;,
+        }),
+
+        factory.StaveNote({
+          keys: [&#39;e/4&#39;, &#39;d/5&#39;],
+          duration: &#39;h&#39;,
+        }),
+
+        factory.StaveNote({
+          keys: [&#39;c/5&#39;, &#39;e/5&#39;, &#39;g/5&#39;],
+          duration: &#39;q&#39;,
+        }),
+      ];
+
+      const notes2 = [
+        factory.StaveNote({
+          keys: [&#39;e/5&#39;],
+          duration: &#39;q&#39;,
+        }),
+
+        factory.StaveNote({
+          keys: [&#39;e/4&#39;, &#39;d/5&#39;],
+          duration: &#39;h&#39;,
+        }),
+
+        factory.StaveNote({
+          keys: [&#39;c/5&#39;, &#39;e/5&#39;, &#39;g/5&#39;],
+          duration: &#39;q&#39;,
+        }),
+      ];
+
+      const voice = factory.Voice().addTickables(notes);
+      const voice2 = factory.Voice().addTickables(notes2);
+
+      system
+        .addStave({
+          voices: [voice],
+        })
+        .addClef(&#39;treble&#39;)
+        .addTimeSignature(&#39;4/4&#39;);
+
+      system2
+        .addStave({
+          voices: [voice2],
+        });
+
+      factory.draw();
+
+      const hairpin = new StaveHairpin({ firstNote: notes[1], lastNote: notes2[1] }, 2);
+      hairpin.setContext(factory.getContext());
+      hairpin.setPosition(4);
+      hairpin.draw();
+    });
+    &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</textarea><br>
+            <input type="submit" value="Edit in JSFiddle">
+            </form>
+           
+    <div class="code-block">
+    <button class="copy-btn svg-btn" type="button" aria-label="Copy code">
+    <svg fill="blue" viewBox="0 0 32 32" data-name="Layer 1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><title></title><path d="M27.2,8.22H23.78V5.42A3.42,3.42,0,0,0,20.36,2H5.42A3.42,3.42,0,0,0,2,5.42V20.36a3.43,3.43,0,0,0,3.42,3.42h2.8V27.2A2.81,2.81,0,0,0,11,30H27.2A2.81,2.81,0,0,0,30,27.2V11A2.81,2.81,0,0,0,27.2,8.22ZM5.42,21.91a1.55,1.55,0,0,1-1.55-1.55V5.42A1.54,1.54,0,0,1,5.42,3.87H20.36a1.55,1.55,0,0,1,1.55,1.55v2.8H11A2.81,2.81,0,0,0,8.22,11V21.91ZM28.13,27.2a.93.93,0,0,1-.93.93H11a.93.93,0,0,1-.93-.93V11a.93.93,0,0,1,.93-.93H27.2a.93.93,0,0,1,.93.93Z"></path></g></svg>
+    </button>
+    <pre><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span><br>    <span class="token comment">&lt;!-- IMPORTANT: Set the character set to UTF-8. Otherwise you may get weird symbols on the score. --></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>utf-8<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span><br>    <span class="token comment">&lt;!-- Div where the scores will be output --></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>output<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><br><br>    <span class="token comment">&lt;!-- Load library --></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/vexflow@5.0.0/build/cjs/vexflow-core.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span><br><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript"><br>    <span class="token comment">/* global VexFlow */</span><br>    VexFlow<span class="token punctuation">.</span><span class="token function">loadFonts</span><span class="token punctuation">(</span><span class="token string">'Bravura'</span><span class="token punctuation">,</span> <span class="token string">'Academico'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span><br>      VexFlow<span class="token punctuation">.</span><span class="token function">setFonts</span><span class="token punctuation">(</span><span class="token string">'Bravura'</span><span class="token punctuation">,</span> <span class="token string">'Academico'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>      <span class="token keyword">const</span> <span class="token punctuation">{</span> Factory<span class="token punctuation">,</span> StaveHairpin <span class="token punctuation">}</span> <span class="token operator">=</span> VexFlow<span class="token punctuation">;</span><br>      <span class="token keyword">const</span> factory <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Factory</span><span class="token punctuation">(</span><span class="token punctuation">{</span><br>        <span class="token literal-property property">renderer</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token literal-property property">elementId</span><span class="token operator">:</span> <span class="token string">'output'</span><span class="token punctuation">,</span> <span class="token literal-property property">width</span><span class="token operator">:</span> <span class="token number">1000</span><span class="token punctuation">,</span> <span class="token literal-property property">height</span><span class="token operator">:</span> <span class="token number">200</span> <span class="token punctuation">}</span><span class="token punctuation">,</span><br>      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br><br>      <span class="token keyword">const</span> system <span class="token operator">=</span> factory<span class="token punctuation">.</span><span class="token function">System</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token literal-property property">width</span><span class="token operator">:</span> <span class="token number">400</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>      <span class="token keyword">const</span> system2 <span class="token operator">=</span> factory<span class="token punctuation">.</span><span class="token function">System</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token literal-property property">x</span><span class="token operator">:</span> <span class="token number">400</span><span class="token punctuation">,</span> <span class="token literal-property property">width</span><span class="token operator">:</span> <span class="token number">350</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br><br>      <span class="token keyword">const</span> notes <span class="token operator">=</span> <span class="token punctuation">[</span><br>        factory<span class="token punctuation">.</span><span class="token function">StaveNote</span><span class="token punctuation">(</span><span class="token punctuation">{</span><br>          <span class="token literal-property property">keys</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'e/5'</span><span class="token punctuation">]</span><span class="token punctuation">,</span><br>          <span class="token literal-property property">duration</span><span class="token operator">:</span> <span class="token string">'q'</span><span class="token punctuation">,</span><br>        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span><br><br>        factory<span class="token punctuation">.</span><span class="token function">StaveNote</span><span class="token punctuation">(</span><span class="token punctuation">{</span><br>          <span class="token literal-property property">keys</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'e/4'</span><span class="token punctuation">,</span> <span class="token string">'d/5'</span><span class="token punctuation">]</span><span class="token punctuation">,</span><br>          <span class="token literal-property property">duration</span><span class="token operator">:</span> <span class="token string">'h'</span><span class="token punctuation">,</span><br>        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span><br><br>        factory<span class="token punctuation">.</span><span class="token function">StaveNote</span><span class="token punctuation">(</span><span class="token punctuation">{</span><br>          <span class="token literal-property property">keys</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'c/5'</span><span class="token punctuation">,</span> <span class="token string">'e/5'</span><span class="token punctuation">,</span> <span class="token string">'g/5'</span><span class="token punctuation">]</span><span class="token punctuation">,</span><br>          <span class="token literal-property property">duration</span><span class="token operator">:</span> <span class="token string">'q'</span><span class="token punctuation">,</span><br>        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span><br>      <span class="token punctuation">]</span><span class="token punctuation">;</span><br><br>      <span class="token keyword">const</span> notes2 <span class="token operator">=</span> <span class="token punctuation">[</span><br>        factory<span class="token punctuation">.</span><span class="token function">StaveNote</span><span class="token punctuation">(</span><span class="token punctuation">{</span><br>          <span class="token literal-property property">keys</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'e/5'</span><span class="token punctuation">]</span><span class="token punctuation">,</span><br>          <span class="token literal-property property">duration</span><span class="token operator">:</span> <span class="token string">'q'</span><span class="token punctuation">,</span><br>        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span><br><br>        factory<span class="token punctuation">.</span><span class="token function">StaveNote</span><span class="token punctuation">(</span><span class="token punctuation">{</span><br>          <span class="token literal-property property">keys</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'e/4'</span><span class="token punctuation">,</span> <span class="token string">'d/5'</span><span class="token punctuation">]</span><span class="token punctuation">,</span><br>          <span class="token literal-property property">duration</span><span class="token operator">:</span> <span class="token string">'h'</span><span class="token punctuation">,</span><br>        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span><br><br>        factory<span class="token punctuation">.</span><span class="token function">StaveNote</span><span class="token punctuation">(</span><span class="token punctuation">{</span><br>          <span class="token literal-property property">keys</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'c/5'</span><span class="token punctuation">,</span> <span class="token string">'e/5'</span><span class="token punctuation">,</span> <span class="token string">'g/5'</span><span class="token punctuation">]</span><span class="token punctuation">,</span><br>          <span class="token literal-property property">duration</span><span class="token operator">:</span> <span class="token string">'q'</span><span class="token punctuation">,</span><br>        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span><br>      <span class="token punctuation">]</span><span class="token punctuation">;</span><br><br>      <span class="token keyword">const</span> voice <span class="token operator">=</span> factory<span class="token punctuation">.</span><span class="token function">Voice</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">addTickables</span><span class="token punctuation">(</span>notes<span class="token punctuation">)</span><span class="token punctuation">;</span><br>      <span class="token keyword">const</span> voice2 <span class="token operator">=</span> factory<span class="token punctuation">.</span><span class="token function">Voice</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">addTickables</span><span class="token punctuation">(</span>notes2<span class="token punctuation">)</span><span class="token punctuation">;</span><br><br>      system<br>        <span class="token punctuation">.</span><span class="token function">addStave</span><span class="token punctuation">(</span><span class="token punctuation">{</span><br>          <span class="token literal-property property">voices</span><span class="token operator">:</span> <span class="token punctuation">[</span>voice<span class="token punctuation">]</span><span class="token punctuation">,</span><br>        <span class="token punctuation">}</span><span class="token punctuation">)</span><br>        <span class="token punctuation">.</span><span class="token function">addClef</span><span class="token punctuation">(</span><span class="token string">'treble'</span><span class="token punctuation">)</span><br>        <span class="token punctuation">.</span><span class="token function">addTimeSignature</span><span class="token punctuation">(</span><span class="token string">'4/4'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br><br>      system2<br>        <span class="token punctuation">.</span><span class="token function">addStave</span><span class="token punctuation">(</span><span class="token punctuation">{</span><br>          <span class="token literal-property property">voices</span><span class="token operator">:</span> <span class="token punctuation">[</span>voice2<span class="token punctuation">]</span><span class="token punctuation">,</span><br>        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br><br>      factory<span class="token punctuation">.</span><span class="token function">draw</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br><br>      <span class="token keyword">const</span> hairpin <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">StaveHairpin</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token literal-property property">firstNote</span><span class="token operator">:</span> notes<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token literal-property property">lastNote</span><span class="token operator">:</span> notes2<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>      hairpin<span class="token punctuation">.</span><span class="token function">setContext</span><span class="token punctuation">(</span>factory<span class="token punctuation">.</span><span class="token function">getContext</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>      hairpin<span class="token punctuation">.</span><span class="token function">setPosition</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>      hairpin<span class="token punctuation">.</span><span class="token function">draw</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>    </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></code></pre>
+  </div>
+  </div>
+          </section>
+        </main>
+        <!-- only shown when navbar is open on mobile to allow for easier closing -->
+        <div class="overlay" id="overlay"></div>
+    </div>
+</body>
+</html>
