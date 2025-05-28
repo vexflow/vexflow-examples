@@ -1,0 +1,69 @@
+---
+title: vexflow-debug.js
+
+eleventyComputed:
+  extraHead:
+    <!-- Load Library -->
+    <script src="https://cdn.jsdelivr.net/npm/vexflow@{% ver %}/build/cjs/vexflow-debug.js"></script>
+
+eleventyNavigation:
+    key: vexflow-debug.js
+    parent: Entry
+    title: vexflow-debug.js
+---
+<h1>vexflow-debug.js</h1>
+<p>
+  This page loads the <code>vexflow-debug.js</code> build, which is the non-minified version of
+  <code>vexflow.js</code>. This build bundles the Bravura, Petaluma, and Gonville music fonts.
+</p>
+<p><a href="https://cdn.jsdelivr.net/npm/vexflow@{% ver %}/build/cjs/vexflow-debug.js">Click here to view the vexflow-debug.js file</a>.</p>
+<p>Open the developer console and explore the <code>VexFlow</code> object. Below are some things you can try:</p>
+
+<p>Get an object with the build information of the VexFlow library.</p>
+{% highlight js %}
+VexFlow.BUILD
+{% endhighlight %}
+
+<p>Get the default font stack, as an array of strings.</p>
+{% highlight js %}
+VexFlow.getFonts()
+{% endhighlight %}
+
+<p>Get the dictionary of all available music glyphs in VexFlow.</p>
+{% highlight js %}
+VexFlow.Glyphs
+{% endhighlight %}
+
+<p>This is the string representing a treble clef:</p>
+{%highlight js%}
+VexFlow.Glyphs.gClef
+{% endhighlight %}
+
+<p>This is the string representing a treble clef:</p>
+{% demo "js" false %}
+document.getElementById("trebleClef").innerText = VexFlow.Glyphs.gClef
+{% enddemo %}
+
+<p>Draw a stave with a treble clef, time signature, and a few notes.</p>
+{% demo "js" %}
+const factory = new VexFlow.Factory({
+  renderer: { elementId: 'output', width: 300, height: 180 },
+});
+
+const score = factory.EasyScore();
+const system = factory.System();
+
+system
+  .addStave({
+    voices: [
+      score.voice(score.notes('C#5/q, B4, A4, G#4', { stem: 'up' })),
+      score.voice(score.notes('C#4/h, C#4', { stem: 'down' })),
+    ],
+  })
+  .addClef('treble')
+  .addTimeSignature('4/4');
+
+factory.draw();
+{% enddemo %}
+
+<div id="output"></div>    

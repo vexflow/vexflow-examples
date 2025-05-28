@@ -1,0 +1,47 @@
+---
+title: Async Promise
+
+eleventyNavigation:
+    key: Async Promise
+    parent: Fonts
+    title: Async Promise
+---
+<!-- 
+Summary: Instead of async/await, you can use Promise .then() to make sure fonts are loaded before proceeding.
+Run: start a web server and load this page.
+-->
+<h1>Async Promise</h1>
+<p>
+  Using <b>vexflow-core.js</b> allows your webpage to load a smaller initial bundle. It will load fonts on demand
+  when you call <code>VexFlow.loadFonts(...fontNames)</code>. This method is asynchronous and returns a Promise.
+</p>
+<p>Open your browser's developer tools to see that font files are downloaded upon request:</p>
+<div id="output"></div>  
+<p>View this page's source code for more information.</p>      
+<!-- vexflow-core.js includes no music fonts. -->
+<script src="https://cdn.jsdelivr.net/npm/vexflow@{% ver %}/build/cjs/vexflow-core.js"></script>
+<script>
+  // You can skip some fonts if you will not be using them.
+  // See your browser's developer tools > network tab to see which fonts are loaded.
+  VexFlow.loadFonts('Bravura', 'Petaluma', 'Leland').then(onFontsLoaded);
+
+  function onFontsLoaded() {
+    // The first argument is the primary music engraving font.
+    // The others are fallbacks, in case a glyph is not found in the first music font.
+    VexFlow.setFonts('Petaluma', 'Bravura', 'Leland');
+
+    const factory = new VexFlow.Factory({ renderer: { elementId: 'output', width: 500, height: 200 } });
+    const score = factory.EasyScore();
+    const system = factory.System();
+    system
+      .addStave({
+        voices: [
+          score.voice(score.notes('C#5/q, B4, A4, G#4', { stem: 'up' })),
+          score.voice(score.notes('C#4/h, C#4', { stem: 'down' })),
+        ],
+      })
+      .addClef('treble')
+      .addTimeSignature('4/4');
+    factory.draw();
+  }
+</script>

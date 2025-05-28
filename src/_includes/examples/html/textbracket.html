@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+  <head>
+    <!-- IMPORTANT: Set the character set to UTF-8. Otherwise you may get weird symbols on the score. -->
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <!-- Div where the scores will be output -->
+    <div id="output"></div>
+
+    <!-- Load library -->
+    <script src="https://cdn.jsdelivr.net/npm/vexflow@{% ver %}/build/cjs/vexflow-core.js"></script>
+
+    <script>
+    /* global VexFlow */
+    VexFlow.loadFonts('Bravura', 'Academico').then(() => {
+      VexFlow.setFonts('Bravura', 'Academico');
+      const { Factory, Dot } = VexFlow;
+      const factory = new Factory({
+        renderer: { elementId: 'output', width: 500, height: 200 },
+      });
+
+      const system = factory.System({ width: 400 });
+
+      function dotted(staveNote, noteIndex = -1) {
+        if (noteIndex < 0) {
+          Dot.buildAndAttach([staveNote], {
+            all: true,
+          });
+        } else {
+          Dot.buildAndAttach([staveNote], {
+            index: noteIndex,
+          });
+        }
+        return staveNote;
+      }
+
+      const notes = [
+        dotted(factory.StaveNote({
+          keys: ['e##/5'],
+          duration: '8d',
+        }).addModifier(factory.Accidental({ type: '##' }))),
+
+        factory.StaveNote({
+          keys: ['eb/5'],
+          duration: '16',
+        }).addModifier(factory.Accidental({ type: 'b' })),
+
+        dotted(factory.StaveNote({
+          keys: ['eb/4', 'd/5'],
+          duration: 'h',
+        }), 0 /* add dot to note at index==0 */),
+
+        dotted(factory.StaveNote({
+          keys: ['c/5', 'eb/5', 'g#/5'],
+          duration: 'q',
+        })
+          .addModifier(factory.Accidental({ type: 'b' }), 1)
+          .addModifier(factory.Accidental({ type: '#' }), 2)),
+      ];
+
+      factory.TextBracket({
+        from: notes[0],
+        to: notes[2],
+        text: '8',
+        options: {
+          superscript: 'vb',
+          position: 'bottom',
+          line: 3,
+        },
+      });
+
+      const voice = factory.Voice().addTickables(notes);
+
+      system
+        .addStave({
+          voices: [voice],
+        })
+        .addClef('treble')
+        .addTimeSignature('4/4');
+
+      factory.draw();
+    });
+    </script>
+  </body>
+</html>

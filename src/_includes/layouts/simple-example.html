@@ -1,0 +1,26 @@
+---
+layout: layouts/base.html
+toc: false
+---
+<h1> {{ title }} </h1>
+
+{{ content }}
+
+{% assign snippetPath = "examples/" | append: filename %}
+
+{% assign ext = filename | split:'.' | last | downcase %}
+{% if ext == "mjs" %}
+  {% assign ext = "js" %}
+{% endif %}
+
+{% assign showIframe = ext == "html" %}
+
+{%- comment -%}
+  Now just wrap the file's contents in demo shortcode.
+  — ext = language (e.g. “html”, “js”)
+  — false = don't show run code button
+  - showIframe = show iframe if the code is html
+{%- endcomment -%}
+{% demo ext false showIframe %}
+  {% render snippetPath %}
+{% enddemo %}

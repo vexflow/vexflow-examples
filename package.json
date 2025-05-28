@@ -1,0 +1,22 @@
+{
+  "name": "vexflow-examples",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Take a look at [the VexFlow Examples](https://vexflow.github.io/vexflow-examples)",
+  "main": "index.js",
+  "scripts": {
+    "build": "eleventy --input=src --output=_site",
+    "debug": "DEBUG=Eleventy* npx @11ty/eleventy --serve --port=9876",
+    "start": "npx @11ty/eleventy --serve --port=9876"
+  },
+  "keywords": [],
+  "author": "vexflow contributers",
+  "license": "MIT",
+  "dependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "@11ty/eleventy-navigation": "^1.0.4",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
+    "install": "^0.13.0",
+    "npm": "^11.3.0"
+  }
+}

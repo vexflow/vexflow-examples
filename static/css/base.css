@@ -1,0 +1,148 @@
+/* All the base styles used on site */
+
+:root {
+    --content-max-width: 100ch;    /* roughly 100 characters per line */
+  }
+
+body{
+    font-family: 'Barlow', Arial, sans-serif;
+    font-size: 16px;
+    background: var(--color-background);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+p{
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+ul{
+    list-style: none;
+}
+
+ol{
+    list-style: none;
+    padding-left: 1rem;
+}
+
+a{
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+a:hover{
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+button{
+    cursor: pointer;
+}
+
+/* self descriptive. Class for buttons that contain an svg */
+/* example: menu button */
+.svg-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--color-text);       /* base color for the icon */
+
+    --icon-size: 1.5rem;    
+    font-size: var(--icon-size);  
+}
+  
+.svg-btn svg {
+    fill: currentColor;
+    width: 1em;   /* scale icon to font-size if you like */
+    height: 1em;
+    display: block;  /* remove tiny whitespace issues */
+  }
+  
+.svg-btn:hover {
+    color: var(--color-link);
+    background: none;
+}
+
+.svg-btn:active {
+    color: var(--color-accent);
+}
+  
+.svg-btn:focus-visible {
+    outline: 2px solid var(--color-link);
+    outline-offset: 2px;
+}
+/* different size helpers */
+.svg-btn--sm { --icon-size: 1rem;  }
+.svg-btn--md { --icon-size: 1.5rem; }
+.svg-btn--lg { --icon-size: 2.5rem; }
+
+button.btn {
+  background-color: #fff;
+  border: 1px solid #d5d9d9;
+  border-radius: 8px;
+  box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+  box-sizing: border-box;
+  color: #0f1111;
+  display: inline-block;
+  font-family: "Amazon Ember",sans-serif;
+  font-size: 13px;
+  line-height: 29px;
+  padding: 0 10px 0 11px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+ }
+
+button.btn:hover {
+  background-color: #f7fafa;
+}
+
+button.btn:focus {
+  border-color: #008296;
+  box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+  outline: 0;
+}
+
+pre {
+    font-size: 0.85rem;
+    overflow: auto;
+    background-color: var(--color-background-secondary);
+    padding: 1rem;
+}
+
+code {
+    font-size: 0.85em;
+  }
+
+/* base styles for all rendered staves etc */
+#output {
+    min-height: 220px;
+    background-color: #fbfbf0;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+}
+
+canvas{
+    background-color: white;
+}
+
+.notation {
+    background-color: white;
+}
+
+/* hotfix for weird backgrounds that are in some of the tokens in prism css */
+pre *{
+    background: none !important;
+}
+
+input[type = "submit"]{
+    cursor: pointer;
+}
